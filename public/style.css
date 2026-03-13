@@ -163,12 +163,13 @@ body {
 }
 
 .masthead-name {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-size: 34px;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
   color: var(--text);
-  letter-spacing: -0.5px;
+  letter-spacing: -1.5px;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .masthead-tagline {
@@ -869,7 +870,7 @@ body {
 @media (max-width: 640px) {
   .y2y-bar-inner  { padding: 0 18px; height: 34px; }
   .header-inner      { height: 64px; padding: 0 18px; }
-  .masthead-name    { font-size: 20px; }
+  .masthead-name    { font-size: 22px; letter-spacing: -0.5px; }
   .masthead-tagline { display: none; }
   .header-kicker    { display: none; }
   .geo-filter-bar { top: 64px; }
