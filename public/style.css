@@ -408,7 +408,6 @@ body {
 
 .card:hover {
   box-shadow: 0 10px 36px rgba(0,0,0,.35), 0 0 0 1.5px var(--geo-color, var(--gold));
-  transform: translateY(-3px);
   border-color: var(--geo-color, var(--gold));
 }
 
@@ -989,10 +988,11 @@ body {
 
 @media (max-width: 640px) {
   .y2y-bar-inner  { padding: 0 18px; height: 34px; }
-  .header-inner      { height: 64px; padding: 0 18px; }
-  .masthead-name    { font-size: 22px; letter-spacing: -0.5px; }
+  .header-inner      { height: auto; padding: 14px 18px 10px; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .masthead-name    { font-size: 24px; letter-spacing: -0.5px; }
   .masthead-tagline { display: none; }
   .header-kicker    { display: none; }
+  .header-right     { align-items: flex-start; flex-direction: row; gap: 14px; }
   .articles-grid  { grid-template-columns: 1fr; }
   .card.card--wide { grid-column: span 1; }
   .main-content   { padding: 20px 18px 56px; }
