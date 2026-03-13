@@ -102,6 +102,13 @@ function render() {
     return matchGeo && matchQ;
   }).sort((a, b) => new Date(b.published) - new Date(a.published));
 
+  // Y2Y cikk ne legyen az első 5 között — kerüljön ~5. pozícióba
+  const y2yIdx = filtered.findIndex(a => (a.source || '').toLowerCase().includes('y2y'));
+  if (y2yIdx >= 0 && y2yIdx < 5) {
+    const [y2yArt] = filtered.splice(y2yIdx, 1);
+    filtered.splice(Math.min(5, filtered.length), 0, y2yArt);
+  }
+
   if (!filtered.length) {
     grid.innerHTML = '<div class="empty-state"><div class="empty-icon">&#x1F50D;</div><h2>Nincs tal&aacute;lat</h2><p>Pr&oacute;b&aacute;lj m&aacute;s felt&eacute;teleket.</p></div>';
     return;
