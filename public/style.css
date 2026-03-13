@@ -424,11 +424,13 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-weight: 800;
   font-size: 8.5px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--geo-color, #c9a84c);
   opacity: 0.75;
-  line-height: 1;
+  line-height: 1.4;
+  max-width: calc(100% - 56px);
+  word-break: break-word;
 }
 
 .card-body {
