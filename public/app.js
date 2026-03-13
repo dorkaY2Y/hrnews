@@ -144,7 +144,7 @@ function cardHTML(a, idx) {
   const geoColor = GEO_COLOR[a.geo] || '#c9a84c';
   const flag     = a.geo ? a.geo.split(' ')[0] : '';
 
-  const imgStyle = a.image ? ' style="background-image:url('' + a.image + '')"' : '';
+  const imgStyle = a.image ? ' style="background-image:url(\'' + a.image + '\')"' : '';
   const cover = '<div class="card-cover' + (a.image ? ' has-image' : '') + '"' + imgStyle + '>'
     + '<span class="card-flag">' + flag + '</span>'
     + '<span class="card-cover-src">' + esc(a.source) + '</span>'
