@@ -111,7 +111,7 @@ function render() {
       || (a.category   || '').toLowerCase().includes(q)
       || (a.source     || '').toLowerCase().includes(q);
     return matchSrc && matchGeo && matchQ;
-  });
+  }).sort((a, b) => new Date(b.published) - new Date(a.published));
 
   if (!filtered.length) {
     grid.innerHTML = '<div class="empty-state"><div class="empty-icon">&#x1F50D;</div><h2>Nincs tal&aacute;lat</h2><p>Pr&oacute;b&aacute;lj m&aacute;s felt&eacute;teleket.</p></div>';
