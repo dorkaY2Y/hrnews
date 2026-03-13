@@ -241,6 +241,25 @@ function extractMeta(html, property) {
   return '';
 }
 
+
+// ─── Extract image URL from RSS item ─────────────────────────────────────────
+function extractImage(item) {
+  const mc = item.media;
+  if (mc) {
+    const obj = Array.isArray(mc) ? mc[0] : mc;
+    const u = obj?.$?.url || obj?.$?.URL;
+    if (u) return u;
+  }
+  const mt = item.mediaThumbnail;
+  if (mt) {
+    const obj = Array.isArray(mt) ? mt[0] : mt;
+    const u = obj?.$?.url;
+    if (u) return u;
+  }
+  if (item.enclosure?.url && (item.enclosure.type || '').startsWith('image/')) return item.enclosure.url;
+  return '';
+}
+
 // ─── Y2Y blog scraper ─────────────────────────────────────────────────────────
 async function scrapeY2Y(existingUrls, twoDaysAgo) {
   const articles = [];
@@ -274,6 +293,7 @@ async function scrapeY2Y(existingUrls, twoDaysAgo) {
                             .replace(/\s*[|–-]\s*Y2Y.*$/i, '').trim();
         const excerpt   = (extractMeta(postHtml, 'og:description') || extractMeta(postHtml, 'twitter:description'))
                             .substring(0, 600);
+        const image     = extractMeta(postHtml, 'og:image') || extractMeta(postHtml, 'twitter:image') || '';
         const published = extractMeta(postHtml, 'article:published_time')
                        || extractMeta(postHtml, 'og:updated_time')
                        || new Date().toISOString();
@@ -291,7 +311,8 @@ async function scrapeY2Y(existingUrls, twoDaysAgo) {
           title,
           url: postUrl,
           published: pubDate.toISOString(),
-          excerpt
+          excerpt,
+          image
         });
       } catch { /* skip this post */ }
     }
@@ -309,7 +330,11 @@ async function fetchRSSFeeds() {
     timeout: 15000,
     headers: { 'User-Agent': 'HRNews-Aggregator/1.0 (y2y.hu)' },
     customFields: {
-      item: [['media:content', 'media'], ['content:encoded', 'contentEncoded']]
+      item: [
+        ['media:content', 'media'],
+        ['media:thumbnail', 'mediaThumbnail'],
+        ['content:encoded', 'contentEncoded']
+      ]
     }
   });
 
@@ -357,7 +382,8 @@ async function fetchRSSFeeds() {
           title:     item.title?.trim(),
           url,
           published: item.isoDate || item.pubDate,
-          excerpt
+          excerpt,
+          image: extractImage(item)
         };
 
         allFetched.push(article);

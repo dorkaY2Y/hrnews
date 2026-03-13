@@ -377,6 +377,31 @@ body {
   user-select: none;
 }
 
+.card-cover.has-image {
+  background-size: cover;
+  background-position: center top;
+}
+
+.card-cover.has-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.62) 100%);
+}
+
+.card-cover.has-image .card-flag {
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.card-cover.has-image .card-cover-src {
+  position: relative;
+  z-index: 1;
+  color: rgba(255,255,255,0.92);
+  opacity: 1;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
 .card-cover-src {
   font-family: 'Exo 2', sans-serif;
   font-weight: 800;
