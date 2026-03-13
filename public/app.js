@@ -80,6 +80,7 @@ function cardHTML(a) {
     + '<div class="card-top"></div>'
     + '<div class="card-body">'
     +   '<div class="card-meta">'
+    +     (a.geo ? '<span class="geo-tag" title="' + esc(a.geo) + '">' + a.geo.split(' ')[0] + '</span>' : '')
     +     '<span class="source-badge">' + esc(a.source) + '</span>'
     +     '<span class="category-tag">' + esc(a.category || '') + '</span>'
     +     '<span class="pub-date">' + date + '</span>'
