@@ -43,9 +43,11 @@ function buildFilters() {
     const count = allArticles.filter(a => a.geo === geo).length;
     const flag  = geo.split(' ')[0];
     const label = geo.split(' ').slice(1).join(' ');
+    const geoColor = GEO_COLOR[geo] || '#c9a84c';
     const btn   = document.createElement('button');
     btn.className      = 'geo-btn';
     btn.dataset.geo    = geo;
+    btn.style.setProperty('--btn-color', geoColor);
     btn.innerHTML      = flag + ' <span class="geo-label">' + label + '</span>'
                        + '<span class="geo-count">' + count + '</span>';
     btn.addEventListener('click', () => setGeo(geo));

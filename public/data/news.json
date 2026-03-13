@@ -1,6 +1,501 @@
 {
-  "lastUpdated": "2026-03-13T07:14:44.754Z",
+  "lastUpdated": "2026-03-13T07:00:00.000Z",
   "articles": [
+    {
+      "id": "art_1773421410767_0_resz",
+      "title": "AI and the Entry-Level Job",
+      "title_hu": "Az AI és a belépő szintű állások",
+      "summary_hu": "Az IBM HR-vezérigazgatója szerint a mesterséges intelligencia alapvetően átírja a pályakezdők karrierútját. A vállalat tehetségstratégiáját az AI korához igazítják: már most kevesebb belépő szintű pozíciót töltenek be, miközben a meglévő munkatársak átképzésére összpontosítanak.",
+      "source": "Harvard Business Review",
+      "url": "https://hbr.org/2026/03/ai-and-the-entry-level-job",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "Editor at large Adi Ignatius connects with IBM&#8217;s chief human resources officer Nickle LaMoreaux to understand the company&#8217;s talent strategy in the age of AI."
+    },
+    {
+      "id": "art_1773421410791_1_5oxl",
+      "title": "Lessons from China’s Short-Drama Boom",
+      "title_hu": "Mit tanulhat az üzleti világ Kína rövid-dráma forradalmából?",
+      "summary_hu": "A kínai streamingplatformok egyedülálló üzleti modellt fejlesztettek ki: a tartalomkészítés, kísérletezés és bevételszerzés egységes rendszerbe integrálódik. A vezérek és HR-szakemberek legfontosabb tanulsága: az iteratív fejlesztés és az azonnali visszajelzés gyorsabbá teszi a szervezeti tanulást.",
+      "source": "Harvard Business Review",
+      "url": "https://hbr.org/2026/03/lessons-from-chinas-short-drama-boom",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "The platforms treat storytelling, experimentation, and monetization as one integrated system&#8212;and the operating logic travels well beyond entertainment."
+    },
+    {
+      "id": "art_1773421410791_2_md4w",
+      "title": "The Map of U.S. Prosperity Is Changing. Here’s Where Companies Should Invest.",
+      "title_hu": "Átrajzolódik az amerikai gazdasági erőtér – hová fektessenek a vállalatok?",
+      "summary_hu": "Egy új kutatáson alapuló index megmutatja, mely amerikai városok képesek ellenállni a demográfiai visszaesésnek, az éghajlati sokkoknak és az AI-disrupciónak. A tehetségszerzési és telephelyválasztási döntések előtt érdemes megvizsgálni, hol koncentrálódik a jövő munkaereje.",
+      "source": "Harvard Business Review",
+      "url": "https://hbr.org/2026/03/the-map-of-u-s-prosperity-is-changing-heres-where-companies-should-invest",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇺🇸 USA",
+      "excerpt": "A new research-backed index of American cities can help companies navigate issues such as demographic decline, climate shock, and AI disruption."
+    },
+    {
+      "id": "art_1773421410791_3_m3t4",
+      "title": "Anthropic: AI’s influence over the labor market is only beginning to be felt",
+      "title_hu": "Az AI hatása a munkaerőpiacra: csak a kezdetén vagyunk",
+      "summary_hu": "Az Anthropic (a Claude fejlesztője) megállapította, hogy a pályakezdők körében egyes szakmákban már lassul a felvétel. A kutatás figyelmeztetés a HR-eseknek: az AI nemcsak az automatizálható feladatokat érinti, hanem az egész toborzási struktúrát átformálja.",
+      "source": "HR Dive",
+      "url": "https://www.hrdive.com/news/anthropic-ai-influence-over-the-labor-market-jobs/814670/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "The Claude developer found that hiring seems to have slowed for younger workers in certain occupations."
+    },
+    {
+      "id": "art_1773421410791_4_jkjw",
+      "title": "Most companies have ‘no formal approach’ to change communication, survey says",
+      "title_hu": "A vállalatok többségének nincs formális változáskommunikációs terve",
+      "summary_hu": "Egy felmérés szerint a szervezetek zöme ad hoc alapon kommunikál változásokat, ami komoly dolgozói fáradsághoz vezet. Ha minden üzenet sürgősnek tűnik, az alkalmazottak egyszerűen kikapcsolják a fogadókészségüket – a HR-eseknek strukturált megközelítésre van szükségük.",
+      "source": "HR Dive",
+      "url": "https://www.hrdive.com/news/most-companies-have-no-formal-approach-to-change-communication-survey-sa/814656/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "“If every message carries a sense of urgency, employees begin to tune out rather than listen closer,” a Gallagher exec said."
+    },
+    {
+      "id": "art_1773421410791_5_6agc",
+      "title": "Job Analysis: 4 Methods for Gathering Data",
+      "title_hu": "Munkakör-elemzés: 4 módszer az adatgyűjtéshez",
+      "summary_hu": "A munkakör-elemzés a pontos munkaköri leírások, az automatizálási döntések és a szervezeti hatékonyság alapja. A cikk négy gyakorlati módszert mutat be: megfigyelés, interjúk, kérdőívek és munkanapló-elemzés.",
+      "source": "HR Bartender",
+      "url": "https://www.hrbartender.com/2026/strategy-planning/job-analysis-4-methods-gathering-data/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "Learn how job analysis can improve organizational efficiency, enhance job descriptions, and inform automation decisions. The post Job Analysis: 4 Methods for Gathering Data appeared first on hr bartender."
+    },
+    {
+      "id": "art_1773421410791_6_2zh1",
+      "title": "And the Oscar Goes to … HR! 4 Ways to Be an Even Better HR Leader This Year",
+      "title_hu": "Az Oscar a HR-é! 4 tipp a még jobb HR-vezetéshez",
+      "summary_hu": "2026-ban először kap Oscar-díjat valaki kifejezetten HR-munkájáért – ez is jelzi, mennyire elismerté vált a szerepek megfelelő betöltésének tudománya. A cikk négy konkrét tippet ad, hogyan fejlesztheti a HR-vezető a saját teljesítményét ebben az évben.",
+      "source": "HRMorning",
+      "url": "https://www.hrmorning.com/articles/and-the-oscar-goes-to-hr/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "Whether you love or hate the Academy Awards ceremonies, you have a reason to pay attention this year. That’s because 2026 is the first year someone in HR will win an Oscar for their job, putting people in the right roles. Can you hear it now? … And the Oscar goes to … HR! The […]"
+    },
+    {
+      "id": "art_1773421410791_7_vd8u",
+      "title": "‘Roller Coaster’ First Year of Trump 2.0: Survey Reveals Top Employer Concerns",
+      "title_hu": "Trump 2.0 első éve: hullámvasút a munkáltatóknak",
+      "summary_hu": "Több mint 300 HR-vezető részvételével készített felmérés szerint az első Trump 2.0-s év igazi hullámvasút volt a munkáltatók számára. A gyors politikai változások a DEI-programok, bevándorlási szabályok és szövetségi munkaügyi előírások területén egyaránt érintik a vállalatokat.",
+      "source": "HRMorning",
+      "url": "https://www.hrmorning.com/news/employer-concerns-littler-survey/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇺🇸 USA",
+      "excerpt": "Widespread uncertainty and rapid policy shifts during the first year of Trump 2.0 have been a “roller coaster for employers,” according to a new report from the Littler Workplace Policy Institute (WPI). To gauge employer concerns amid this uncertainty, WPI surveyed more than 300 HR professionals, C-suite execs and in-house attorneys, asking about issues most […]"
+    },
+    {
+      "id": "art_1773421410791_8_d7ky",
+      "title": "Simon Sinek: 3 phrases HR needs to abandon in the age of AI",
+      "title_hu": "Simon Sinek: 3 kifejezés, amelytől a HR-nek meg kell szabadulnia az AI korában",
+      "summary_hu": "A világhírű leadership-gondolkodó szerint apró nyelvi változások drámai eredményeket hozhatnak. Sinek három konkrét HR-zsargont azonosít, amelyek aláássák az emberi kapcsolatokat és a szervezeti kultúrát, és megmutatja, hogyan érdemes felváltani őket.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/simon-sinek-3-phrases-hr-needs-to-abandon-in-the-age-of-ai/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "The author and leadership expert says HR can make small shifts that could drive meaningful results as they lead through the disruption of AI. The post Simon Sinek: 3 phrases HR needs to abandon in the age of AI appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_9_hx7z",
+      "title": "Oracle beats expectations and stays quiet on job cut speculation",
+      "title_hu": "Oracle: rekorderedmény, de hallgatás az elbocsátási spekulációkról",
+      "summary_hu": "Az Oracle harmadéves eredménye felülmúlta a várakozásokat, ám a cégvezetés nem nyilatkozott a lehetséges tömeges elbocsátásokról. A HR-vezetők számára a lecke: az AI-vezérelt átalakulás idején a kommunikáció hiánya is maga az üzenet.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/oracle-beats-expectations-and-stays-quiet-on-job-cut-speculation/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇺🇸 USA",
+      "excerpt": "HR leaders watching Oracle got product momentum and no answers on layoffs in the company's third-quarter fiscal 2026 earnings call. The post Oracle beats expectations and stays quiet on job cut speculation appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_10_83y5",
+      "title": "From Nike to Coca-Cola: EEOC puts Fortune 500 on notice over DEI",
+      "title_hu": "EEOC figyelmeztetést küldött a Fortune 500-as cégeknek a DEI-programok miatt",
+      "summary_hu": "Az Egyenlő Foglalkoztatási Esélyegyenlőségi Bizottság elnöke személyesen értesítette a Nike-t, a Coca-Colát és más nagyvállalatok vezérigazgatóit: szövetségi peres eljárás indulhat a DEI-programok miatt. A DEI megítélése gyökeresen megváltozott az USA-ban.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/from-nike-to-coca-cola-eeoc-puts-fortune-500-on-notice-over-dei/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇺🇸 USA",
+      "excerpt": "EEOC Chair Andrea Lucas sent a warning to CEOs over DEI programs, signaling federal litigation is on the table. The post From Nike to Coca-Cola: EEOC puts Fortune 500 on notice over DEI appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_11_yojm",
+      "title": "Debate: Should the Treasury Department destroy all BOI reporting data?",
+      "title_hu": "Vita: megsemmisítse-e az Állmkincstár a vállalati tulajdonosi adatokat?",
+      "summary_hu": "Miután a BOI adatszolgáltatás már nem kötelező, vita tárgya, hogy az Egyesült Államok Kincstára megsemmisítheti-e az összegyűjtött adatokat. A kérdés a vállalati compliance és adatkezelési döntéseket egyaránt érinti.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/debate-do-you-agree-treasury-department-should-destroy-all-boi-reporting-data/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇺🇸 USA",
+      "excerpt": "What should companies insist on now that BOI reporting data is no longer required? The post Debate: Should the Treasury Department destroy all BOI reporting data? appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_12_9wnu",
+      "title": "Dayforce top AI exec’s advice on closing the readiness gap",
+      "title_hu": "AI-felkészültségi rés: hogyan zárd be a lemaradást?",
+      "summary_hu": "Az üzleti vezetők kétharmada látja szervezetében az AI és adatkészséghiányt, mégis kevesebb mint felük biztosít akár alapszintű AI-képzést. A Dayforce HR-tech cég AI-vezérigazgatója konkrét lépéseket javasol a felkészültségi rés bezárásához.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/dayforce-top-ai-execs-advice-on-closing-the-readiness-gap/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "Nearly two out of three business leaders say they see data and AI skills gaps in their organization, according to a new survey of business leaders out of the U.S. and the U.K. from learning platform DataCamp. Yet less than half say their organizations provide even basic AI literacy training. And among those who have […] The post Dayforce top AI exec’s advice on closing the readiness gap appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_13_geop",
+      "title": "Transform all-hands meetings to strengthen remote culture",
+      "title_hu": "All-hands meetingek átalakítása a remote kultúra erősítéséhez",
+      "summary_hu": "A remote és hibrid csapatok számára az all-hands találkozók kritikus kohéziós szerepet töltenek be, ha szándékosan, emberközpontúan szervezik őket. A cikk bemutatja, hogyan tegyük tartósan hatásossá ezeket a rendszeres összejöveteleket.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/transform-all-hands-meetings-to-strengthen-remote-culture/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "For remote and hybrid success, all-hands meetings must be designed with intention, grounded in people-first principles and reinforced long after the event ends. The post Transform all-hands meetings to strengthen remote culture appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_14_mvsi",
+      "title": "Trump Accounts move forward as Treasury issues proposed rules",
+      "title_hu": "Trump Accounts: az Állmkincstár részletezi az új megtakarítási szabályokat",
+      "summary_hu": "Az IRS és az Állmkincstár közzétette a Trump Accounts (gyermekmegtakarítási számlák) részleteit, de a munkáltatók szerepéről egyelőre nincs útmutatás. A HR-eseknek figyelniük kell a közelgő munkáltatói kötelezettségekre.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/trump-accounts-move-forward-as-treasury-issues-proposed-rules/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇺🇸 USA",
+      "excerpt": "The IRS and Treasury Department last week unveiled details on the new Trump Accounts, but guidance on employer involvement remains pending. The post Trump Accounts move forward as Treasury issues proposed rules appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_15_uo61",
+      "title": "From busywork to better work: Amplify manager results with agentic AI",
+      "title_hu": "Ügynöki AI: az admin-munkák vége, a menedzseri hatékonyság kezdete",
+      "summary_hu": "Ahogy a szervezetek növelik a menedzserek irányítási körét, az agentic AI valódi megoldást kínál: átveszi az adminisztratív feladatokat és felszabadítja a vezetőket a valódi embermenedzsment számára. Konkrét esettanulmányok mutatják a hatékonyságnövekedést.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/from-busywork-to-better-work-amplify-manager-results-with-agentic-ai/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "As organizations increase managers' spans of control, they risk losing significant performance; yet, agentic AI can transform that challenge into an opportunity. The post From busywork to better work: Amplify manager results with agentic AI appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_16_p4v0",
+      "title": "Oracle’s potential mass layoff signals an AI trade-off",
+      "title_hu": "Oracle tömeges elbocsátás: az AI-kompromisszum ára",
+      "summary_hu": "Az Oracle állítólag 30 000 fős leépítést fontolgat AI-adatközpont-bővítés finanszírozásához – ez az AI-átállás eddig leglátványosabb emberi ára. A HR-vezetők számára a figyelmeztetés: az AI-befektetések és a munkaerő-megtartás egyensúlyát kell megtalálni.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/oracles-potential-mass-layoff-signals-an-ai-trade-off/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇺🇸 USA",
+      "excerpt": "Oracle is reportedly weighing cuts of up to 30,000 employees to fund AI data center expansion. Here's what HR leaders need to watch. The post Oracle’s potential mass layoff signals an AI trade-off appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_17_k6j5",
+      "title": "Middle East crisis puts Amazon, Google and Nvidia’s duty of care to the test",
+      "title_hu": "Közel-keleti válság: az Amazon, Google és Nvidia gondoskodási kötelezettségének próbája",
+      "summary_hu": "A geopolitikai bizonytalanság idején a munkáltatók felelőssége (duty of care) különösen felértékelődik. Egy kockázatelemző vezérigazgatója szerint most nem az előrejelzésen, hanem a gyors reagálási képesség felépítésén van a hangsúly.",
+      "source": "HR Executive",
+      "url": "https://hrexecutive.com/middle-east-crisis-puts-amazon-google-and-nvidias-duty-of-care-to-the-test/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "\"In times of geopolitical uncertainty, attempting to predict events is less important than preparing for rapid change,\" says Georg Winter, CEO of risk advisory firm GrECo. The post Middle East crisis puts Amazon, Google and Nvidia’s duty of care to the test appeared first on HR Executive."
+    },
+    {
+      "id": "art_1773421410791_18_niif",
+      "title": "Warnings over UK growth as Iran conflict clouds economic forecasts",
+      "title_hu": "Figyelmeztetések az Egyesült Királyság gazdasági növekedéséről az iráni konfliktus árnyékában",
+      "summary_hu": "Az Egyesült Királyság gazdasága januárban váratlanul stagnált a decemberi 0,1%-os növekedés után. A bizonytalanság közvetlenül érinti a brit munkáltatók munkaerő-tervezési döntéseit is.",
+      "source": "Personnel Today",
+      "url": "https://www.personneltoday.com/hr/warnings-over-uk-growth-as-iran-conflict-clouds-economic-forecasts/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇬🇧 UK",
+      "excerpt": "The UK economy unexpectedly recorded zero growth in January, following growth of 0.1% in December. The post Warnings over UK growth as Iran conflict clouds economic forecasts appeared first on Personnel Today."
+    },
+    {
+      "id": "art_1773421410791_19_sv3r",
+      "title": "Tribunal claims up 12% as pressure grows on system",
+      "title_hu": "12%-kal nőtt a foglalkoztatási bírósági ügyek száma az Egyesült Királyságban",
+      "summary_hu": "A nyitott ügyek száma 12%-kal emelkedett, és egyes eseteket 2029-ig sem fognak megtárgyalni. A rendszerre nehezedő nyomás egyértelmű felhívás a munkáltatóknak: erősítsék meg a belső vitarendezési folyamataikat.",
+      "source": "Personnel Today",
+      "url": "https://www.personneltoday.com/hr/tribunal-claims-up-12/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇬🇧 UK",
+      "excerpt": "The number of open employment tribunals has increased by 12% and some cases will wait until 2029 to be heard. The post Tribunal claims up 12% as pressure grows on system appeared first on Personnel Today."
+    },
+    {
+      "id": "art_1773421410791_20_4yxz",
+      "title": "Interest in apprenticeships on the rise in UK",
+      "title_hu": "Fellendülőben az érdeklődés a szakképzési programok iránt az Egyesült Királyságban",
+      "summary_hu": "2025-ben 9%-kal nőtt a tanulószerződéses képzési helyek iránt érdeklődők száma. A trendek szerint a fiatalok egyre inkább a szakképzést és a szakmai képesítéseket választják az egyetem helyett – ez átformálja a toborzási piacot.",
+      "source": "Personnel Today",
+      "url": "https://www.personneltoday.com/hr/interest-in-apprenticeships-on-the-rise-in-uk/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇬🇧 UK",
+      "excerpt": "National searches for apprenticeships and vocational training rose by 9% in 2025. The post Interest in apprenticeships on the rise in UK appeared first on Personnel Today."
+    },
+    {
+      "id": "art_1773421410791_21_abaw",
+      "title": "Sexual harassment and the Employment Rights Act (webinar)",
+      "title_hu": "Szexuális zaklatás és az új Foglalkoztatási Jogok törvény – webinárium",
+      "summary_hu": "Az Egyesült Királyságban hatályba lépő Employment Rights Act változtatja a szexuális zaklatás és a visszaélések bejelentésének szabályait. Ingyenes webinárium ismerteti a munkáltatói kötelezettségeket és a szükséges belső folyamat-átalakításokat.",
+      "source": "Personnel Today",
+      "url": "https://www.personneltoday.com/hr/sexual-harassment-whistleblowing-employment-rights-act-webinar/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇬🇧 UK",
+      "excerpt": "17 March 2026 | Register now for our webinar examining changes to sexual harassment and whistleblowing rules in the Employment Rights Act. The post Sexual harassment and the Employment Rights Act (webinar) appeared first on Personnel Today."
+    },
+    {
+      "id": "art_1773421410791_22_vsl8",
+      "title": "NHS staff survey reveals stability, not improvement",
+      "title_hu": "NHS dolgozói felmérés: stabilitás igen, javulás nem",
+      "summary_hu": "A legfrissebb NHS dolgozói felmérés szerint az egyik legfontosabb mutató – az alkalmazotti ajánlási hajlandóság – 2025-ben enyhén csökkent. A stabilitás önmagában nem elég: az egészségügyi HR-eseknek aktívabb elkötelezettség-építésre van szükségük.",
+      "source": "Personnel Today",
+      "url": "https://www.personneltoday.com/hr/nhs-staff-survey-reveals-stability-not-improvement/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇬🇧 UK",
+      "excerpt": "One of the most closely watched indicators – staff advocacy – fell marginally in 2025. The post NHS staff survey reveals stability, not improvement appeared first on Personnel Today."
+    },
+    {
+      "id": "art_1773421410791_23_2tes",
+      "title": "Neurodiversity: better training is needed for managers",
+      "title_hu": "Neurodiverzitás: a menedzserek több mint egyharmada nem kap megfelelő képzést",
+      "summary_hu": "A dolgozók több mint egyharmada szerint a munkáltató nem hatékony a neurodivergens munkatársakat támogató menedzseri képzésben. A neurodiverzitás-tudatos munkakörnyezet nemcsak etikai kérdés, hanem valós versenyképességi előny is.",
+      "source": "Personnel Today",
+      "url": "https://www.personneltoday.com/hr/neurodiversity-better-training-is-needed-for-managers/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇬🇧 UK",
+      "excerpt": "More than a third of workers think that their employer is ineffective at training managers to support neurodiversity at work. The post Neurodiversity: better training is needed for managers appeared first on Personnel Today."
+    },
+    {
+      "id": "art_1773421410791_24_0qln",
+      "title": "New GP survey highlights fit note failures",
+      "title_hu": "Orvosi igazolások válsága: a brit orvosok 72%-a soha nem utasít vissza táppénzes kérelmet",
+      "summary_hu": "752 háziorvos felmérése szerint 540-en soha nem tagadtak meg orvosi igazolást – ez azt jelenti, hogy a fit note rendszer nem valódi szűrőként működik. A HR-eseknek érdemes felülvizsgálni az egészségvédelmi és jelenlétmenedzsment-folyamataikat.",
+      "source": "Personnel Today",
+      "url": "https://www.personneltoday.com/hr/new-gp-survey-highlights-fit-note-failures/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇬🇧 UK",
+      "excerpt": "Of the 752 GPs who replied, 540 said they had never refused a fit note request, while 162 said they had turned at least one down. The post New GP survey highlights fit note failures appeared first on Personnel Today."
+    },
+    {
+      "id": "art_1773421410791_25_2oby",
+      "title": "Union faces legal challenge over gender policy",
+      "title_hu": "Jogi kihívás a szakszervezet nemi egyenlőségi politikájával szemben",
+      "summary_hu": "A Community szakszervezet bírósági felülvizsgálattal néz szembe nemi egyenlőségi stratégiája miatt. Az ügy precedensértékű lehet a munkahelyi gender-politikák jogi megítélése szempontjából.",
+      "source": "Personnel Today",
+      "url": "https://www.personneltoday.com/hr/union-faces-legal-challenge-over-gender-policy/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇬🇧 UK",
+      "excerpt": "Judicial review lodged at the Court of Session seeks to scrap the Community union's gender equality strategy. The post Union faces legal challenge over gender policy appeared first on Personnel Today."
+    },
+    {
+      "id": "art_1773421410792_26_tlf8",
+      "title": "John Lewis restores staff bonus with 2% payout",
+      "title_hu": "John Lewis visszaállítja a dolgozói bónuszt: 4 év után 2%-os kifizetés",
+      "summary_hu": "A John Lewis Partnership négy év szünet után visszaállítja a munkatársak bónuszát: az összes partner 2%-ot kap, miután a vállalat 134 millió fontos nyereséget ért el. Ez a nyereségmegosztáson alapuló munkavállalói tulajdonlás pozitív példája.",
+      "source": "Personnel Today",
+      "url": "https://www.personneltoday.com/hr/john-lewis-restores-staff-bonus-with-2-payout/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇬🇧 UK",
+      "excerpt": "John Lewis Partnership gives staff first bonus in four years, with ‘partners’ receiving a 2% payout after retailer reports profit of £134m. The post John Lewis restores staff bonus with 2% payout appeared first on Personnel Today."
+    },
+    {
+      "id": "art_1773421410792_27_qzx7",
+      "title": "9 HR Datasets to Practice Your People Analytics Skills",
+      "title_hu": "9 HR-adatkészlet a people analytics készségek fejlesztéséhez",
+      "summary_hu": "Mivel a munkaerő-adatok a szervezeti adatok legérzékenyebb kategóriájába tartoznak, ritkán érhetők el publikusan. Az AIHR összegyűjtötte azokat az adatkészleteket, amelyekkel a HR-elemzők biztonságosan gyakorolhatják adatelemzési és vizualizációs készségeiket.",
+      "source": "AIHR",
+      "url": "https://www.aihr.com/blog/hr-data-sets-people-analytics/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "HR data sets are rare in the public domain because workforce data is among the most sensitive information an organization holds. It often includes personal, financial, and performance-related details that require careful protection. At the same time, HR teams are placing greater focus on data-driven decision-making. SHRM highlights the growing role of people analytics in… The post 9 HR Datasets to Practice Your People Analytics Skills appeared first on AIHR."
+    },
+    {
+      "id": "art_1773421410792_28_9mh6",
+      "title": "Letter of Recommendation for Employee: 4 Templates + How to Write One",
+      "title_hu": "Ajánlólevél munkatársnak: 4 sablon és útmutató",
+      "summary_hu": "Az ajánlólevelek ma is meghatározó szerepet játszanak a toborzásban: a Fortune 500-as cégek több mint 80%-a háttérellenőrzési szolgáltatásokat alkalmaz. A cikk négy kész sablont és lépésről lépésre útmutatót kínál hatásos ajánlólevél megírásához.",
+      "source": "AIHR",
+      "url": "https://www.aihr.com/blog/letter-of-recommendation-for-employee/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "A letter of recommendation is still a vital part of the recruitment process, even as recruitment becomes more data-driven. Over 80% of Fortune 500 companies use background screening services to manage compliance and reduce hiring risks. These services primarily cover employment verification (35%) and criminal record checks (40%), indicating an emphasis on due diligence in… The post Letter of Recommendation for Employee: 4 Templates + How to Write One appeared first on AIHR."
+    },
+    {
+      "id": "art_1773421410792_29_5n52",
+      "title": "FREE Career Map Template: How To Create a Career Map in 12 Steps",
+      "title_hu": "Ingyenes karriértérkép-sablon: 12 lépés a belső karrierutak meghatározásához",
+      "summary_hu": "A karriértérkép láthatóvá teszi a fejlődési útvonalakat és segít feltölteni a kritikus pozíciókat belső tehetségből. A kutatások szerint a fejlesztési szakemberek 49%-a szerint a felsővezetők aggódnak a dolgozók kompetenciahiánya miatt.",
+      "source": "AIHR",
+      "url": "https://www.aihr.com/blog/career-map-template/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "A career map template gives HR a practical way to turn career development into a visible system that builds skills and fills critical roles from within. This is especially important since 49% of learning and talent development professionals say executives are concerned employees lack the right skills to execute their organizations’ strategies. Widening skills gaps… The post FREE Career Map Template: How To Create a Career Map in 12 Steps appeared first on AIHR."
+    },
+    {
+      "id": "art_1773421410792_30_xonv",
+      "title": "McKinsey’s The State of Organizations 2026 research: Three decisions to make now",
+      "title_hu": "McKinsey: A szervezetek állapota 2026-ban – 3 döntés, amelyet most kell meghozni",
+      "summary_hu": "A McKinsey legfrissebb szervezeti kutatása három kritikus döntési területet azonosít, amelyeket a vezetőknek azonnal kell kezelniük a bizonytalan és gyorsan változó időkben. Az elemzés feltárja, mit jelent ez a HR-stratégiára nézve.",
+      "source": "Unleash",
+      "url": "https://www.unleash.ai/strategy-and-leadership/mckinseys-the-state-of-organizations-2026-research-three-decisions-to-make-now/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "UNLEASH explored McKinsey's State of Organization 2026 data. Read on to find out the three actions that leaders and organizations need to take now to thrive in these uncertain and challenging times."
+    },
+    {
+      "id": "art_1773421410792_31_x511",
+      "title": "Leaders at All Levels: Kraft Heinz’s 5X Speed Secret",
+      "title_hu": "Kraft Heinz titka: 36 hónapból 6 hónap – hogyan gyorsítottak 5-szörösére?",
+      "summary_hu": "A Kraft Heinz 36 hónapról 6 hónapra csökkentette az új termékek piacra jutási idejét azzal, hogy alapvetően átszervezte, ahogy az emberek dolgoznak. A modell – amelyet ma az egész vállalat alkalmaz – a szervezeti agilitás egyik legjobb esettanulmánya.",
+      "source": "MIT Sloan",
+      "url": "https://sloanreview.mit.edu/video/leaders-at-all-levels-kraft-heinzs-5x-speed-secret/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌍 Globális",
+      "excerpt": "Is 36 months too long for a new-product cycle? It was for Kraft Heinz. So, starting with a pilot project, it was able to cut time to market to just six months by redesigning how people worked. Today, units throughout the company are applying that model’s step-by-step approach to change and are seeing measurable improvements […]"
+    },
+    {
+      "id": "art_1773421410792_32_monu",
+      "title": "Flexible work empowers women and strengthens business performance, study finds",
+      "title_hu": "Rugalmas munka és a nők karrierje: az összefüggést az új kutatás is megerősíti",
+      "summary_hu": "Egy friss ázsiai tanulmány szerint a hibrid munkavégzés gyorsítja a nők karrierlehetőségeit, miközben növeli a termelékenységet, a kollaborációt és a megtartási mutatókat. A rugalmas munkavégzés egyszerre etikai és üzleti befektetés.",
+      "source": "HRM Asia",
+      "url": "https://hrmasia.com/flexible-work-empowers-women-and-strengthens-business-performance-study-finds/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🌏 Ázsia",
+      "excerpt": "Hybrid work is accelerating women’s career progression, with new research showing flexibility boosts productivity, collaboration, and retention across organisations."
+    },
+    {
+      "id": "art_1773421410792_40_d1je",
+      "title": "Most látszik, mekkorát tévedtek az autógyártók: ki fog milliárdokat bukni?",
+      "title_hu": "Mekkorát tévedtek az autógyártók? Ki fog milliárdokat bukni?",
+      "summary_hu": "A Honda történelmi veszteséget jelentett be – ilyenre 70 éve nem volt példa. Az autóipar stratégiai irányváltása tömeges elbocsátásokkal és átszervezésekkel jár, amelyek a hazai autóipari munkavállalókat is közvetlenül érinthetik.",
+      "source": "Portfolio",
+      "url": "https://www.portfolio.hu/podcast/20260313/most-latszik-mekkorat-tevedtek-az-autogyartok-ki-fog-milliardokat-bukni-824260",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "Már meghallgatható a Portfolio Checklist pénteki adása. A mai műsorban három témát dolgoztunk fel. Elsőként arról beszéltünk, hogy a Honda történelmi veszteséget jelentett be – ilyenre hetven éve nem volt példa. A hír azért is különösen figyelemre méltó, mert jól rávilágít az autóipar egészét érintő problémákra, amelyek részben abból fakadnak, hogy a szektor túl nagy várakozásokat fűzött az elektromos autók gyors térnyeréséhez. A témáról Nagy Viktor, a Portfolio vezető részvénypiaci elemzője beszélt. A második blokkban a hamarosan megrendezett SmartMan konferenciáról kérdeztük Ács Istvánt, az "
+    },
+    {
+      "id": "art_1773421410792_41_6l8t",
+      "title": "Készül a nagy szigorítás: egy időre vége az édes életnek Európában",
+      "title_hu": "Vége az édes életnek: nagy szigorítás készül Európában",
+      "summary_hu": "Az Európai Bizottság legalább egy évre felfüggesztené a vámmentes cukorimportot a belső piac stabilizálása érdekében. A protekcionista lépések sorozata jelzi, hogy Európa gazdaságpolitikája átalakulóban van – ez a hazai vállalkozásokat is érinti.",
+      "source": "Portfolio",
+      "url": "https://www.portfolio.hu/unios-forrasok/20260313/keszul-a-nagy-szigoritas-egy-idore-vege-az-edes-eletnek-europaban-824284",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇪🇺 Európa",
+      "excerpt": "Az Európai Bizottság legalább egy évre felfüggesztené a vámmentes cukorimportot, hogy stabilizálja a belső piaci árakat – jelentette be Christophe Hansen mezőgazdasági biztos - írta meg a Bloomberg."
+    },
+    {
+      "id": "art_1773421410792_42_o1u2",
+      "title": "Célt ért a dolgozói ultimátum: hirtelen felállt a pszichiátriai intézet vezetője",
+      "title_hu": "Sikerrel járt a dolgozói ultimátum: lemondott a pszichiátriai intézet főigazgatója",
+      "summary_hu": "A Nyírő Gyula Országos Pszichiátriai Intézet dolgozói azzal fenyegeztek, hogy felmondják önként vállalt többletmunkájukat – és ez elég volt: Ézsi Robin főigazgató pénteken benyújtotta lemondását. Az eset példa arra, hogy a szervezett munkavállalói fellépés valódi változást hozhat.",
+      "source": "Portfolio",
+      "url": "https://www.portfolio.hu/gazdasag/20260313/celt-ert-a-dolgozoi-ultimatum-hirtelen-felallt-a-pszichiatriai-intezet-vezetoje-824280",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "Pénteken benyújtotta lemondását Ézsi Robin, a Nyírő Gyula Országos Pszichiátriai és Addiktológiai Intézet (Nyírő OPAI) főigazgatója. Az ügy előzménye, hogy a budapesti pszichiáterek jelentős része korábban azt üzente, hogy 2026 tavaszától felmondja az önként vállalt többletmunkát, ami komoly problémát jelentene a szakellátásban. A tiltakozás közvetlen előzménye Ézsi Robin főigazgatói tevékenysége volt."
+    },
+    {
+      "id": "art_1773421410792_51_ptlb",
+      "title": "A CATL megerősítette, hogy súlyos baleset történt a debreceni akkugyárának építési területén",
+      "title_hu": "CATL megerősítette: súlyos munkavédelmi baleset a debreceni gyárépítésen",
+      "summary_hu": "A CATL akkugyár debreceni építési területén mintegy 3 méteres magasságból zuhant le egy munkás. A kínai óriásvállalat megerősítette a balesetet – az eset ismét ráirányítja a figyelmet a nagy beruházások munkavédelmi kockázataira Magyarországon.",
+      "source": "Telex",
+      "url": "https://telex.hu/belfold/2026/03/13/catl-debrecen-akkugyar-megerositette-baleset",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "Tényleg lezuhant egy munkás, a cég közleménye szerint nagyjából 3 méteres magasságból."
+    },
+    {
+      "id": "art_1773421410792_52_r198",
+      "title": "Lemondott Ézsi Robin a Nyírő Gyula Országos Pszichiátriai és Addiktológiai Intézet éléről",
+      "title_hu": "Lemondott a Nyírő pszichiátriai intézet főigazgatója – tömegesen hagyták ott a dolgozók",
+      "summary_hu": "Ézsi Robin főigazgatósága alatt a Nyírő Gyula Intézet elveszítette pszichiátriai stábjának jelentős részét. A lemondás hátterében strukturális HR-problémák állnak: túlterhelés, az elismertség hiánya és rossz munkakörülmények.",
+      "source": "Telex",
+      "url": "https://telex.hu/belfold/2026/03/13/ezsi-robin-lemondas-nyiro-opai-vizsgalobizottsag-pinter-sandor",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "Főigazgatósága alatt tömegével hagyták ott a dolgozók a pszichiátriai ellátás legfontosabb országos intézményét."
+    },
+    {
+      "id": "art_1773421410792_56_bvaa",
+      "title": "Erős évet zárt a bank, amit Orbánék betámadtak",
+      "title_hu": "Erős évet zárt az Erste Bank Magyarországon, miközben a kormány nyomás alatt tartotta",
+      "summary_hu": "Az Erste Bank Magyarország növelte nyereségét 2025-ben, miközben a bankszektort extra adóterhek sújtották. Az üzleti és pénzügyi stabilitás kérdése közvetlenül hat a munkáltatók bérezési és fejlesztési döntéseire is.",
+      "source": "Telex",
+      "url": "https://telex.hu/gazdasag/2026/03/13/erste-bank-hitelezes-bankrendszer-profit-csalas-jelasity",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "A bankszektornak tavaly csökkent a nyeresége, de az Erstének nőtt az eredménye."
+    },
+    {
+      "id": "art_1773421410792_57_mqx6",
+      "title": "Spar-vezér: Észszerű feltételek mellett szeretnénk Magyarországon maradni",
+      "title_hu": "Spar-vezér: Megmaradnánk Magyarországon, de csak észszerű feltételekkel",
+      "summary_hu": "Hans K. Reisch vezérigazgató szerint a különadó 85 millió, az árréskorlátozás 37 millió euróba kerül a hazai Sparnak évente. Ha az üzleti feltételek nem javulnak, a Spar is elhagyhatja Magyarországot – ez több ezer munkahely sorsát érintené.",
+      "source": "Telex",
+      "url": "https://telex.hu/gazdasag/2026/03/13/spar-vezerigazgato-kulonado-magyarorszag",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "Hans K. Reisch szerint a magyar kormány által kivetett különadó tavaly 85 millió euróba, az árréskorlátozás pedig 37 millió euróba került a hazai Sparnak."
+    },
+    {
+      "id": "art_1773421410792_63_tdpd",
+      "title": "EVE Power Hungary, VOSZ Sign Strategic Partnership to Strengthen Local Supply Chain",
+      "title_hu": "EVE Power Hungary és a VOSZ stratégiai partnerséget kötött a helyi beszállítói hálózat fejlesztésére",
+      "summary_hu": "A kínai akkumulátorgyártó EVE Power Hungary és a VOSZ Debrecenben stratégiai együttműködési megállapodást írt alá a helyi beszállítói lánc megerősítésére. A partnerség munkahelyteremtési potenciállal bír a régióban.",
+      "source": "BBJ",
+      "url": "https://bbj.hu/business/industry/deals/eve-power-hungary-vosz-sign-strategic-partnership-to-strengthen-local-supply-chain/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "EVE Power Hungary and the National Association of Entrepreneurs and Employers (VOSZ) signed a strategic cooperation agreement in Debrecen on Thursday to strengthen local supplier networks."
+    },
+    {
+      "id": "art_1773421410792_65_frj7",
+      "title": "Hungary Construction Output Drops Considerably Year-on-year in January",
+      "title_hu": "Magyarország építőipara 11,4%-kal esett vissza januárban",
+      "summary_hu": "A KSH adatai szerint az építőipar kibocsátása 2026 januárjában 11,4%-kal csökkent éves alapon, mindkét fő szegmensben. A visszaesés a szakmunkás-foglalkoztatásra és a munkaerőpiac szerkezetére is hatással lehet.",
+      "source": "BBJ",
+      "url": "https://bbj.hu/business/real-estate/construction/hungary-construction-output-drops-considerably-year-on-year-in-january/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "Hungary’s construction output volume fell 11.4% year-on-year in January 2026 based on raw data, while working day-adjusted figures show a 9.6% decline, according to the latest data by the CEntral Statistical Office (KSH). Output decreased in both main construction segments. The construction of buildings fell 9.6%, while civil engineering output dropped 14.5%. On a seasonally […]"
+    },
+    {
+      "id": "art_1773421410792_67_p5ew",
+      "title": "CEOs Facing ‘Tyranny of the Urgent’ – The latest issue of the BBJ",
+      "title_hu": "\"A sürgős zsarnoksága\": a magyar vezérigazgatók az azonnali nyomás és a tech-átalakulás csapdájában",
+      "summary_hu": "A PwC Magyarország 15. CEO-felmérése szerint a hazai vezérigazgatók rövid távú nyomással küzdenek, miközben a hosszú távú technológiai átalakulást is kellene menedzselniük. A riport az egyensúly megtalálásának kihívásait elemzi.",
+      "source": "BBJ",
+      "url": "https://bbj.hu/business/the-latest-issue-of-the-budapest-business-journal/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "The country managing partner of PwC Hungary, László Radványi, says local executives are grappling with mounting shorttermpressure while navigating the long-term techtransformation reshaping the global economy, as laid out in the firm’s 15th Hungarian CEOSurvey."
+    },
+    {
+      "id": "art_1773421410792_68_n5hz",
+      "title": "Erste Bank Hungary After-tax Profit Rises 14% in 2025",
+      "title_hu": "Az Erste Bank Hungary adózás utáni nyeresége 14%-kal nőtt 2025-ben",
+      "summary_hu": "Az Erste Bank Hungary 150 milliárd forintos adózás utáni eredményt ért el 2025-ben, 14%-os növekedéssel. A bankszektori teljesítmény mértékadó a hazai gazdasági légkör szempontjából.",
+      "source": "BBJ",
+      "url": "https://bbj.hu/economy/finance/banking/erste-bank-hungary-after-tax-profit-rises-14-in-2025/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "After-tax profit of Austrian-owned Erste Bank Hungary rose 14% to HUF 150 bln in 2025, chairman-CEO Radovan Jelasity said, according to a report by news wire MTI."
+    },
+    {
+      "id": "art_1773421410792_70_sqqv",
+      "title": "S&P Warns Hungary Could Face Downgrade",
+      "title_hu": "Az S&P figyelmeztette Magyarországot: lehetséges hitelminősítés-rontás",
+      "summary_hu": "Az S&P Global jelenleg \"BBB-\" besorolással és \"negatív\" kilátással értékeli Magyarországot. Ha megismétlődik a 2022-es energiaárak sokkszerű emelkedése, az súlyos folyó fizetési mérleg-romláshoz, inflációhoz és forintgyengüléshez vezethet.",
+      "source": "BBJ",
+      "url": "https://bbj.hu/economy/finance/ratings/sp-warns-hungary-could-face-downgrade/",
+      "pubDate": "2026-03-13T07:00:00.000Z",
+      "geo": "🇭🇺 Magyar",
+      "excerpt": "S&P Global Ratings currently rates Hungary at \"BBB‑\" with a \"negative\" outlook and warns that a repeat of the 2022 post‑invasion gas‑price surge could sharply worsen the country's current‑account balance, raise inflation, and weaken the forint."
+    },
     {
       "id": "art_1773386084739_0",
       "source": "Harvard Business Review",
@@ -11,7 +506,8 @@
       "url": "https://hbr.org/2026/03/developing-employees-who-thrive-through-continuous-change",
       "published": "2026-03-12T12:25:33.000Z",
       "excerpt": "Leaders must build systems that turn continuous transformation into something employees help shape, not simply endure.",
-      "summary_hu": "A folyamatos szervezeti változás nemcsak fárasztja, hanem ki is égetheti a munkavállalókat – hacsak a vezetők nem alakítanak ki olyan rendszereket, amelyekben az emberek aktívan formálhatják a változást, nem csak elszenvedik. A cikk konkrét lépéseket mutat be arra, hogyan váljanak a transzformációs ciklusok fejlődési lehetőséggé."
+      "summary_hu": "A folyamatos szervezeti változás nemcsak fárasztja, hanem ki is égetheti a munkavállalókat – hacsak a vezetők nem alakítanak ki olyan rendszereket, amelyekben az emberek aktívan formálhatják a változást, nem csak elszenvedik. A cikk konkrét lépéseket mutat be arra, hogyan váljanak a transzformációs ciklusok fejlődési lehetőséggé.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_1",
@@ -23,7 +519,8 @@
       "url": "https://hbr.org/2026/03/how-to-turn-individual-talent-into-organizational-excellence",
       "published": "2026-03-12T12:15:13.000Z",
       "excerpt": "Leaders need to treat performance as a design problem.",
-      "summary_hu": "A vezetők hajlamosak a teljesítményt egyéni képességek kérdéseként kezelni, miközben a valódi szervezeti kiválóság tervezési probléma. A szerzők amellett érvelnek, hogy a rendszerek és struktúrák átgondolása fontosabb, mint a legjobb tehetségek megtalálása."
+      "summary_hu": "A vezetők hajlamosak a teljesítményt egyéni képességek kérdéseként kezelni, miközben a valódi szervezeti kiválóság tervezési probléma. A szerzők amellett érvelnek, hogy a rendszerek és struktúrák átgondolása fontosabb, mint a legjobb tehetségek megtalálása.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_2",
@@ -35,7 +532,8 @@
       "url": "https://hbr.org/podcast/2026/03/strategy-summit-2026-why-ai-transformation-needs-a-human-touch",
       "published": "2026-03-12T12:10:48.000Z",
       "excerpt": "A conversation with Publicis Sapient CEO Nigel Vaz on AI and digital transformation.",
-      "summary_hu": "A Publicis Sapient vezérigazgatója szerint az AI-transzformáció csak akkor sikeres, ha az emberi tényező – az empátia, a kontextus és a kulturális érzékenység – végig jelen van a folyamatban. Az automatizálás önmagában nem elég: a digitális átalakulás emberi vezetést igényel."
+      "summary_hu": "A Publicis Sapient vezérigazgatója szerint az AI-transzformáció csak akkor sikeres, ha az emberi tényező – az empátia, a kontextus és a kulturális érzékenység – végig jelen van a folyamatban. Az automatizálás önmagában nem elég: a digitális átalakulás emberi vezetést igényel.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_3",
@@ -47,7 +545,8 @@
       "url": "https://hbr.org/2026/03/who-in-the-c-suite-should-own-ai",
       "published": "2026-03-12T12:05:09.000Z",
       "excerpt": "The jostling for control has just begun. Here's how leaders can resolve it.",
-      "summary_hu": "A felsővezetői csapatokon belül egyre élesebb a verseny az AI-stratégia tulajdonlásáért – a CTO, CDO és CHRO egyaránt igényt tart rá. A cikk keretet ad arra, hogyan oszthatóak el a felelősségek hatékonyabban, és miért fontos, hogy a HR-nek is helye legyen az AI-irányításban."
+      "summary_hu": "A felsővezetői csapatokon belül egyre élesebb a verseny az AI-stratégia tulajdonlásáért – a CTO, CDO és CHRO egyaránt igényt tart rá. A cikk keretet ad arra, hogyan oszthatóak el a felelősségek hatékonyabban, és miért fontos, hogy a HR-nek is helye legyen az AI-irányításban.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_4",
@@ -59,7 +558,8 @@
       "url": "https://hbr.org/2026/03/healthcare-uses-specialized-language-it-needs-specialized-ai-too",
       "published": "2026-03-11T12:25:45.000Z",
       "excerpt": "Large language models often misinterpret the clinical dialects used across medical fields.",
-      "summary_hu": "Az általános célú nagy nyelvi modellek rendszeresen félreértelmezik az orvosi szaknyelvet, ami komoly kockázatot jelent a klinikai döntéstámogatásban. Az egészségügyi AI-fejlesztők egyre inkább specializált, területspecifikus modelleket igényelnek a megbízhatóbb működéshez."
+      "summary_hu": "Az általános célú nagy nyelvi modellek rendszeresen félreértelmezik az orvosi szaknyelvet, ami komoly kockázatot jelent a klinikai döntéstámogatásban. Az egészségügyi AI-fejlesztők egyre inkább specializált, területspecifikus modelleket igényelnek a megbízhatóbb működéshez.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_5",
@@ -71,7 +571,8 @@
       "url": "https://hbr.org/2026/03/what-should-your-companys-ai-sound-like-to-customers",
       "published": "2026-03-11T12:15:51.000Z",
       "excerpt": "Tone can matter just as much as content.",
-      "summary_hu": "Az AI-alapú ügyfélkommunikáció hangvétele legalább annyira meghatározza a márkaképet, mint a tartalom maga. A cikk azt vizsgálja, hogyan találhatják meg a vállalatok az autentikus, márkával konzisztens AI-hangot – és miért kell ezt tudatos döntésként kezelni."
+      "summary_hu": "Az AI-alapú ügyfélkommunikáció hangvétele legalább annyira meghatározza a márkaképet, mint a tartalom maga. A cikk azt vizsgálja, hogyan találhatják meg a vállalatok az autentikus, márkával konzisztens AI-hangot – és miért kell ezt tudatos döntésként kezelni.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_6",
@@ -83,7 +584,8 @@
       "url": "https://hbr.org/podcast/2026/03/looking-back-on-nikes-evolution-from-startup-to-global-enterprise",
       "published": "2026-03-11T10:05:50.000Z",
       "excerpt": "A conversation with Phil Knight, co-founder and former CEO of Nike, on the company's enduring culture of innovation.",
-      "summary_hu": "Phil Knight, a Nike alapítója visszatekint arra, hogyan vált a cég egy raktárból globális sportmárka-birodalommá, és mi tartotta fenn az innovációs kultúrát a növekedés során. Az interjú tanulságos olvasmány a szervezeti kultúra és az idő próbáján való helytállás szempontjából."
+      "summary_hu": "Phil Knight, a Nike alapítója visszatekint arra, hogyan vált a cég egy raktárból globális sportmárka-birodalommá, és mi tartotta fenn az innovációs kultúrát a növekedés során. Az interjú tanulságos olvasmány a szervezeti kultúra és az idő próbáján való helytállás szempontjából.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_7",
@@ -95,7 +597,8 @@
       "url": "https://hbr.org/2026/03/how-to-solve-one-of-the-most-expensive-problems-in-employer-healthcare",
       "published": "2026-03-11T12:05:54.000Z",
       "excerpt": "A center of excellence model at the Mayo Clinic offers coordinated, multidisciplinary evaluations.",
-      "summary_hu": "A munkáltatói egészségügyi kiadások egyik legnagyobb tétele a komplex, nehezen diagnosztizálható esetek kezelése. A Mayo Klinika koordinált, multidiszciplináris modellje csökkenti a felesleges beavatkozásokat és a hosszú távú egészségügyi költségeket."
+      "summary_hu": "A munkáltatói egészségügyi kiadások egyik legnagyobb tétele a komplex, nehezen diagnosztizálható esetek kezelése. A Mayo Klinika koordinált, multidiszciplináris modellje csökkenti a felesleges beavatkozásokat és a hosszú távú egészségügyi költségeket.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_8",
@@ -107,7 +610,8 @@
       "url": "https://www.hrdive.com/news/ai-trailed-dei-immigration-2025-compliance-impact/814361/",
       "published": "2026-03-12T20:27:00.000Z",
       "excerpt": "The combination of regulatory and economic uncertainty prompted more than one-third of employers to reduce headcount.",
-      "summary_hu": "Egy Littler-felmérés szerint a munkáltatók 2025-ben a DEI-t és a bevándorlási politikát tartják a compliance szempontjából nagyobb kihívásnak, mint az AI-t. A szabályozási és gazdasági bizonytalanság hatására a cégek több mint egyharmada csökkentette a létszámát az elmúlt évben."
+      "summary_hu": "Egy Littler-felmérés szerint a munkáltatók 2025-ben a DEI-t és a bevándorlási politikát tartják a compliance szempontjából nagyobb kihívásnak, mint az AI-t. A szabályozási és gazdasági bizonytalanság hatására a cégek több mint egyharmada csökkentette a létszámát az elmúlt évben.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_9",
@@ -119,7 +623,8 @@
       "url": "https://www.hrdive.com/news/employees-dont-see-ai-as-a-co-worker/814585/",
       "published": "2026-03-12T20:26:00.000Z",
       "excerpt": "Here's a roundup of numbers from the last week of HR news.",
-      "summary_hu": "A heti HR-számösszefoglaló szerint a munkavállalók többsége nem tekinti az AI-t munkatársnak, csupán eszköznek. Az összeállítás tartalmazza a Honda Kronos-perben kötött egyezség összegét és egyéb aktuális HR-trendeket is."
+      "summary_hu": "A heti HR-számösszefoglaló szerint a munkavállalók többsége nem tekinti az AI-t munkatársnak, csupán eszköznek. Az összeállítás tartalmazza a Honda Kronos-perben kötött egyezség összegét és egyéb aktuális HR-trendeket is.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_10",
@@ -131,7 +636,8 @@
       "url": "https://www.hrdive.com/news/instant-paychecks-can-boost-low-income-workers-savings-habits/814325/",
       "published": "2026-03-12T15:52:00.000Z",
       "excerpt": "Despite consumer advocates' concerns around earned wage access fees, researchers found modest usage can help with financial planning.",
-      "summary_hu": "Új kutatás szerint az azonnali bérfizetési megoldások mérsékelten, de következetesen javítják az alacsony jövedelmű munkavállalók megtakarítás-szokásait. A fogyasztóvédők által kifogásolt díjak ellenére a rendszeres, kis összegű felhasználás pénzügyi stabilitást eredményez."
+      "summary_hu": "Új kutatás szerint az azonnali bérfizetési megoldások mérsékelten, de következetesen javítják az alacsony jövedelmű munkavállalók megtakarítás-szokásait. A fogyasztóvédők által kifogásolt díjak ellenére a rendszeres, kis összegű felhasználás pénzügyi stabilitást eredményez.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_11",
@@ -143,7 +649,8 @@
       "url": "https://www.hrdive.com/news/how-to-train-managers-for-pay-questions/814554/",
       "published": "2026-03-12T15:51:00.000Z",
       "excerpt": "Managers often fear saying the wrong thing, but training and documentation can help.",
-      "summary_hu": "A béremelésekkel kapcsolatos kérdésekre adott bizonytalan válaszok súlyos bizalomvesztést okozhatnak. A szakértők szerint a menedzserképzés és az átlátható dokumentáció kulcs ahhoz, hogy a bérbeszélgetések – az inflációt és a teljesítményt összekötve – konstruktívak maradjanak."
+      "summary_hu": "A béremelésekkel kapcsolatos kérdésekre adott bizonytalan válaszok súlyos bizalomvesztést okozhatnak. A szakértők szerint a menedzserképzés és az átlátható dokumentáció kulcs ahhoz, hogy a bérbeszélgetések – az inflációt és a teljesítményt összekötve – konstruktívak maradjanak.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_12",
@@ -155,7 +662,8 @@
       "url": "https://www.hrdive.com/news/us-companies-plan-to-accelerate-global-hiring-despite-hurdles/814532/",
       "published": "2026-03-12T15:39:00.000Z",
       "excerpt": "As global expansion and AI adoption speed up, engagement has faltered.",
-      "summary_hu": "Az Atlas HXM felmérése szerint az amerikai vállalatok globális toborzási terveiket felgyorsítják, miközben a munkavállalói elkötelezettség csökkent a terjeszkedési folyamatok és az AI-integráció közepette. A globális munkaerőpiac komplexitása egyre nagyobb HR-kihívást jelent."
+      "summary_hu": "Az Atlas HXM felmérése szerint az amerikai vállalatok globális toborzási terveiket felgyorsítják, miközben a munkavállalói elkötelezettség csökkent a terjeszkedési folyamatok és az AI-integráció közepette. A globális munkaerőpiac komplexitása egyre nagyobb HR-kihívást jelent.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_13",
@@ -167,7 +675,8 @@
       "url": "https://www.hrdive.com/news/workers-receptive-to-corporate-bs-may-struggle-with-analytic-thinking/814501/",
       "published": "2026-03-12T15:38:00.000Z",
       "excerpt": "Empty rhetoric in an organization acts more like a clogged toilet of inefficiency, a Cornell researcher said.",
-      "summary_hu": "Egy Cornell-kutatás kimutatta, hogy az üres vállalati szólamokra fogékony munkavállalók gyengébb analitikus gondolkodást mutatnak. A szerzők szerint a hitelességet nélkülöző kommunikáció elfojtja a kritikus gondolkodást, ami hosszú távon szervezeti hatékonysági problémákhoz vezet."
+      "summary_hu": "Egy Cornell-kutatás kimutatta, hogy az üres vállalati szólamokra fogékony munkavállalók gyengébb analitikus gondolkodást mutatnak. A szerzők szerint a hitelességet nélkülöző kommunikáció elfojtja a kritikus gondolkodást, ami hosszú távon szervezeti hatékonysági problémákhoz vezet.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_14",
@@ -179,7 +688,8 @@
       "url": "https://www.hrdive.com/news/bravo-warner-bros-cant-compel-arbitration-real-housewives-lawsuit/814449/",
       "published": "2026-03-11T20:47:00.000Z",
       "excerpt": "The defendants didn't bring up arbitration for more than a year after the lawsuit was filed.",
-      "summary_hu": "Egy szövetségi bíró kimondta, hogy a Bravo és a Warner Bros. nem kényszerítheti arbitrációra a volt Real Housewives-szereplőt, mivel az arbitrációs igényt több mint egy évnyi mulasztás után terjesztette elő. Az eset rámutat az arbitrációs záradékok időben való érvényesítésének fontosságára."
+      "summary_hu": "Egy szövetségi bíró kimondta, hogy a Bravo és a Warner Bros. nem kényszerítheti arbitrációra a volt Real Housewives-szereplőt, mivel az arbitrációs igényt több mint egy évnyi mulasztás után terjesztette elő. Az eset rámutat az arbitrációs záradékok időben való érvényesítésének fontosságára.",
+      "geo": "🌍 Globális"
     },
     {
       "id": "art_1773386084739_15",
@@ -191,7 +701,8 @@
       "url": "https://www.hrdive.com/news/eeoc-restaurant-fired-worker-seizure-focus-on-health/814463/",
       "published": "2026-03-11T20:46:00.000Z",
       "excerpt": "The Americans with Disabilities Act prohibits discrimination against employees who are regarded as having a disability.",
-      "summary_hu": "Az EEOC pert indított egy étterem ellen, amely rohamot kapott munkavállalóját azzal az indokkal bocsátotta el, hogy így az egészségére összpontosíthat. Az ADA tiltja az ilyen diszkriminációt azokkal szemben, akiket a munkáltató fogyatékossággal rendelkezőként kezel."
+      "summary_hu": "Az EEOC pert indított egy étterem ellen, amely rohamot kapott munkavállalóját azzal az indokkal bocsátotta el, hogy így az egészségére összpontosíthat. Az ADA tiltja az ilyen diszkriminációt azokkal szemben, akiket a munkáltató fogyatékossággal rendelkezőként kezel.",
+      "geo": "🇺🇸 USA"
     },
     {
       "id": "art_1773386084739_16",
@@ -203,7 +714,8 @@
       "url": "https://www.hrdive.com/news/eeoc-staffer-bias-lawsuit-settlement/814485/",
       "published": "2026-03-11T20:45:00.000Z",
       "excerpt": "The case drew attention due to the rarity of lawsuits alleging workplace discrimination against the commission.",
-      "summary_hu": "Az EEOC 250 000 dolláros egyezséget kötött saját korábbi munkatársával, aki diszkriminációs pert indított az ügynökség ellen. Az eset kivételes figyelmet kapott, hiszen az EEOC maga felügyeli a munkahelyi diszkrimináció elleni törvények betartását."
+      "summary_hu": "Az EEOC 250 000 dolláros egyezséget kötött saját korábbi munkatársával, aki diszkriminációs pert indított az ügynökség ellen. Az eset kivételes figyelmet kapott, hiszen az EEOC maga felügyeli a munkahelyi diszkrimináció elleni törvények betartását.",
+      "geo": "🇺🇸 USA"
     },
     {
       "id": "art_1773386084739_17",
@@ -215,7 +727,8 @@
       "url": "https://www.hrdive.com/news/freedom-of-conscience-in-the-workplace-act-proposal/814426/",
       "published": "2026-03-11T15:07:00.000Z",
       "excerpt": "Florida's HB 641, which targets gender identity in the workplace, puts employers between a rock and a hard place.",
-      "summary_hu": "A floridai HB 641 törvényjavaslat, amely korlátozná a nemi identitás munkahelyi elismerését, nehéz helyzetbe hozza a munkáltatókat: a szövetségi és állami jogszabályok közötti feszültség jogi kockázatot teremt. Az ügyvédek szerint a vállalatoknak már most érdemes felülvizsgálni irányelveiket."
+      "summary_hu": "A floridai HB 641 törvényjavaslat, amely korlátozná a nemi identitás munkahelyi elismerését, nehéz helyzetbe hozza a munkáltatókat: a szövetségi és állami jogszabályok közötti feszültség jogi kockázatot teremt. Az ügyvédek szerint a vállalatoknak már most érdemes felülvizsgálni irányelveiket.",
+      "geo": "🌍 Globális"
     }
   ]
 }

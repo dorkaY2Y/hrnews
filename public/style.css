@@ -47,15 +47,15 @@ body {
 
 /* ---- Y2Y TOP BAR ---- */
 .y2y-bar {
-  background: #ffffff;
-  border-bottom: 1px solid #e8e2d8;
+  background: #050509;
+  border-bottom: 1px solid rgba(255,255,255,.05);
 }
 
 .y2y-bar-inner {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 28px;
-  height: 48px;
+  height: 38px;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -69,11 +69,12 @@ body {
 }
 
 .y2y-bar-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
   color: var(--gold);
-  letter-spacing: 0.5px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
   line-height: 1;
   transition: opacity .15s;
 }
@@ -88,14 +89,14 @@ body {
 }
 
 .y2y-bar-tagline {
-  font-size: 12.5px;
+  font-size: 11px;
   color: #5a5470;
-  font-style: italic;
+  font-style: normal;
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.2px;
 }
 
 .y2y-bar-link {
@@ -146,17 +147,17 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 4px;
+  letter-spacing: 8px;
   color: var(--gold);
   text-transform: uppercase;
-  margin-bottom: 1px;
+  margin-bottom: 3px;
 }
 
 .logo-headline {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   color: var(--text);
   line-height: 1;
 }
@@ -290,6 +291,7 @@ body {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border: 1px solid var(--card-border);
+  border-left: 5px solid var(--geo-color, var(--gold));
   display: flex;
   flex-direction: column;
   transition: box-shadow .22s, transform .22s, border-color .22s;
@@ -303,9 +305,10 @@ body {
 }
 
 .card-top {
-  height: 4px;
+  height: 3px;
   flex-shrink: 0;
   background: var(--geo-color, var(--gold));
+  opacity: 0.55;
 }
 
 .card-body {
@@ -361,12 +364,12 @@ body {
 }
 
 .card-title {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 16.5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.32;
   color: var(--card-text);
-  letter-spacing: -0.1px;
+  letter-spacing: 0px;
 }
 
 .card-divider {
@@ -624,10 +627,10 @@ body {
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 640px) {
-  .y2y-bar-inner  { padding: 0 18px; height: 42px; }
+  .y2y-bar-inner  { padding: 0 18px; height: 34px; }
   .y2y-bar-tagline { display: none; }
   .header-inner   { height: 64px; padding: 0 18px; }
-  .logo-headline  { font-size: 20px; }
+  .logo-headline  { font-size: 19px; }
   .geo-filter-bar { top: 64px; }
   .filter-bar     { top: 112px; }
   .articles-grid  { grid-template-columns: 1fr; }
@@ -679,17 +682,33 @@ body {
   letter-spacing: 0.3px;
 }
 
-.geo-btn:hover {
-  border-color: var(--gold);
-  color: var(--gold-light);
+.geo-btn:not([data-geo="all"])::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--btn-color, var(--border-2));
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity .15s;
 }
 
+.geo-btn:hover {
+  border-color: var(--btn-color, var(--gold));
+  color: var(--text);
+}
+
+.geo-btn:hover::before { opacity: 1; }
+
 .geo-btn.active {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: #0d0d12;
+  background: var(--btn-color, var(--gold));
+  border-color: var(--btn-color, var(--gold));
+  color: #fff;
   font-weight: 700;
 }
+
+.geo-btn.active::before { background: rgba(255,255,255,.35); opacity: 1; }
 
 .geo-count {
   display: inline-flex;
@@ -726,8 +745,8 @@ body {
 }
 
 .card.featured .card-title {
-  font-size: 22px;
-  line-height: 1.28;
+  font-size: 24px;
+  line-height: 1.24;
 }
 
 .card.featured .card-summary {
