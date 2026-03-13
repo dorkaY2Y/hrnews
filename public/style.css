@@ -998,8 +998,9 @@ body {
   .main-content   { padding: 16px 14px 56px; }
   .search-wrap    { padding: 16px 14px 0; }
 
-  /* Mobile cards: compact list style, geo-color left border gives variety */
-  .card:not(.featured) .card-cover  { display: none; }
+  /* Mobile cards: kep nelkuli cover elrejtve; kepesnel kisebb cover marad */
+  .card:not(.featured) .card-cover:not(.has-image) { display: none; }
+  .card:not(.featured) .card-cover.has-image { height: 80px; padding: 8px 14px; }
   .card:not(.featured) .card-body   { padding: 14px 16px 8px; gap: 6px; }
   .card:not(.featured) .card-title  { font-size: 15px; line-height: 1.3; }
   .card:not(.featured) .card-divider { display: none; }
@@ -1013,17 +1014,6 @@ body {
     overflow: hidden;
   }
   .card:not(.featured) .card-footer { padding: 8px 16px 12px; }
-
-  /* Every 4th regular card: show a thin color-accent strip instead of no cover */
-  .card:not(.featured):nth-child(4n) .card-cover {
-    display: flex;
-    height: 44px;
-    padding: 6px 14px;
-  }
-  .card:not(.featured):nth-child(4n) .card-flag {
-    font-size: 36px;
-    opacity: 0.12;
-  }
 }
 
 

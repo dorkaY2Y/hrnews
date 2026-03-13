@@ -111,6 +111,13 @@ function render() {
   }
   if (y2yArts.length) filtered.splice(Math.min(5, filtered.length), 0, ...y2yArts);
 
+  // Azonos forrasok ne keruljenek egymas melle — interleave by source
+  const featured = filtered.shift();         // featured card mindig elso marad
+  const rest = interleaveBySource(filtered);
+  filtered.length = 0;
+  if (featured) filtered.push(featured);
+  filtered.push(...rest);
+
   if (!filtered.length) {
     grid.innerHTML = '<div class="empty-state"><div class="empty-icon">&#x1F50D;</div><h2>Nincs tal&aacute;lat</h2><p>Pr&oacute;b&aacute;lj m&aacute;s felt&eacute;teleket.</p></div>';
     return;
@@ -182,6 +189,18 @@ function cardHTML(a, idx) {
   return '<article class="card' + (isFeat ? ' featured' : isWide ? ' card--wide' : '') + '" data-geo="' + esc(a.geo || '') + '" data-url="' + esc(a.url) + '" style="--geo-color:' + geoColor + ';cursor:pointer">'
     + inner
     + '</article>';
+}
+
+// Azonos forrasok szetszorasahoz: ne legyenek egymas mellett
+function interleaveBySource(articles) {
+  const result = [];
+  const pool = [...articles];
+  while (pool.length) {
+    const lastSrc = result.length ? result[result.length - 1].source : null;
+    const idx = pool.findIndex(a => a.source !== lastSrc);
+    result.push(...pool.splice(idx === -1 ? 0 : idx, 1));
+  }
+  return result;
 }
 
 function showSkeletons() {
