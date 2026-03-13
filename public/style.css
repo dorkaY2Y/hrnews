@@ -1,0 +1,410 @@
+/* ===========================
+   HR World News – Portal CSS
+   =========================== */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:      #0f2140;
+  --navy-mid:  #1a3560;
+  --blue:      #1d4ed8;
+  --blue-lite: #3b82f6;
+  --bg:        #f1f5f9;
+  --surface:   #ffffff;
+  --border:    #e2e8f0;
+  --text:      #0f172a;
+  --muted:     #64748b;
+  --radius:    12px;
+  --shadow:    0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
+  --shadow-hov:0 4px 12px rgba(0,0,0,.12), 0 8px 32px rgba(0,0,0,.08);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ---- HEADER ---- */
+.site-header {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 16px rgba(0,0,0,.25);
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo { display: flex; align-items: center; gap: 14px; }
+
+.logo-mark {
+  width: 44px; height: 44px;
+  background: var(--blue-lite);
+  border-radius: 10px;
+  display: grid; place-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px; font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.logo-title {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.logo-sub {
+  display: block;
+  font-size: 11px;
+  color: rgba(255,255,255,.6);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+.header-meta {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; color: rgba(255,255,255,.55);
+  white-space: nowrap;
+}
+
+.update-time { color: rgba(255,255,255,.85); font-weight: 500; }
+
+/* ---- FILTER BAR ---- */
+.filter-bar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 68px;
+  z-index: 90;
+}
+
+.filter-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  height: 52px;
+  align-items: center;
+}
+
+.filter-inner::-webkit-scrollbar { display: none; }
+
+.filter-btn {
+  flex-shrink: 0;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .15s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.filter-btn:hover { border-color: var(--blue-lite); color: var(--blue); }
+
+.filter-btn.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+/* ---- SEARCH ---- */
+.search-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 24px 0;
+}
+
+.search-inner {
+  position: relative;
+  max-width: 480px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px; top: 50%;
+  transform: translateY(-50%);
+  width: 16px; height: 16px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color .15s, box-shadow .15s;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--blue-lite);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+}
+
+.search-input::placeholder { color: var(--muted); }
+
+/* ---- MAIN GRID ---- */
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+/* ---- ARTICLE CARD ---- */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s, transform .2s;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hov);
+  transform: translateY(-2px);
+}
+
+.card-top {
+  height: 4px;
+  flex-shrink: 0;
+}
+
+.card-body {
+  padding: 20px 20px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.category-tag {
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.pub-date {
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+  letter-spacing: -0.2px;
+}
+
+.card-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+
+.summary-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.summary-label::before {
+  content: '🇭🇺';
+  font-size: 11px;
+}
+
+.card-summary {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.card-footer {
+  padding: 12px 20px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  transition: gap .15s;
+}
+
+.read-link:hover { gap: 10px; }
+
+.read-link svg {
+  width: 14px; height: 14px;
+  transition: transform .15s;
+}
+
+.read-link:hover svg { transform: translateX(2px); }
+
+/* ---- EMPTY STATE ---- */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--muted);
+}
+
+.empty-icon { font-size: 48px; margin-bottom: 16px; }
+
+.empty-state h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.empty-state p { font-size: 14px; }
+
+/* ---- SKELETON LOADER ---- */
+.skeleton {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skel {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 6px;
+}
+
+.skel-sm  { height: 12px; width: 40%; }
+.skel-md  { height: 14px; width: 100%; }
+.skel-md2 { height: 14px; width: 85%; }
+.skel-lg  { height: 18px; width: 90%; }
+.skel-lg2 { height: 18px; width: 70%; }
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ---- FOOTER ---- */
+.site-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.55);
+  text-align: center;
+  padding: 28px 24px;
+}
+
+.footer-inner { max-width: 1280px; margin: 0 auto; }
+
+.footer-sources {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.footer-sources strong { color: rgba(255,255,255,.8); }
+
+.footer-note { font-size: 12px; }
+
+.footer-note a {
+  color: var(--blue-lite);
+  text-decoration: none;
+}
+
+.footer-note a:hover { text-decoration: underline; }
+
+/* ---- RESULT COUNT ---- */
+.result-count {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: -8px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 640px) {
+  .header-inner { height: 60px; }
+  .logo-title   { font-size: 18px; }
+  .logo-sub     { display: none; }
+  .filter-bar   { top: 60px; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .main-content { padding: 16px 16px 40px; }
+  .search-wrap  { padding: 16px 16px 0; }
+  .filter-inner { padding: 0 16px; }
+}

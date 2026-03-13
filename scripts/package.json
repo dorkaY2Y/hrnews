@@ -1,0 +1,12 @@
+{
+  "name": "hrnews-fetcher",
+  "version": "1.0.0",
+  "description": "HR News RSS fetcher",
+  "main": "fetch-rss.js",
+  "scripts": {
+    "fetch": "node fetch-rss.js"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}

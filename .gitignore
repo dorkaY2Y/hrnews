@@ -1,0 +1,4 @@
+node_modules/
+data/raw-new-articles.json
+.env
+*.log

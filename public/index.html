@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR World News – Globális HR hírek magyarul</title>
+  <meta name="description" content="A legfrissebb globális HR hírek rövid magyar összefoglalóval." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-mark">HR</div>
+        <div class="logo-text">
+          <span class="logo-title">World News</span>
+          <span class="logo-sub">Globális HR hírek · magyarul</span>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span class="update-label">Frissítve:</span>
+        <span id="lastUpdated" class="update-time">–</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- FILTER BAR -->
+  <nav class="filter-bar" id="filterBar">
+    <div class="filter-inner">
+      <button class="filter-btn active" data-filter="all">Összes</button>
+      <!-- Source buttons injected by JS -->
+    </div>
+  </nav>
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <div class="search-inner">
+      <svg class="search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M15 15l-2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" class="search-input" placeholder="Keresés a hírek között..." />
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <div class="articles-grid" id="articlesGrid">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">📰</div>
+        <h2>Még nincsenek cikkek</h2>
+        <p>Futtasd le a scheduled task-ot az első hírek betöltéséhez.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-sources">
+        Források: <strong>SHRM</strong> · <strong>Harvard Business Review</strong> · <strong>Flex Index</strong> · <strong>HR Dive</strong> · <strong>Y2Y Blog</strong>
+      </p>
+      <p class="footer-note">
+        Magyar összefoglalók: AI-asszisztált · <a href="https://www.y2y.hu" target="_blank" rel="noopener">y2y.hu</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
