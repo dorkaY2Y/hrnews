@@ -250,6 +250,16 @@ body {
   position: sticky;
   top: 128px;
   z-index: 90;
+  overflow: hidden;
+}
+.filter-bar::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 52px;
+  background: linear-gradient(to right, transparent, var(--surface));
+  pointer-events: none;
+  z-index: 2;
 }
 
 .filter-inner {
@@ -891,6 +901,16 @@ body {
   position: sticky;
   top: 80px;
   z-index: 95;
+  overflow: hidden;
+}
+.geo-filter-bar::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 52px;
+  background: linear-gradient(to right, transparent, var(--surface));
+  pointer-events: none;
+  z-index: 2;
 }
 
 .geo-inner {
