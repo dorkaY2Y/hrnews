@@ -528,6 +528,15 @@ body {
   margin-left: auto;
 }
 
+.pub-date-footer {
+  display: none;
+  margin-left: 0;
+}
+
+@media (max-width: 640px) {
+  .pub-date-footer { display: inline; }
+}
+
 .card-title {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   font-size: 17px;
@@ -987,6 +996,19 @@ body {
 }
 
 @media (max-width: 640px) {
+  .filter-inner,
+  .geo-inner {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 14px;
+  }
+  .filter-inner::-webkit-scrollbar,
+  .geo-inner::-webkit-scrollbar { display: none; }
+}
+
+@media (max-width: 640px) {
   .y2y-bar-inner  { padding: 0 18px; height: 34px; }
   .header-inner      { height: auto; padding: 14px 18px 10px; flex-direction: column; align-items: flex-start; gap: 6px; }
   .masthead-name    { font-size: 24px; letter-spacing: -0.5px; }
@@ -1014,6 +1036,13 @@ body {
     overflow: hidden;
   }
   .card:not(.featured) .card-footer { padding: 8px 16px 12px; }
+  /* Meta-sor tisztítás: pub-date mobilon a meta-sorból elrejtve, footer-be kerül */
+  .card:not(.featured) .pub-date:not(.pub-date-footer) { display: none; }
+  /* Olvasd el gomb érintőfelületre optimalizálva */
+  .read-link { min-height: 44px; padding: 0 4px; }
+  /* Header kompaktabb */
+  .header-inner { gap: 4px; padding: 10px 14px 8px; }
+  .masthead-name { font-size: 21px; }
 }
 
 
@@ -1177,7 +1206,7 @@ body {
   }
   .card.featured .card-cover {
     width: 100%;
-    height: 130px;
+    height: 200px;
     min-height: unset;
   }
   .card.featured .card-flag {

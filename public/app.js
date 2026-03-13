@@ -177,6 +177,7 @@ function cardHTML(a, idx) {
     +     '<svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     +   '</a>'
     +   '<div class="card-footer-right">'
+    +     (date && !isFeat ? '<span class="pub-date pub-date-footer">' + date + '</span>' : '')
     +     '<span class="read-time">' + readTime + ' perc</span>'
     +     '<span class="card-num">' + num + '</span>'
     +   '</div>'
