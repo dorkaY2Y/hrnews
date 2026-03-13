@@ -538,6 +538,32 @@ async function fetchRSSFeeds() {
     }
   }
 
+  // ── OG image backfill for new RSS articles without images ─────────────────
+  const needImg = newArticles.filter(a => !a.image && a.url && a.url.startsWith('http'));
+  if (needImg.length) {
+    process.stdout.write(`\nFetching OG images for ${needImg.length} new articles... `);
+    let imgFound = 0;
+    async function fetchOgImage(article) {
+      try {
+        const html = await httpGet(article.url);
+        const rawImg = extractMeta(html, 'og:image') || extractMeta(html, 'twitter:image') || '';
+        const img = isTemplateImage(rawImg) ? '' : rawImg;
+        if (img) {
+          // Fix relative URLs (e.g. HBR)
+          article.image = img.startsWith('/') ? new URL(img, article.url).href : img;
+          imgFound++;
+        }
+      } catch { /* skip */ }
+    }
+    // Concurrency limit: 5
+    let idx = 0;
+    async function worker() {
+      while (idx < needImg.length) { await fetchOgImage(needImg[idx++]); }
+    }
+    await Promise.all(Array.from({ length: Math.min(5, needImg.length) }, worker));
+    console.log(`✓ (${imgFound} kép)`);
+  }
+
   // ── Non-RSS scrapers (CIPD, McKinsey, Gallup…) ────────────────────────────
   for (const cfg of SCRAPERS) {
     const scraped = await scrapeSource(cfg, existingUrls, twoDaysAgo);
