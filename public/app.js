@@ -142,8 +142,12 @@ function cardHTML(a, idx) {
   const geoColor = GEO_COLOR[a.geo] || '#c9a84c';
   const flag     = a.geo ? a.geo.split(' ')[0] : '';
 
-  const imgStyle = a.image ? ' style="background-image:url(\'' + a.image + '\')"' : '';
-  const cover = '<div class="card-cover' + (a.image ? ' has-image' : '') + '"' + imgStyle + '>'
+  const h        = strHash(a.url || a.title || String(idx));
+  const randImg  = !a.image && (h % 10) < 4
+    ? 'https://picsum.photos/seed/' + h + '/600/300' : '';
+  const imgSrc   = a.image || randImg;
+  const imgStyle = imgSrc ? ' style="background-image:url(\'' + imgSrc + '\')"' : '';
+  const cover = '<div class="card-cover' + (imgSrc ? ' has-image' : '') + '"' + imgStyle + '>'
     + '<span class="card-flag">' + flag + '</span>'
     + '<span class="card-cover-src">' + esc(a.source) + '</span>'
     + '</div>';
@@ -198,6 +202,12 @@ function formatDate(iso, withTime) {
   const opts = { month: 'short', day: 'numeric' };
   if (withTime) { opts.hour = '2-digit'; opts.minute = '2-digit'; }
   return d.toLocaleDateString('hu-HU', opts);
+}
+
+function strHash(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  return Math.abs(h);
 }
 
 function esc(str) {
