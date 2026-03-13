@@ -1,14 +1,12 @@
 /* HR World News – Frontend JS */
 
 const grid          = document.getElementById('articlesGrid');
-const filterBar     = document.getElementById('filterBar').querySelector('.filter-inner');
 const geoInner      = document.getElementById('geoBar').querySelector('.geo-inner');
 const searchInput   = document.getElementById('searchInput');
 const lastUpdatedEl = document.getElementById('lastUpdated');
 const headerStats   = document.getElementById('headerStats');
 
 let allArticles  = [];
-let activeFilter = 'all';
 let activeGeo    = 'all';
 
 async function loadNews() {
@@ -60,26 +58,12 @@ function buildFilters() {
     geoInner.appendChild(btn);
   });
 
-  // Source tabs
-  const sources = [...new Set(allArticles.map(a => a.source))].sort();
-  sources.forEach(src => {
-    const btn = document.createElement('button');
-    btn.className      = 'filter-btn';
-    btn.dataset.filter = src;
-    btn.textContent    = src;
-    btn.addEventListener('click', () => setFilter(src));
-    filterBar.appendChild(btn);
-  });
 }
 
 function setGeo(geo) {
   activeGeo = geo;
   geoInner.querySelectorAll('.geo-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.geo === geo));
-  // Reset source filter when switching geo
-  activeFilter = 'all';
-  filterBar.querySelectorAll('.filter-btn').forEach(b =>
-    b.classList.toggle('active', b.dataset.filter === 'all'));
   render();
 }
 
@@ -91,7 +75,6 @@ function setFilter(filter) {
 }
 
 geoInner.querySelector('[data-geo="all"]').addEventListener('click', () => setGeo('all'));
-filterBar.querySelector('[data-filter="all"]').addEventListener('click', () => setFilter('all'));
 
 let searchTimer;
 searchInput.addEventListener('input', () => {
@@ -102,7 +85,6 @@ searchInput.addEventListener('input', () => {
 function render() {
   const q = searchInput.value.trim().toLowerCase();
   const filtered = allArticles.filter(a => {
-    const matchSrc = activeFilter === 'all' || a.source === activeFilter;
     const matchGeo = activeGeo === 'all' || a.geo === activeGeo;
     const matchQ   = !q
       || (a.title_hu   || '').toLowerCase().includes(q)
@@ -110,7 +92,7 @@ function render() {
       || (a.summary_hu || '').toLowerCase().includes(q)
       || (a.category   || '').toLowerCase().includes(q)
       || (a.source     || '').toLowerCase().includes(q);
-    return matchSrc && matchGeo && matchQ;
+    return matchGeo && matchQ;
   }).sort((a, b) => new Date(b.published) - new Date(a.published));
 
   if (!filtered.length) {
