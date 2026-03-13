@@ -313,35 +313,112 @@ function extractImage(item) {
   return '';
 }
 
-// ─── Y2Y blog scraper ─────────────────────────────────────────────────────────
-async function scrapeY2Y(existingUrls, twoDaysAgo) {
+// ─── Scraper config: non-RSS sources ─────────────────────────────────────────
+const SCRAPERS = [
+  {
+    name: 'CIPD',
+    category: 'HR Policy',
+    color: '#1e3a5f',
+    geo: '🇪🇺 EU',
+    listingUrl: 'https://www.cipd.org/uk/about/press-releases/',
+    urlPattern: /["']((?:https:\/\/www\.cipd\.org)?\/uk\/(?:about\/press-releases|knowledge)\/[a-z0-9][^"'?#\s]{10,})/g,
+    baseUrl: 'https://www.cipd.org'
+  },
+  {
+    name: 'McKinsey',
+    category: 'HR Strategy',
+    color: '#1a365d',
+    geo: '🌍 Global',
+    listingUrl: 'https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights',
+    urlPattern: /["']((?:https:\/\/www\.mckinsey\.com)?\/capabilities\/people-and-organizational-performance\/our-insights\/[^"'?#\s]{10,})/g,
+    baseUrl: 'https://www.mckinsey.com'
+  },
+  {
+    name: 'Gallup Workplace',
+    category: 'Employee Engagement',
+    color: '#0d4f8b',
+    geo: '🌍 Global',
+    listingUrl: 'https://www.gallup.com/workplace/home.aspx',
+    urlPattern: /["']((?:https:\/\/www\.gallup\.com)?\/workplace\/\d{4,}\/[^"'?#\s]{5,})/g,
+    baseUrl: 'https://www.gallup.com'
+  }
+];
+
+// ─── Generic OG-meta scraper (for non-RSS sources) ───────────────────────────
+async function scrapeSource(cfg, existingUrls, twoDaysAgo) {
+  const articles = [];
+  try {
+    process.stdout.write(`Scraping ${cfg.name}... `);
+    const html = await httpGet(cfg.listingUrl);
+
+    const urlSet = new Set();
+    for (const m of html.matchAll(cfg.urlPattern)) {
+      const raw = m[1].split('?')[0].split('#')[0];
+      const full = raw.startsWith('http') ? raw : cfg.baseUrl + raw;
+      urlSet.add(full);
+    }
+
+    const candidates = [...urlSet].filter(u => !existingUrls.has(u)).slice(0, 8);
+    process.stdout.write(`(${candidates.length} URL) `);
+
+    for (const url of candidates) {
+      try {
+        const pageHtml = await httpGet(url);
+        const title   = (extractMeta(pageHtml, 'og:title') || extractMeta(pageHtml, 'twitter:title'))
+                          .replace(/\s*[|–-]\s*(CIPD|McKinsey|Gallup).*$/i, '').trim();
+        const excerpt = (extractMeta(pageHtml, 'og:description') || extractMeta(pageHtml, 'twitter:description'))
+                          .substring(0, 600);
+        const image   = extractMeta(pageHtml, 'og:image') || extractMeta(pageHtml, 'twitter:image') || '';
+        const pubStr  = extractMeta(pageHtml, 'article:published_time')
+                     || extractMeta(pageHtml, 'og:updated_time') || '';
+        if (!title) continue;
+
+        const pubDate = pubStr ? new Date(pubStr) : new Date();
+        if (!isNaN(pubDate.getTime()) && pubDate < twoDaysAgo) continue;
+
+        articles.push({
+          source:    cfg.name,
+          category:  cfg.category,
+          color:     cfg.color,
+          geo:       cfg.geo,
+          title,
+          url,
+          published: isNaN(pubDate.getTime()) ? new Date().toISOString() : pubDate.toISOString(),
+          excerpt,
+          image
+        });
+      } catch { /* skip */ }
+    }
+
+    console.log(`✓ (${articles.length} új cikk)`);
+  } catch (err) {
+    console.log(`✗ hiba: ${err.message}`);
+  }
+  return articles;
+}
+
+// ─── Y2Y blog scraper (mindig megjelenik a legfrissebb 2 cikk) ───────────────
+async function scrapeY2Y(existingUrls) {
   const articles = [];
   try {
     process.stdout.write('Scraping Y2Y blog... ');
 
-    // Fetch blog page and look for /post/ URLs embedded in the HTML
     const blogHtml = await httpGet('https://www.y2y.hu/blog');
 
-    // Match absolute URLs with /post/ path
     const urlSet = new Set();
-    for (const m of blogHtml.matchAll(/["'](https?:\/\/(?:www\.)?y2y\.hu\/post\/[^"'?#\s]+)/g)) {
+    for (const m of blogHtml.matchAll(/["'](https?:\/\/(?:www\.)?y2y\.hu\/post\/[^"'?#\s]+)/g))
       urlSet.add(m[1].split('?')[0].split('#')[0]);
-    }
-    // Also try relative /post/ paths
-    for (const m of blogHtml.matchAll(/["'](\/post\/[^"'?#\s]+)/g)) {
+    for (const m of blogHtml.matchAll(/["'](\/post\/[^"'?#\s]+)/g))
       urlSet.add('https://www.y2y.hu' + m[1].split('?')[0].split('#')[0]);
-    }
 
     const foundUrls = [...urlSet];
     process.stdout.write(`(${foundUrls.length} URL) `);
 
-    // For each post page, extract OG meta tags
+    // Fetch all, sort by date, always include the 2 newest regardless of age
+    const candidates = [];
     for (const postUrl of foundUrls.slice(0, 12)) {
       try {
-        if (existingUrls.has(postUrl)) continue;
-
-        const postHtml = await httpGet(postUrl);
-
+        const postHtml  = await httpGet(postUrl);
         const title     = (extractMeta(postHtml, 'og:title') || extractMeta(postHtml, 'twitter:title'))
                             .replace(/\s*[|–-]\s*Y2Y.*$/i, '').trim();
         const excerpt   = (extractMeta(postHtml, 'og:description') || extractMeta(postHtml, 'twitter:description'))
@@ -350,27 +427,33 @@ async function scrapeY2Y(existingUrls, twoDaysAgo) {
         const published = extractMeta(postHtml, 'article:published_time')
                        || extractMeta(postHtml, 'og:updated_time')
                        || new Date().toISOString();
-
         if (!title) continue;
-
-        const pubDate = new Date(published);
-        if (isNaN(pubDate) || pubDate < twoDaysAgo) continue;
-
-        articles.push({
-          source: 'Y2Y',
-          category: 'Y2Y Blog',
-          color: '#b45309',
-          geo: '🇪🇺 EU',
-          title,
-          url: postUrl,
-          published: pubDate.toISOString(),
-          excerpt,
-          image
-        });
-      } catch { /* skip this post */ }
+        candidates.push({ postUrl, title, excerpt, image, published });
+      } catch { /* skip */ }
     }
 
-    console.log(`✓ (${articles.length} új Y2Y cikk)`);
+    // Sort newest first
+    candidates.sort((a, b) => new Date(b.published) - new Date(a.published));
+
+    // Always include the 2 newest; rest only if not already shown
+    for (let i = 0; i < candidates.length; i++) {
+      const { postUrl, title, excerpt, image, published } = candidates[i];
+      if (i >= 2 && existingUrls.has(postUrl)) continue;   // skip older duplicates
+      if (i >= 2) break;                                    // only 2 guaranteed
+      articles.push({
+        source: 'Y2Y',
+        category: 'Y2Y Blog',
+        color: '#DED114',
+        geo: '🇭🇺 Magyar',
+        title,
+        url: postUrl,
+        published: new Date(published).toISOString(),
+        excerpt,
+        image
+      });
+    }
+
+    console.log(`✓ (${articles.length} Y2Y cikk)`);
   } catch (err) {
     console.log(`✗ Y2Y hiba: ${err.message}`);
   }
@@ -449,8 +532,14 @@ async function fetchRSSFeeds() {
     }
   }
 
-  // ── Y2Y scraper ────────────────────────────────────────────────────────────
-  const y2yArticles = await scrapeY2Y(existingUrls, twoDaysAgo);
+  // ── Non-RSS scrapers (CIPD, McKinsey, Gallup…) ────────────────────────────
+  for (const cfg of SCRAPERS) {
+    const scraped = await scrapeSource(cfg, existingUrls, twoDaysAgo);
+    newArticles.push(...scraped);
+  }
+
+  // ── Y2Y scraper (always shows 2 newest regardless of age) ─────────────────
+  const y2yArticles = await scrapeY2Y(existingUrls);
   newArticles.push(...y2yArticles);
 
   fs.writeFileSync(RAW_OUTPUT, JSON.stringify({

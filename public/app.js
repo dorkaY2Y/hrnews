@@ -76,6 +76,13 @@ function setFilter(filter) {
 
 geoInner.querySelector('[data-geo="all"]').addEventListener('click', () => setGeo('all'));
 
+// Whole card is clickable — skip if user clicked an actual link/button
+grid.addEventListener('click', e => {
+  if (e.target.closest('a, button')) return;
+  const card = e.target.closest('[data-url]');
+  if (card && card.dataset.url) window.open(card.dataset.url, '_blank');
+});
+
 let searchTimer;
 searchInput.addEventListener('input', () => {
   clearTimeout(searchTimer);
@@ -163,7 +170,7 @@ function cardHTML(a, idx) {
     ? cover + '<div class="card-content">' + body + footer + '</div>'
     : cover + body + footer;
 
-  return '<article class="card' + (isFeat ? ' featured' : '') + '" data-geo="' + esc(a.geo || '') + '" style="--geo-color:' + geoColor + '">'
+  return '<article class="card' + (isFeat ? ' featured' : '') + '" data-geo="' + esc(a.geo || '') + '" data-url="' + esc(a.url) + '" style="--geo-color:' + geoColor + ';cursor:pointer">'
     + inner
     + '</article>';
 }
