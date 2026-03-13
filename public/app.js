@@ -143,7 +143,7 @@ function cardHTML(a, idx) {
   const flag     = a.geo ? a.geo.split(' ')[0] : '';
 
   const h        = strHash(a.url || a.title || String(idx));
-  const randImg  = !a.image && (h % 10) < 4
+  const randImg  = !a.image
     ? 'https://picsum.photos/seed/' + h + '/600/300' : '';
   const imgSrc   = a.image || randImg;
   const imgStyle = imgSrc ? ' style="background-image:url(\'' + imgSrc + '\')"' : '';
