@@ -1,12 +1,15 @@
-/* HR World News - Frontend JS */
+/* HR World News – Frontend JS */
 
-const grid         = document.getElementById('articlesGrid');
-const filterBar    = document.getElementById('filterBar').querySelector('.filter-inner');
-const searchInput  = document.getElementById('searchInput');
-const lastUpdatedEl= document.getElementById('lastUpdated');
+const grid          = document.getElementById('articlesGrid');
+const filterBar     = document.getElementById('filterBar').querySelector('.filter-inner');
+const geoInner      = document.getElementById('geoBar').querySelector('.geo-inner');
+const searchInput   = document.getElementById('searchInput');
+const lastUpdatedEl = document.getElementById('lastUpdated');
+const headerStats   = document.getElementById('headerStats');
 
 let allArticles  = [];
 let activeFilter = 'all';
+let activeGeo    = 'all';
 
 async function loadNews() {
   showSkeletons();
@@ -15,6 +18,10 @@ async function loadNews() {
     const data = await res.json();
     allArticles = data.articles || [];
     if (data.lastUpdated) lastUpdatedEl.textContent = formatDate(data.lastUpdated, true);
+    if (headerStats) {
+      const srcCount = new Set(allArticles.map(a => a.source)).size;
+      headerStats.textContent = allArticles.length + ' cikk · ' + srcCount + ' forrás';
+    }
     buildFilters();
     render();
   } catch (err) {
@@ -27,6 +34,25 @@ function errorState(msg) {
 }
 
 function buildFilters() {
+  // GEO tabs
+  const geoOrder = ['🇺🇸 USA', '🇬🇧 UK', '🇪🇺 Európa', '🌍 Globális', '🌏 Ázsia', '🇭🇺 Magyar'];
+  const geoInData = new Set(allArticles.map(a => a.geo).filter(Boolean));
+  const geos = geoOrder.filter(g => geoInData.has(g));
+
+  geos.forEach(geo => {
+    const count = allArticles.filter(a => a.geo === geo).length;
+    const flag  = geo.split(' ')[0];
+    const label = geo.split(' ').slice(1).join(' ');
+    const btn   = document.createElement('button');
+    btn.className      = 'geo-btn';
+    btn.dataset.geo    = geo;
+    btn.innerHTML      = flag + ' <span class="geo-label">' + label + '</span>'
+                       + '<span class="geo-count">' + count + '</span>';
+    btn.addEventListener('click', () => setGeo(geo));
+    geoInner.appendChild(btn);
+  });
+
+  // Source tabs
   const sources = [...new Set(allArticles.map(a => a.source))].sort();
   sources.forEach(src => {
     const btn = document.createElement('button');
@@ -38,6 +64,17 @@ function buildFilters() {
   });
 }
 
+function setGeo(geo) {
+  activeGeo = geo;
+  geoInner.querySelectorAll('.geo-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.geo === geo));
+  // Reset source filter when switching geo
+  activeFilter = 'all';
+  filterBar.querySelectorAll('.filter-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.filter === 'all'));
+  render();
+}
+
 function setFilter(filter) {
   activeFilter = filter;
   filterBar.querySelectorAll('.filter-btn').forEach(b =>
@@ -45,6 +82,7 @@ function setFilter(filter) {
   render();
 }
 
+geoInner.querySelector('[data-geo="all"]').addEventListener('click', () => setGeo('all'));
 filterBar.querySelector('[data-filter="all"]').addEventListener('click', () => setFilter('all'));
 
 let searchTimer;
@@ -57,32 +95,44 @@ function render() {
   const q = searchInput.value.trim().toLowerCase();
   const filtered = allArticles.filter(a => {
     const matchSrc = activeFilter === 'all' || a.source === activeFilter;
+    const matchGeo = activeGeo === 'all' || a.geo === activeGeo;
     const matchQ   = !q
       || (a.title_hu   || '').toLowerCase().includes(q)
       || (a.title      || '').toLowerCase().includes(q)
       || (a.summary_hu || '').toLowerCase().includes(q)
-      || (a.category   || '').toLowerCase().includes(q);
-    return matchSrc && matchQ;
+      || (a.category   || '').toLowerCase().includes(q)
+      || (a.source     || '').toLowerCase().includes(q);
+    return matchSrc && matchGeo && matchQ;
   });
 
   if (!filtered.length) {
     grid.innerHTML = '<div class="empty-state"><div class="empty-icon">&#x1F50D;</div><h2>Nincs tal&aacute;lat</h2><p>Pr&oacute;b&aacute;lj m&aacute;s felt&eacute;teleket.</p></div>';
     return;
   }
-  grid.innerHTML = '<p class="result-count">' + filtered.length + ' cikk</p>' + filtered.map(cardHTML).join('');
+
+  grid.innerHTML = '<p class="result-count">' + filtered.length + ' cikk</p>'
+    + filtered.map((a, i) => cardHTML(a, i)).join('');
 }
 
-function cardHTML(a) {
-  const date = a.published ? formatDate(a.published) : '';
-  const sum  = a.summary_hu ? esc(a.summary_hu) : '<em>&Ouml;sszefoglal&oacute; hamarosan&hellip;</em>';
-  const title = a.title_hu || a.title || 'C&iacute;m n&eacute;lk&uuml;l';
-  return '<article class="card">'
+function cardHTML(a, idx) {
+  const date     = a.published ? formatDate(a.published) : '';
+  const sum      = a.summary_hu ? esc(a.summary_hu) : '<em>&Ouml;sszefoglal&oacute; hamarosan&hellip;</em>';
+  const title    = a.title_hu || a.title || 'C&iacute;m n&eacute;lk&uuml;l';
+  const isFeat   = idx === 0;
+  const ageMs    = a.published ? Date.now() - new Date(a.published) : Infinity;
+  const isNew    = ageMs < 8 * 3600 * 1000;
+  const num      = String(idx + 1).padStart(2, '0');
+  const words    = ((a.excerpt || '') + ' ' + (a.summary_hu || '')).trim().split(/\s+/).length;
+  const readTime = Math.max(2, Math.round(words / 180));
+
+  return '<article class="card' + (isFeat ? ' featured' : '') + '">'
     + '<div class="card-top"></div>'
     + '<div class="card-body">'
     +   '<div class="card-meta">'
     +     (a.geo ? '<span class="geo-tag" title="' + esc(a.geo) + '">' + a.geo.split(' ')[0] + '</span>' : '')
     +     '<span class="source-badge">' + esc(a.source) + '</span>'
     +     '<span class="category-tag">' + esc(a.category || '') + '</span>'
+    +     (isNew ? '<span class="badge-new">&#9679; &Uacute;J</span>' : '')
     +     '<span class="pub-date">' + date + '</span>'
     +   '</div>'
     +   '<h2 class="card-title">' + esc(title) + '</h2>'
@@ -95,6 +145,10 @@ function cardHTML(a) {
     +     'Olvasd el'
     +     '<svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     +   '</a>'
+    +   '<div class="card-footer-right">'
+    +     '<span class="read-time">' + readTime + ' perc</span>'
+    +     '<span class="card-num">' + num + '</span>'
+    +   '</div>'
     + '</div>'
     + '</article>';
 }
@@ -112,7 +166,7 @@ function showSkeletons() {
 function formatDate(iso, withTime) {
   const d = new Date(iso);
   if (isNaN(d)) return '';
-  const opts = { year: 'numeric', month: 'short', day: 'numeric' };
+  const opts = { month: 'short', day: 'numeric' };
   if (withTime) { opts.hour = '2-digit'; opts.minute = '2-digit'; }
   return d.toLocaleDateString('hu-HU', opts);
 }

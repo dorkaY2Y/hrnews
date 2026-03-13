@@ -45,41 +45,75 @@ body {
   min-height: 100vh;
 }
 
-/* ---- Y2Y TOP BAR (paytransparency.hu stílus) ---- */
-.logo-bar {
+/* ---- Y2Y TOP BAR ---- */
+.y2y-bar {
+  background: #ffffff;
+  border-bottom: 1px solid #e8e2d8;
+}
+
+.y2y-bar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+  height: 48px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  padding: 14px 24px;
+  gap: 14px;
+}
+
+.y2y-bar-brand {
   text-decoration: none;
-  border-bottom: 1px solid #ededea;
-  transition: background .15s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
-.logo-bar:hover { background: #fafaf6; }
-
-.logo-bar-text {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 13px;
+.y2y-bar-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
   font-weight: 700;
-  text-transform: uppercase;
+  color: var(--gold);
   letter-spacing: 0.5px;
-  color: #2B2D42;
-}
-
-.logo-bar-text span {
-  color: #DED114;
-  font-weight: 800;
-}
-
-.logo-bar-logo {
-  height: 30px;
-  opacity: 0.7;
+  line-height: 1;
   transition: opacity .15s;
 }
 
-.logo-bar:hover .logo-bar-logo { opacity: 1; }
+.y2y-bar-brand:hover .y2y-bar-logo { opacity: 0.8; }
+
+.y2y-bar-divider {
+  width: 1px;
+  height: 22px;
+  background: #d8d2c8;
+  flex-shrink: 0;
+}
+
+.y2y-bar-tagline {
+  font-size: 12.5px;
+  color: #5a5470;
+  font-style: italic;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.1px;
+}
+
+.y2y-bar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #9a7428;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color .15s;
+  text-transform: uppercase;
+}
+
+.y2y-bar-link:hover { color: var(--gold); }
 
 /* ---- HEADER ---- */
 .site-header {
@@ -148,7 +182,7 @@ body {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   position: sticky;
-  top: 72px;
+  top: 120px;
   z-index: 90;
 }
 
@@ -365,6 +399,9 @@ body {
   padding: 12px 20px 16px;
   border-top: 1px solid var(--card-divider);
   background: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .read-link {
@@ -483,14 +520,157 @@ body {
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 640px) {
-  .logo-bar       { padding: 10px 18px; }
-  .logo-bar-logo  { height: 24px; }
+  .y2y-bar-inner  { padding: 0 18px; height: 42px; }
+  .y2y-bar-tagline { display: none; }
   .header-inner   { height: 64px; padding: 0 18px; }
   .logo-title     { font-size: 18px; }
   .logo-sub       { display: none; }
-  .filter-bar     { top: 64px; }
+  .geo-filter-bar { top: 64px; }
+  .filter-bar     { top: 112px; }
   .articles-grid  { grid-template-columns: 1fr; }
   .main-content   { padding: 20px 18px 56px; }
   .search-wrap    { padding: 18px 18px 0; }
   .filter-inner   { padding: 0 18px; }
+}
+
+
+/* ---- GEO FILTER BAR ---- */
+.geo-filter-bar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 72px;
+  z-index: 95;
+}
+
+.geo-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  height: 48px;
+  align-items: center;
+}
+
+.geo-inner::-webkit-scrollbar { display: none; }
+
+.geo-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border-2);
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .15s;
+  font-family: inherit;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.geo-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+.geo-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #0d0d12;
+  font-weight: 700;
+}
+
+.geo-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.1);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.geo-btn.active .geo-count { background: rgba(0,0,0,.2); }
+
+/* ---- HEADER STATS ---- */
+.header-stats {
+  font-size: 11px;
+  color: var(--muted-2);
+  background: var(--surface-2);
+  padding: 3px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-right: 8px;
+}
+
+/* ---- FEATURED CARD ---- */
+.card.featured {
+  grid-column: 1 / -1;
+}
+
+.card.featured .card-title {
+  font-size: 22px;
+  line-height: 1.28;
+}
+
+.card.featured .card-summary {
+  font-size: 14.5px;
+}
+
+/* ---- NEW BADGE ---- */
+.badge-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  font-weight: 800;
+  color: #ef4444;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  animation: pulse-badge 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+
+/* ---- CARD FOOTER RIGHT ---- */
+.card-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.read-time {
+  font-size: 10px;
+  color: var(--card-muted);
+  font-weight: 500;
+}
+
+.card-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--card-muted);
+  opacity: 0.45;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 640px) {
+  .geo-inner { padding: 0 18px; }
+  .header-stats { display: none; }
 }

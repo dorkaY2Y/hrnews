@@ -7,6 +7,9 @@
  *   SHRM HR Mag:       https://rss.shrm.org/hrmagazine
  *   HBR:               http://feeds.hbr.org/harvardbusiness  (HTTP not HTTPS)
  *   HR Dive:           https://www.hrdive.com/feeds/news/
+ *   HR Bartender:      https://www.hrbartender.com/feed/
+ *   Talent Management: https://www.talentmgt.com/feed/
+ *   HRMorning:         https://www.hrmorning.com/feed/
  *   Flex Index:        https://flexindex.substack.com/feed
  *   WorkLife.news:     https://www.worklife.news/feed/
  *   HR Executive:      https://hrexecutive.com/feed/
@@ -16,7 +19,13 @@
  *   AIHR:              https://www.aihr.com/blog/feed/
  *   Unleash:           https://www.unleash.ai/feed/
  *   Josh Bersin:       https://joshbersin.com/feed/
+ *   MIT Sloan:         https://sloanreview.mit.edu/feed/
  *   HRM Asia:          https://hrmasia.com/feed/
+ *   People Matters:    https://www.peoplematters.in/rss.xml
+ *   Portfolio.hu:      https://www.portfolio.hu/rss/all.xml
+ *   G7.hu:             https://g7.hu/feed
+ *   Telex.hu:          https://telex.hu/rss/all-articles
+ *   BBJ:               https://bbj.hu/rss
  *
  * Y2Y: no RSS – scrapes OG meta tags from y2y.hu/blog post pages
  */
@@ -48,6 +57,27 @@ const FEEDS = [
     url: 'https://www.hrdive.com/feeds/news/',
     category: 'HR News',
     color: '#0369a1',
+    geo: '🇺🇸 USA'
+  },
+  {
+    name: 'HR Bartender',
+    url: 'https://www.hrbartender.com/feed/',
+    category: 'HR & Management',
+    color: '#c2410c',
+    geo: '🇺🇸 USA'
+  },
+  {
+    name: 'Talent Management',
+    url: 'https://www.talentmgt.com/feed/',
+    category: 'Talent Management',
+    color: '#7c3aed',
+    geo: '🇺🇸 USA'
+  },
+  {
+    name: 'HRMorning',
+    url: 'https://www.hrmorning.com/feed/',
+    category: 'HR News',
+    color: '#0284c7',
     geo: '🇺🇸 USA'
   },
   {
@@ -115,6 +145,13 @@ const FEEDS = [
     color: '#92400e',
     geo: '🌍 Globális'
   },
+  {
+    name: 'MIT Sloan',
+    url: 'https://sloanreview.mit.edu/feed/',
+    category: 'Leadership & Strategy',
+    color: '#9f1239',
+    geo: '🌍 Globális'
+  },
   // ──────────────────── 🌏 Ázsia ────────────────────
   {
     name: 'HRM Asia',
@@ -122,6 +159,42 @@ const FEEDS = [
     category: 'HR News',
     color: '#065f46',
     geo: '🌏 Ázsia'
+  },
+  {
+    name: 'People Matters',
+    url: 'https://www.peoplematters.in/rss.xml',
+    category: 'HR & People',
+    color: '#0f766e',
+    geo: '🌏 Ázsia'
+  },
+  // ──────────────────── 🇭🇺 Magyar ────────────────────
+  {
+    name: 'Portfolio',
+    url: 'https://www.portfolio.hu/rss/all.xml',
+    category: 'Üzlet & Gazdaság',
+    color: '#1d4ed8',
+    geo: '🇭🇺 Magyar'
+  },
+  {
+    name: 'G7',
+    url: 'https://g7.hu/feed',
+    category: 'Gazdaság & Munkaerőpiac',
+    color: '#15803d',
+    geo: '🇭🇺 Magyar'
+  },
+  {
+    name: 'Telex',
+    url: 'https://telex.hu/rss/all-articles',
+    category: 'Hírek',
+    color: '#dc2626',
+    geo: '🇭🇺 Magyar'
+  },
+  {
+    name: 'BBJ',
+    url: 'https://bbj.hu/rss',
+    category: 'Business',
+    color: '#1e3a5f',
+    geo: '🇭🇺 Magyar'
   },
 ];
 

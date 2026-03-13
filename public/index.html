@@ -2,22 +2,31 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="https://www.y2y.hu/images/y2y-logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HR World News – Globális HR hírek magyarul</title>
   <meta name="description" content="A legfrissebb globális HR hírek rövid magyar összefoglalóval." />
+  <link rel="icon" type="image/svg+xml" href="https://www.y2y.hu/images/y2y-logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Exo+2:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Y2Y TOP BAR -->
-  <a class="logo-bar" href="https://www.y2y.hu" target="_blank" rel="noopener">
-    <span class="logo-bar-text">Working with <span>#nofilter</span></span>
-    <img class="logo-bar-logo" src="https://www.y2y.hu/images/y2y-logo.svg" alt="Y2Y" />
-  </a>
+  <div class="y2y-bar">
+    <div class="y2y-bar-inner">
+      <a class="y2y-bar-brand" href="https://www.y2y.hu" target="_blank" rel="noopener">
+        <span class="y2y-bar-logo">Y2Y</span>
+      </a>
+      <span class="y2y-bar-divider"></span>
+      <span class="y2y-bar-tagline">A változásban is élhető (munka)helyedért dolgozunk</span>
+      <a class="y2y-bar-link" href="https://www.y2y.hu" target="_blank" rel="noopener">
+        y2y.hu
+        <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="site-header">
@@ -30,16 +39,25 @@
         </div>
       </div>
       <div class="header-meta">
+        <span id="headerStats" class="header-stats"></span>
         <span class="update-label">Frissítve:</span>
         <span id="lastUpdated" class="update-time">–</span>
       </div>
     </div>
   </header>
 
-  <!-- FILTER BAR -->
+  <!-- GEO FILTER BAR -->
+  <div id="geoBar" class="geo-filter-bar">
+    <div class="geo-inner">
+      <button class="geo-btn active" data-geo="all">Összes</button>
+      <!-- Geo buttons injected by JS -->
+    </div>
+  </div>
+
+  <!-- SOURCE FILTER BAR -->
   <nav class="filter-bar" id="filterBar">
     <div class="filter-inner">
-      <button class="filter-btn active" data-filter="all">Összes</button>
+      <button class="filter-btn active" data-filter="all">Összes forrás</button>
       <!-- Source buttons injected by JS -->
     </div>
   </nav>
@@ -48,14 +66,14 @@
   <div class="search-wrap">
     <div class="search-inner">
       <svg class="search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M15 15l-2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      <input type="text" id="searchInput" class="search-input" placeholder="Keresés a hírek között..." />
+      <input type="text" id="searchInput" class="search-input" placeholder="Keresés a hírek között…" />
     </div>
   </div>
 
   <!-- MAIN CONTENT -->
   <main class="main-content">
     <div class="articles-grid" id="articlesGrid">
-      <div class="empty-state" id="emptyState">
+      <div class="empty-state">
         <div class="empty-icon">📰</div>
         <h2>Még nincsenek cikkek</h2>
         <p>Futtasd le a scheduled task-ot az első hírek betöltéséhez.</p>
@@ -67,7 +85,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-sources">
-        Források: <strong>SHRM</strong> · <strong>Harvard Business Review</strong> · <strong>HR Dive</strong> · <strong>Flex Index</strong> · <strong>WorkLife</strong> · <strong>HR Executive</strong> · <strong>Personnel Today</strong> · <strong>AIHR</strong> · <strong>Unleash</strong> · <strong>Josh Bersin</strong> · <strong>HRM Asia</strong> · <strong>Y2Y Blog</strong>
+        Források: <strong>SHRM</strong> · <strong>HBR</strong> · <strong>HR Dive</strong> · <strong>HR Bartender</strong> · <strong>Flex Index</strong> · <strong>WorkLife</strong> · <strong>HR Executive</strong> · <strong>Workology</strong> · <strong>Talent Management</strong> · <strong>HRMorning</strong> · <strong>Personnel Today</strong> · <strong>People Management</strong> · <strong>People Matters</strong> · <strong>AIHR</strong> · <strong>Unleash</strong> · <strong>Josh Bersin</strong> · <strong>MIT Sloan</strong> · <strong>HRM Asia</strong> · <strong>Portfolio</strong> · <strong>G7</strong> · <strong>Telex</strong> · <strong>BBJ</strong> · <strong>Y2Y Blog</strong>
       </p>
       <p class="footer-note">
         Magyar összefoglalók: AI-asszisztált · <a href="https://www.y2y.hu" target="_blank" rel="noopener">y2y.hu</a>
