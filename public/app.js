@@ -142,10 +142,14 @@ function cardHTML(a, idx) {
   const words    = ((a.excerpt || '') + ' ' + (a.summary_hu || '')).trim().split(/\s+/).length;
   const readTime = Math.max(2, Math.round(words / 180));
   const geoColor = GEO_COLOR[a.geo] || '#c9a84c';
+  const flag     = a.geo ? a.geo.split(' ')[0] : '';
 
-  return '<article class="card' + (isFeat ? ' featured' : '') + '" data-geo="' + esc(a.geo || '') + '" style="--geo-color:' + geoColor + '">'
-    + '<div class="card-top"></div>'
-    + '<div class="card-body">'
+  const cover = '<div class="card-cover">'
+    + '<span class="card-flag">' + flag + '</span>'
+    + '<span class="card-cover-src">' + esc(a.source) + '</span>'
+    + '</div>';
+
+  const body = '<div class="card-body">'
     +   '<div class="card-meta">'
     +     (a.geo ? '<span class="geo-tag" title="' + esc(a.geo) + '">' + a.geo.split(' ')[0] + '</span>' : '')
     +     '<span class="source-badge">' + esc(a.source) + '</span>'
@@ -157,8 +161,9 @@ function cardHTML(a, idx) {
     +   '<div class="card-divider"></div>'
     +   '<p class="summary-label">Magyar &ouml;sszefoglal&oacute;</p>'
     +   '<p class="card-summary">' + sum + '</p>'
-    + '</div>'
-    + '<div class="card-footer">'
+    + '</div>';
+
+  const footer = '<div class="card-footer">'
     +   '<a class="read-link" href="' + esc(a.url) + '" target="_blank" rel="noopener">'
     +     'Olvasd el'
     +     '<svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -167,7 +172,14 @@ function cardHTML(a, idx) {
     +     '<span class="read-time">' + readTime + ' perc</span>'
     +     '<span class="card-num">' + num + '</span>'
     +   '</div>'
-    + '</div>'
+    + '</div>';
+
+  const inner = isFeat
+    ? cover + '<div class="card-content">' + body + footer + '</div>'
+    : cover + body + footer;
+
+  return '<article class="card' + (isFeat ? ' featured' : '') + '" data-geo="' + esc(a.geo || '') + '" style="--geo-color:' + geoColor + '">'
+    + inner
     + '</article>';
 }
 

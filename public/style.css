@@ -350,11 +350,42 @@ body {
   border-color: var(--geo-color, var(--gold));
 }
 
-.card-top {
-  height: 3px;
+.card-cover {
+  position: relative;
+  height: 96px;
   flex-shrink: 0;
-  background: var(--geo-color, var(--gold));
-  opacity: 0.55;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 16px 11px;
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--geo-color, #c9a84c) 24%, #f0ebe2) 0%,
+    #faf8f4 100%
+  );
+}
+
+.card-flag {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 60px;
+  line-height: 1;
+  opacity: 0.1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.card-cover-src {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 800;
+  font-size: 8.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--geo-color, #c9a84c);
+  opacity: 0.75;
+  line-height: 1;
 }
 
 .card-body {
@@ -411,7 +442,7 @@ body {
 
 .card-title {
   font-family: 'Playfair Display', serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.32;
   color: var(--card-text);
@@ -789,15 +820,62 @@ body {
 /* ---- FEATURED CARD ---- */
 .card.featured {
   grid-column: 1 / -1;
+  flex-direction: row;
+}
+
+.card.featured .card-cover {
+  width: 340px;
+  height: auto;
+  min-height: 260px;
+  flex-shrink: 0;
+  align-items: flex-end;
+  padding: 16px 20px 16px;
+}
+
+.card.featured .card-flag {
+  font-size: 110px;
+  opacity: 0.08;
+  right: 18px;
+  top: 50%;
+}
+
+.card.featured .card-cover-src {
+  font-size: 9.5px;
+  letter-spacing: 4px;
+  opacity: 0.85;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
 }
 
 .card.featured .card-title {
-  font-size: 24px;
-  line-height: 1.24;
+  font-size: 26px;
+  line-height: 1.22;
 }
 
 .card.featured .card-summary {
   font-size: 14.5px;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+}
+
+@media (max-width: 768px) {
+  .card.featured {
+    flex-direction: column;
+  }
+  .card.featured .card-cover {
+    width: 100%;
+    height: 130px;
+    min-height: unset;
+  }
+  .card.featured .card-flag {
+    font-size: 70px;
+    right: 16px;
+  }
 }
 
 /* ---- NEW BADGE ---- */
