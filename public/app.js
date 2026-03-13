@@ -18,6 +18,12 @@ async function loadNews() {
     const data = await res.json();
     allArticles = data.articles || [];
     if (data.lastUpdated) lastUpdatedEl.textContent = formatDate(data.lastUpdated, true);
+  // Date display
+  const dateEl = document.getElementById('headerDate');
+  if (dateEl) {
+    const now = new Date();
+    dateEl.textContent = now.toLocaleDateString('hu-HU', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
     if (headerStats) {
       const srcCount = new Set(allArticles.map(a => a.source)).size;
       headerStats.textContent = allArticles.length + ' cikk · ' + srcCount + ' forrás';
