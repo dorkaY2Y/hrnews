@@ -140,7 +140,7 @@ function cardHTML(a, idx) {
   const title    = a.title_hu || a.title || 'C&iacute;m n&eacute;lk&uuml;l';
   const isFeat   = idx === 0;
   const ageMs    = a.published ? Date.now() - new Date(a.published) : Infinity;
-  const isNew    = ageMs < 8 * 3600 * 1000;
+  const isNew    = ageMs < 8 * 3600 * 1000 && !(a.source || '').toLowerCase().includes('y2y');
   const num      = String(idx + 1).padStart(2, '0');
   const words    = ((a.excerpt || '') + ' ' + (a.summary_hu || '')).trim().split(/\s+/).length;
   const readTime = Math.max(2, Math.round(words / 180));
