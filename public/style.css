@@ -13,10 +13,10 @@
   --surface-3:   #22223a;
   --border:      #1f1f30;
   --border-2:    #2a2a40;
-  --gold:        #c9a84c;
-  --gold-light:  #e4c97a;
-  --gold-dim:    rgba(201,168,76,.15);
-  --gold-dim2:   rgba(201,168,76,.25);
+  --gold:        #DED114;
+  --gold-light:  #ecea52;
+  --gold-dim:    rgba(222,209,20,.15);
+  --gold-dim2:   rgba(222,209,20,.28);
   --text:        #eae5db;
   --text-2:      #b8b2a8;
   --muted:       #7a7680;
@@ -32,7 +32,7 @@
   /* --- shared --- */
   --radius:      10px;
   --shadow:      0 2px 12px rgba(0,0,0,.45), 0 1px 3px rgba(0,0,0,.3);
-  --shadow-hov:  0 10px 36px rgba(0,0,0,.35), 0 0 0 1.5px rgba(201,168,76,.35);
+  --shadow-hov:  0 10px 36px rgba(0,0,0,.35), 0 0 0 1.5px rgba(222,209,20,.4);
 }
 
 html { scroll-behavior: smooth; }
@@ -47,18 +47,19 @@ body {
 
 /* ---- Y2Y TOP BAR ---- */
 .y2y-bar {
-  background: #050509;
-  border-bottom: 1px solid rgba(255,255,255,.05);
+  background: #ffffff;
+  border-bottom: 1px solid #e2e2e2;
 }
 
 .y2y-bar-inner {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 28px;
-  height: 36px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .y2y-bar-brand {
@@ -72,14 +73,30 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-size: 10px;
   font-weight: 800;
-  color: var(--gold);
+  color: #0d0d12;
   letter-spacing: 7px;
   text-transform: uppercase;
   line-height: 1;
   transition: opacity .15s;
 }
 
-.y2y-bar-brand:hover .y2y-bar-logo { opacity: 0.7; }
+.y2y-bar-brand:hover .y2y-bar-logo { opacity: 0.55; }
+
+.y2y-bar-nofilter {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 0.1px;
+  flex: 1;
+  text-align: center;
+}
+
+.y2y-bar-nofilter strong {
+  font-weight: 800;
+  color: #444;
+  letter-spacing: 0;
+}
 
 .y2y-bar-link {
   display: inline-flex;
@@ -87,7 +104,7 @@ body {
   gap: 4px;
   font-size: 11px;
   font-weight: 700;
-  color: rgba(201,168,76,0.5);
+  color: #999;
   text-decoration: none;
   letter-spacing: 0.5px;
   white-space: nowrap;
@@ -96,7 +113,7 @@ body {
   text-transform: uppercase;
 }
 
-.y2y-bar-link:hover { color: var(--gold); }
+.y2y-bar-link:hover { color: #0d0d12; }
 
 /* ---- HEADER ---- */
 .site-header {
@@ -446,8 +463,8 @@ body {
   letter-spacing: 0.6px;
   text-transform: uppercase;
   background: var(--gold-dim);
-  color: #9a7428;
-  border: 1px solid rgba(201,168,76,.3);
+  color: #6b6600;
+  border: 1px solid rgba(222,209,20,.35);
 }
 
 .category-tag {
@@ -516,7 +533,7 @@ body {
   gap: 6px;
   font-size: 11px;
   font-weight: 700;
-  color: #9a7428;
+  color: #6b6600;
   text-decoration: none;
   transition: gap .15s, color .15s;
   text-transform: uppercase;
