@@ -1,7 +1,38 @@
 {
   "permissions": {
     "allow": [
-      "Bash(/c/Users/dorka/OneDrive/Desktop/HRNEWS/scripts/package.json:*)"
+      "Bash(/c/Users/dorka/OneDrive/Desktop/HRNEWS/scripts/package.json:*)",
+      "Bash(powershell.exe -Command \"Set-Location ''C:\\\\Users\\\\dorka\\\\OneDrive\\\\Desktop\\\\HRNEWS''; git add public/app.js public/index.html public/style.css scripts/fetch-rss.js; git status --short\")",
+      "Bash(powershell.exe -Command \"Set-Location ''C:\\\\Users\\\\dorka\\\\OneDrive\\\\Desktop\\\\HRNEWS''; git commit -m ''Feature: global feeds, geo flags, Y2Y scraper, Y2Y top bar''; git push origin master\")",
+      "WebFetch(domain:paytransparency.hu)",
+      "Bash(node -e \":*)",
+      "Bash(powershell.exe -Command \"Set-Location ''C:\\\\Users\\\\dorka\\\\OneDrive\\\\Desktop\\\\HRNEWS''; git add public/index.html public/style.css; git commit -m ''UI: paytransparency.hu-style top bar \\(logo-bar\\)''; git push origin master\")",
+      "Bash(powershell.exe -Command \"Set-Location ''C:\\\\Users\\\\dorka\\\\OneDrive\\\\Desktop\\\\HRNEWS''; git add public/index.html public/style.css; git commit -m ''UI: Exo 2 card titles, Y2Y SVG favicon''; git push origin master\")",
+      "WebFetch(domain:www.gallup.com)",
+      "WebFetch(domain:www.ere.net)",
+      "WebFetch(domain:talentmgt.com)",
+      "WebFetch(domain:sifted.eu)",
+      "WebFetch(domain:www.weforum.org)",
+      "WebFetch(domain:feeds.feedburner.com)",
+      "WebFetch(domain:www.hrmorning.com)",
+      "Bash(node \"C:/Users/dorka/AppData/Local/Temp/fix_css.js\")",
+      "Bash(powershell -Command \":*)",
+      "Bash(node \"C:/Users/dorka/AppData/Local/Temp/fix_redesign2.js\")",
+      "mcp__scheduled-tasks__list_scheduled_tasks",
+      "Bash(node \"C:/Users/dorka/AppData/Local/Temp/patch_atom.js\")",
+      "Bash(node scripts/fetch-rss.js)",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''C:/Users/dorka/OneDrive/Desktop/HRNEWS/data/raw-new-articles.json'',''utf8''\\)\\); console.log\\(''total:'', d.articles.length\\); d.articles.forEach\\(\\(a,i\\)=>console.log\\(i, a.source, ''|'', a.title.slice\\(0,80\\)\\)\\);\")",
+      "Bash(node /c/Users/dorka/AppData/Local/Temp/header-redesign.js)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(node /c/Users/dorka/AppData/Local/Temp/newsportal-redesign.js)",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''C:/Users/dorka/OneDrive/Desktop/HRNEWS/public/data/news.json'',''utf8''\\)\\); console.log\\(''articles:'', d.articles.length\\);\")",
+      "Bash(node \"C:/Users/dorka/AppData/Local/Temp/merge-articles.js\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''C:/Users/dorka/OneDrive/Desktop/HRNEWS/public/data/news.json'',''utf8''\\)\\); console.log\\(''valid JSON, articles:'', d.articles.length, ''first:'', d.articles[0].title_hu.slice\\(0,40\\)\\);\")",
+      "Bash(node --check \"C:/Users/dorka/OneDrive/Desktop/HRNEWS/public/app.js\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''public/data/news.json'',''utf8''\\)\\); const geos=[...new Set\\(d.articles.map\\(a=>a.geo\\)\\)]; console.log\\(geos\\);\")",
+      "Bash(node --check public/app.js)"
     ]
   }
 }
