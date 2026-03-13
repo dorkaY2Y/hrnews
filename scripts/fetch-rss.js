@@ -296,20 +296,27 @@ function extractMeta(html, property) {
 
 
 // ─── Extract image URL from RSS item ─────────────────────────────────────────
+// Sablon/brand OG kepek kizarasa (nem cikk-specifikus kepek)
+const TEMPLATE_IMAGE_PATTERNS = [
+  'emd_soc_meta_og',  // Gallup template OG
+];
+function isTemplateImage(url) {
+  return url && TEMPLATE_IMAGE_PATTERNS.some(p => url.includes(p));
+}
 function extractImage(item) {
   const mc = item.media;
   if (mc) {
     const obj = Array.isArray(mc) ? mc[0] : mc;
     const u = obj?.$?.url || obj?.$?.URL;
-    if (u) return u;
+    if (u && !isTemplateImage(u)) return u;
   }
   const mt = item.mediaThumbnail;
   if (mt) {
     const obj = Array.isArray(mt) ? mt[0] : mt;
     const u = obj?.$?.url;
-    if (u) return u;
+    if (u && !isTemplateImage(u)) return u;
   }
-  if (item.enclosure?.url && (item.enclosure.type || '').startsWith('image/')) return item.enclosure.url;
+  if (item.enclosure?.url && (item.enclosure.type || '').startsWith('image/') && !isTemplateImage(item.enclosure.url)) return item.enclosure.url;
   return '';
 }
 
@@ -368,7 +375,8 @@ async function scrapeSource(cfg, existingUrls, twoDaysAgo) {
                           .replace(/\s*[|–-]\s*(CIPD|McKinsey|Gallup).*$/i, '').trim();
         const excerpt = (extractMeta(pageHtml, 'og:description') || extractMeta(pageHtml, 'twitter:description'))
                           .substring(0, 600);
-        const image   = extractMeta(pageHtml, 'og:image') || extractMeta(pageHtml, 'twitter:image') || '';
+        const rawImg  = extractMeta(pageHtml, 'og:image') || extractMeta(pageHtml, 'twitter:image') || '';
+        const image   = isTemplateImage(rawImg) ? '' : rawImg;
         const pubStr  = extractMeta(pageHtml, 'article:published_time')
                      || extractMeta(pageHtml, 'og:updated_time') || '';
         if (!title) continue;
