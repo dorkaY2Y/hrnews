@@ -993,10 +993,37 @@ body {
   .masthead-tagline { display: none; }
   .header-kicker    { display: none; }
   .header-right     { align-items: flex-start; flex-direction: row; gap: 14px; }
-  .articles-grid  { grid-template-columns: 1fr; }
+  .articles-grid  { grid-template-columns: 1fr; gap: 10px; }
   .card.card--wide { grid-column: span 1; }
-  .main-content   { padding: 20px 18px 56px; }
-  .search-wrap    { padding: 18px 18px 0; }
+  .main-content   { padding: 16px 14px 56px; }
+  .search-wrap    { padding: 16px 14px 0; }
+
+  /* Mobile cards: compact list style, geo-color left border gives variety */
+  .card:not(.featured) .card-cover  { display: none; }
+  .card:not(.featured) .card-body   { padding: 14px 16px 8px; gap: 6px; }
+  .card:not(.featured) .card-title  { font-size: 15px; line-height: 1.3; }
+  .card:not(.featured) .card-divider { display: none; }
+  .card:not(.featured) .summary-label { font-size: 9px; margin-bottom: 0; }
+  .card:not(.featured) .card-summary {
+    font-size: 13px;
+    line-height: 1.65;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .card:not(.featured) .card-footer { padding: 8px 16px 12px; }
+
+  /* Every 4th regular card: show a thin color-accent strip instead of no cover */
+  .card:not(.featured):nth-child(4n) .card-cover {
+    display: flex;
+    height: 44px;
+    padding: 6px 14px;
+  }
+  .card:not(.featured):nth-child(4n) .card-flag {
+    font-size: 36px;
+    opacity: 0.12;
+  }
 }
 
 

@@ -134,9 +134,7 @@ function cardHTML(a, idx) {
   const isWide   = !isFeat && idx % 4 === 0;   // every 4th card spans 2 cols
 
   const h        = strHash(a.url || a.title || String(idx));
-  const randImg  = !a.image
-    ? 'https://picsum.photos/seed/' + h + '/600/300' : '';
-  const imgSrc   = a.image || randImg;
+  const imgSrc   = a.image || '';
   const imgStyle = imgSrc ? ' style="background-image:url(\'' + imgSrc + '\')"' : '';
   const cover = '<div class="card-cover' + (imgSrc ? ' has-image' : '') + '"' + imgStyle + '>'
     + '<span class="card-flag">' + flag + '</span>'

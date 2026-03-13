@@ -434,11 +434,10 @@ async function scrapeY2Y(existingUrls) {
     // Sort newest first
     candidates.sort((a, b) => new Date(b.published) - new Date(a.published));
 
-    // Always include the 2 newest; rest only if not already shown
+    // Always include the newest 1 Y2Y article
     for (let i = 0; i < candidates.length; i++) {
       const { postUrl, title, excerpt, image, published } = candidates[i];
-      if (i >= 2 && existingUrls.has(postUrl)) continue;
-      if (i >= 2) break;
+      if (i >= 1) break;
       articles.push({
         source: 'Y2Y',
         category: 'Y2Y Blog',
