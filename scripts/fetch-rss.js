@@ -167,7 +167,88 @@ const FEEDS = [
     color: '#0f766e',
     geo: '🌏 Ázsia'
   },
+  {
+    name: 'HR in Asia',
+    url: 'https://www.hrinasia.com/feed/',
+    category: 'HR News',
+    color: '#0d9488',
+    geo: '🌏 Ázsia'
+  },
+  {
+    name: 'Human Resources Online',
+    url: 'https://www.humanresourcesonline.net/feed/',
+    category: 'HR News',
+    color: '#0e7490',
+    geo: '🌏 Ázsia'
+  },
+  // ──────────────────── 🇺🇸 USA – extra ────────────────────
+  {
+    name: 'ERE',
+    url: 'https://www.ere.net/feed/',
+    category: 'Recruiting',
+    color: '#1d4ed8',
+    geo: '🇺🇸 USA'
+  },
+  {
+    name: 'TLNT',
+    url: 'https://www.tlnt.com/feed/',
+    category: 'Talent & HR',
+    color: '#2563eb',
+    geo: '🇺🇸 USA'
+  },
+  {
+    name: 'Employee Benefit News',
+    url: 'https://www.benefitnews.com/feed/',
+    category: 'Benefits',
+    color: '#0369a1',
+    geo: '🇺🇸 USA'
+  },
+  {
+    name: 'Workforce',
+    url: 'https://workforce.com/feed/',
+    category: 'Workforce Management',
+    color: '#0f172a',
+    geo: '🇺🇸 USA'
+  },
+  {
+    name: 'HR Brew',
+    url: 'https://www.hrbrew.com/feed/',
+    category: 'HR News',
+    color: '#854d0e',
+    geo: '🇺🇸 USA'
+  },
+  // ──────────────────── 🇪🇺 EU – extra ────────────────────
+  {
+    name: 'HR Magazine UK',
+    url: 'https://www.hrmagazine.co.uk/feed/',
+    category: 'HR News',
+    color: '#1e3a5f',
+    geo: '🇪🇺 EU'
+  },
+  {
+    name: 'HRZone',
+    url: 'https://www.hrzone.com/feed/',
+    category: 'HR Strategy',
+    color: '#6b21a8',
+    geo: '🇪🇺 EU'
+  },
+  // ──────────────────── 🌍 Global – extra ────────────────────
+  {
+    name: 'HR Technologist',
+    url: 'https://www.hrtechnologist.com/feed/',
+    category: 'HR Tech',
+    color: '#0f766e',
+    geo: '🌍 Global'
+  },
   // 🇭🇺 Magyar: csak Y2Y (scraper, lásd lent)
+  // ─────────────────────────────────────────────────────────
+  // Nincs RSS (kézi figyelés szükséges):
+  //   CIPD (cipd.co.uk) – csak members area
+  //   AHRI (ahri.com.au) – 403 blokkolja
+  //   RH Info (rh-info.fr) – nincs feed
+  //   McKinsey People & Org – nincs section RSS
+  //   Gallup Workplace – nincs feed
+  //   China HR Development – nincs feed
 ];
 
 const PROJECT_ROOT = path.join(__dirname, '..');
