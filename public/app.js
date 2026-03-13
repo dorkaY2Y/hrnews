@@ -114,6 +114,15 @@ function render() {
     + filtered.map((a, i) => cardHTML(a, i)).join('');
 }
 
+const GEO_COLOR = {
+  '\u{1F1FA}\u{1F1F8} USA':     '#2563eb',
+  '\u{1F1EC}\u{1F1E7} UK':      '#1e3a8a',
+  '\u{1F1EA}\u{1F1FA} Eur\u00F3pa': '#1d4ed8',
+  '\u{1F30D} Glob\u00E1lis':    '#0891b2',
+  '\u{1F30F} \u00C1zsia':       '#7c3aed',
+  '\u{1F1ED}\u{1F1FA} Magyar':  '#dc2626',
+};
+
 function cardHTML(a, idx) {
   const date     = a.published ? formatDate(a.published) : '';
   const sum      = a.summary_hu ? esc(a.summary_hu) : '<em>&Ouml;sszefoglal&oacute; hamarosan&hellip;</em>';
@@ -124,8 +133,9 @@ function cardHTML(a, idx) {
   const num      = String(idx + 1).padStart(2, '0');
   const words    = ((a.excerpt || '') + ' ' + (a.summary_hu || '')).trim().split(/\s+/).length;
   const readTime = Math.max(2, Math.round(words / 180));
+  const geoColor = GEO_COLOR[a.geo] || '#c9a84c';
 
-  return '<article class="card' + (isFeat ? ' featured' : '') + '">'
+  return '<article class="card' + (isFeat ? ' featured' : '') + '" data-geo="' + esc(a.geo || '') + '" style="--geo-color:' + geoColor + '">'
     + '<div class="card-top"></div>'
     + '<div class="card-body">'
     +   '<div class="card-meta">'
