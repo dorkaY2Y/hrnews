@@ -43,6 +43,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ---- Y2Y TOP BAR ---- */
