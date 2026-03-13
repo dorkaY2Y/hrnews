@@ -23,7 +23,7 @@ async function loadNews() {
 }
 
 function errorState(msg) {
-  return '<div class="empty-state"><div class="empty-icon">26a0</div><h2>Hiba</h2><p>' + msg + '</p></div>';
+  return '<div class="empty-state"><div class="empty-icon">&#x26A0;</div><h2>Hiba</h2><p>' + msg + '</p></div>';
 }
 
 function buildFilters() {
@@ -58,6 +58,7 @@ function render() {
   const filtered = allArticles.filter(a => {
     const matchSrc = activeFilter === 'all' || a.source === activeFilter;
     const matchQ   = !q
+      || (a.title_hu   || '').toLowerCase().includes(q)
       || (a.title      || '').toLowerCase().includes(q)
       || (a.summary_hu || '').toLowerCase().includes(q)
       || (a.category   || '').toLowerCase().includes(q);
@@ -72,18 +73,18 @@ function render() {
 }
 
 function cardHTML(a) {
-  const color = a.color || '#1d4ed8';
-  const date  = a.published ? formatDate(a.published) : '';
-  const sum   = a.summary_hu ? esc(a.summary_hu) : '<em>&Ouml;sszefoglal&oacute; hamarosan&hellip;</em>';
+  const date = a.published ? formatDate(a.published) : '';
+  const sum  = a.summary_hu ? esc(a.summary_hu) : '<em>&Ouml;sszefoglal&oacute; hamarosan&hellip;</em>';
+  const title = a.title_hu || a.title || 'C&iacute;m n&eacute;lk&uuml;l';
   return '<article class="card">'
-    + '<div class="card-top" style="background:' + color + '"></div>'
+    + '<div class="card-top"></div>'
     + '<div class="card-body">'
     +   '<div class="card-meta">'
-    +     '<span class="source-badge" style="background:' + color + '">' + esc(a.source) + '</span>'
+    +     '<span class="source-badge">' + esc(a.source) + '</span>'
     +     '<span class="category-tag">' + esc(a.category || '') + '</span>'
     +     '<span class="pub-date">' + date + '</span>'
     +   '</div>'
-    +   '<h2 class="card-title">' + esc(a.title || 'C&iacute;m n&eacute;lk&uuml;l') + '</h2>'
+    +   '<h2 class="card-title">' + esc(title) + '</h2>'
     +   '<div class="card-divider"></div>'
     +   '<p class="summary-label">Magyar &ouml;sszefoglal&oacute;</p>'
     +   '<p class="card-summary">' + sum + '</p>'
