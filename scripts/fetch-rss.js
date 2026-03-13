@@ -114,14 +114,14 @@ const FEEDS = [
     url: 'https://www.personneltoday.com/feed/',
     category: 'HR News',
     color: '#1e40af',
-    geo: '🇬🇧 UK'
+    geo: '🇪🇺 EU'
   },
   {
     name: 'People Management',
     url: 'https://www.peoplemanagement.co.uk/feed',
     category: 'HR Policy',
     color: '#0c4a6e',
-    geo: '🇬🇧 UK'
+    geo: '🇪🇺 EU'
   },
   // ──────────────────── 🌍 Globális ────────────────
   {
@@ -129,28 +129,28 @@ const FEEDS = [
     url: 'https://www.aihr.com/blog/feed/',
     category: 'HR Fejlesztés',
     color: '#0891b2',
-    geo: '🌍 Globális'
+    geo: '🌍 Global'
   },
   {
     name: 'Unleash',
     url: 'https://www.unleash.ai/feed/',
     category: 'HR Tech',
     color: '#db2777',
-    geo: '🌍 Globális'
+    geo: '🌍 Global'
   },
   {
     name: 'Josh Bersin',
     url: 'https://joshbersin.com/feed/',
     category: 'HR Strategy',
     color: '#92400e',
-    geo: '🌍 Globális'
+    geo: '🌍 Global'
   },
   {
     name: 'MIT Sloan',
     url: 'https://sloanreview.mit.edu/feed/',
     category: 'Leadership & Strategy',
     color: '#9f1239',
-    geo: '🌍 Globális'
+    geo: '🌍 Global'
   },
   // ──────────────────── 🌏 Ázsia ────────────────────
   {
@@ -279,7 +279,7 @@ async function scrapeY2Y(existingUrls, twoDaysAgo) {
           source: 'Y2Y',
           category: 'Y2Y Blog',
           color: '#b45309',
-          geo: '🇭🇺 Magyar',
+          geo: '🇪🇺 EU',
           title,
           url: postUrl,
           published: pubDate.toISOString(),

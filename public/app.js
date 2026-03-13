@@ -41,7 +41,7 @@ function errorState(msg) {
 
 function buildFilters() {
   // GEO tabs
-  const geoOrder = ['🇺🇸 USA', '🇬🇧 UK', '🇪🇺 Európa', '🌍 Globális', '🌏 Ázsia', '🇭🇺 Magyar'];
+  const geoOrder = ['🇺🇸 USA', '🇪🇺 EU', '🌍 Global', '🌏 Ázsia'];
   const geoInData = new Set(allArticles.map(a => a.geo).filter(Boolean));
   const geos = geoOrder.filter(g => geoInData.has(g));
 
@@ -123,12 +123,10 @@ function render() {
 }
 
 const GEO_COLOR = {
-  '\u{1F1FA}\u{1F1F8} USA':     '#2563eb',
-  '\u{1F1EC}\u{1F1E7} UK':      '#1e3a8a',
-  '\u{1F1EA}\u{1F1FA} Eur\u00F3pa': '#1d4ed8',
-  '\u{1F30D} Glob\u00E1lis':    '#0891b2',
-  '\u{1F30F} \u00C1zsia':       '#7c3aed',
-  '\u{1F1ED}\u{1F1FA} Magyar':  '#dc2626',
+  '\u{1F1FA}\u{1F1F8} USA':     '#2563eb',   // blue
+  '\u{1F1EA}\u{1F1FA} EU':      '#dc2626',   // red
+  '\u{1F30D} Global':           '#0891b2',   // teal
+  '\u{1F30F} \u00C1zsia':       '#7c3aed',   // purple
 };
 
 function cardHTML(a, idx) {
