@@ -45,75 +45,41 @@ body {
   min-height: 100vh;
 }
 
-/* ---- Y2Y TOP BAR ---- */
-.y2y-bar {
-  background: #ffffff;
-  border-bottom: 1px solid #e8e2d8;
-}
-
-.y2y-bar-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 28px;
-  height: 48px;
+/* ---- Y2Y TOP BAR (paytransparency.hu stílus) ---- */
+.logo-bar {
   display: flex;
   align-items: center;
-  gap: 14px;
-}
-
-.y2y-bar-brand {
+  justify-content: space-between;
+  background: #fff;
+  padding: 14px 24px;
   text-decoration: none;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
+  border-bottom: 1px solid #ededea;
+  transition: background .15s;
 }
 
-.y2y-bar-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
+.logo-bar:hover { background: #fafaf6; }
+
+.logo-bar-text {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 13px;
   font-weight: 700;
-  color: var(--gold);
+  text-transform: uppercase;
   letter-spacing: 0.5px;
-  line-height: 1;
+  color: #2B2D42;
+}
+
+.logo-bar-text span {
+  color: #DED114;
+  font-weight: 800;
+}
+
+.logo-bar-logo {
+  height: 30px;
+  opacity: 0.7;
   transition: opacity .15s;
 }
 
-.y2y-bar-brand:hover .y2y-bar-logo { opacity: 0.8; }
-
-.y2y-bar-divider {
-  width: 1px;
-  height: 22px;
-  background: #d8d2c8;
-  flex-shrink: 0;
-}
-
-.y2y-bar-tagline {
-  font-size: 12.5px;
-  color: #5a5470;
-  font-style: italic;
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  letter-spacing: 0.1px;
-}
-
-.y2y-bar-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 11px;
-  font-weight: 700;
-  color: #9a7428;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: color .15s;
-  text-transform: uppercase;
-}
-
-.y2y-bar-link:hover { color: var(--gold); }
+.logo-bar:hover .logo-bar-logo { opacity: 1; }
 
 /* ---- HEADER ---- */
 .site-header {
@@ -517,8 +483,8 @@ body {
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 640px) {
-  .y2y-bar-inner  { padding: 0 18px; height: 42px; }
-  .y2y-bar-tagline { display: none; }
+  .logo-bar       { padding: 10px 18px; }
+  .logo-bar-logo  { height: 24px; }
   .header-inner   { height: 64px; padding: 0 18px; }
   .logo-title     { font-size: 18px; }
   .logo-sub       { display: none; }
