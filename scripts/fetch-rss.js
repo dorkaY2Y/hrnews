@@ -340,15 +340,7 @@ const SCRAPERS = [
     urlPattern: /["']((?:https:\/\/www\.mckinsey\.com)?\/capabilities\/people-and-organizational-performance\/our-insights\/[^"'?#\s]{10,})/g,
     baseUrl: 'https://www.mckinsey.com'
   },
-  {
-    name: 'Gallup Workplace',
-    category: 'Employee Engagement',
-    color: '#0d4f8b',
-    geo: '🌍 Global',
-    listingUrl: 'https://www.gallup.com/workplace/home.aspx',
-    urlPattern: /["']((?:https:\/\/www\.gallup\.com)?\/workplace\/\d{4,}\/[^"'?#\s]{5,})/g,
-    baseUrl: 'https://www.gallup.com'
-  }
+  // Gallup eltávolítva: nincs RSS, template képek, fake timestampok
 ];
 
 // ─── Generic OG-meta scraper (for non-RSS sources) ───────────────────────────
