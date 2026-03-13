@@ -131,6 +131,8 @@ function cardHTML(a, idx) {
   const geoColor = GEO_COLOR[a.geo] || '#c9a84c';
   const flag     = a.geo ? a.geo.split(' ')[0] : '';
 
+  const isWide   = !isFeat && idx % 4 === 0;   // every 4th card spans 2 cols
+
   const h        = strHash(a.url || a.title || String(idx));
   const randImg  = !a.image
     ? 'https://picsum.photos/seed/' + h + '/600/300' : '';
@@ -170,7 +172,7 @@ function cardHTML(a, idx) {
     ? cover + '<div class="card-content">' + body + footer + '</div>'
     : cover + body + footer;
 
-  return '<article class="card' + (isFeat ? ' featured' : '') + '" data-geo="' + esc(a.geo || '') + '" data-url="' + esc(a.url) + '" style="--geo-color:' + geoColor + ';cursor:pointer">'
+  return '<article class="card' + (isFeat ? ' featured' : isWide ? ' card--wide' : '') + '" data-geo="' + esc(a.geo || '') + '" data-url="' + esc(a.url) + '" style="--geo-color:' + geoColor + ';cursor:pointer">'
     + inner
     + '</article>';
 }

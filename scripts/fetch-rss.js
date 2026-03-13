@@ -405,16 +405,15 @@ async function scrapeY2Y(existingUrls) {
 
     const blogHtml = await httpGet('https://www.y2y.hu/blog');
 
+    // y2y.hu uses /blog/<slug> URLs (server-side PHP, not Wix)
     const urlSet = new Set();
-    for (const m of blogHtml.matchAll(/["'](https?:\/\/(?:www\.)?y2y\.hu\/post\/[^"'?#\s]+)/g))
+    for (const m of blogHtml.matchAll(/href="(https?:\/\/(?:www\.)?y2y\.hu\/blog\/[^"?#\s]{3,})"/g))
       urlSet.add(m[1].split('?')[0].split('#')[0]);
-    for (const m of blogHtml.matchAll(/["'](\/post\/[^"'?#\s]+)/g))
-      urlSet.add('https://www.y2y.hu' + m[1].split('?')[0].split('#')[0]);
 
     const foundUrls = [...urlSet];
     process.stdout.write(`(${foundUrls.length} URL) `);
 
-    // Fetch all, sort by date, always include the 2 newest regardless of age
+    // Fetch OG meta from each post, sort by date, always include the 2 newest
     const candidates = [];
     for (const postUrl of foundUrls.slice(0, 12)) {
       try {
@@ -438,8 +437,8 @@ async function scrapeY2Y(existingUrls) {
     // Always include the 2 newest; rest only if not already shown
     for (let i = 0; i < candidates.length; i++) {
       const { postUrl, title, excerpt, image, published } = candidates[i];
-      if (i >= 2 && existingUrls.has(postUrl)) continue;   // skip older duplicates
-      if (i >= 2) break;                                    // only 2 guaranteed
+      if (i >= 2 && existingUrls.has(postUrl)) continue;
+      if (i >= 2) break;
       articles.push({
         source: 'Y2Y',
         category: 'Y2Y Blog',
