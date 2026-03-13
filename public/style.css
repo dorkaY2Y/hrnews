@@ -326,10 +326,10 @@ body {
 }
 
 .card-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16.5px;
   font-weight: 700;
-  line-height: 1.38;
+  line-height: 1.35;
   color: var(--card-text);
   letter-spacing: -0.1px;
 }
