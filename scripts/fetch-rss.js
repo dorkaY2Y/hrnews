@@ -167,35 +167,7 @@ const FEEDS = [
     color: '#0f766e',
     geo: '🌏 Ázsia'
   },
-  // ──────────────────── 🇭🇺 Magyar ────────────────────
-  {
-    name: 'Portfolio',
-    url: 'https://www.portfolio.hu/rss/all.xml',
-    category: 'Üzlet & Gazdaság',
-    color: '#1d4ed8',
-    geo: '🇭🇺 Magyar'
-  },
-  {
-    name: 'G7',
-    url: 'https://g7.hu/feed',
-    category: 'Gazdaság & Munkaerőpiac',
-    color: '#15803d',
-    geo: '🇭🇺 Magyar'
-  },
-  {
-    name: 'Telex',
-    url: 'https://telex.hu/rss/all-articles',
-    category: 'Hírek',
-    color: '#dc2626',
-    geo: '🇭🇺 Magyar'
-  },
-  {
-    name: 'BBJ',
-    url: 'https://bbj.hu/rss',
-    category: 'Business',
-    color: '#1e3a5f',
-    geo: '🇭🇺 Magyar'
-  },
+  // 🇭🇺 Magyar: csak Y2Y (scraper, lásd lent)
 ];
 
 const PROJECT_ROOT = path.join(__dirname, '..');
