@@ -129,7 +129,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 32px;
-  height: 100px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -141,7 +141,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  gap: 0;
 }
 
 .masthead-wordmark {
@@ -153,17 +153,17 @@ body {
 .masthead-row {
   display: flex;
   align-items: baseline;
-  gap: 13px;
+  gap: 14px;
 }
 
 .masthead-pre {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 800;
-  font-size: 9.5px;
+  font-size: 10px;
   letter-spacing: 4.5px;
   color: #0d0d12;
   background: var(--gold);
-  padding: 3px 7px 2px;
+  padding: 4px 8px 3px;
   text-transform: uppercase;
   line-height: 1.5;
   flex-shrink: 0;
@@ -172,31 +172,31 @@ body {
 .masthead-name {
   font-family: 'Exo 2', sans-serif;
   font-weight: 800;
-  font-size: 36px;
+  font-size: 52px;
   color: var(--text);
-  letter-spacing: -1.5px;
+  letter-spacing: -2px;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .masthead-sub {
   display: block;
-  font-size: 10.5px;
+  font-size: 11px;
   color: rgba(234,229,219,0.45);
-  letter-spacing: 0.6px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  margin-top: 5px;
+  margin-top: 14px;
 }
 
 .masthead-desc {
   display: block;
-  font-size: 11.5px;
-  color: rgba(234,229,219,0.38);
+  font-size: 13px;
+  color: rgba(234,229,219,0.52);
   line-height: 1.6;
-  margin-top: 8px;
-  max-width: 420px;
+  margin-top: 6px;
+  max-width: 480px;
   font-style: italic;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.2px;
 }
 
 @media (max-width: 640px) {
@@ -1056,9 +1056,11 @@ body {
   .card:not(.featured) .pub-date:not(.pub-date-footer) { display: none; }
   /* Olvasd el gomb érintőfelületre optimalizálva */
   .read-link { min-height: 44px; padding: 0 4px; }
-  /* Header kompaktabb */
-  .header-inner { gap: 4px; padding: 10px 14px 8px; }
-  .masthead-name { font-size: 21px; }
+  /* Header mobilon */
+  .header-inner { gap: 6px; padding: 20px 18px 16px; }
+  .masthead-name { font-size: 32px; letter-spacing: -1px; }
+  .masthead-sub { margin-top: 10px; }
+  .masthead-desc { font-size: 12px; margin-top: 4px; }
 }
 
 
