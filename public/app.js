@@ -22,9 +22,27 @@ async function loadNews() {
     const now = new Date();
     dateEl.textContent = now.toLocaleDateString('hu-HU', { year: 'numeric', month: 'long', day: 'numeric' });
   }
+    const sources = [...new Set(allArticles.map(a => a.source))].sort();
     if (headerStats) {
-      const srcCount = new Set(allArticles.map(a => a.source)).size;
-      headerStats.textContent = allArticles.length + ' cikk · ' + srcCount + ' forrás';
+      headerStats.textContent = allArticles.length + ' cikk · ' + sources.length + ' forrás';
+    }
+    // Footer: forrásszám + lista dinamikusan
+    const footerSrcCount = document.querySelector('.footer-stat strong:nth-child(1)');
+    const footerSrcItems = document.querySelector('.footer-sources');
+    if (footerSrcCount) {
+      const statEls = document.querySelectorAll('.footer-stat');
+      statEls.forEach(el => { if (el.textContent.includes('forrás')) el.querySelector('strong').textContent = sources.length; });
+    }
+    if (footerSrcItems) {
+      const label = footerSrcItems.querySelector('.footer-src-label');
+      footerSrcItems.innerHTML = '';
+      if (label) footerSrcItems.appendChild(label);
+      sources.forEach((s, i) => {
+        const span = document.createElement('span');
+        span.className = 'footer-src-item' + (i === sources.length - 1 ? ' last' : '');
+        span.textContent = s;
+        footerSrcItems.appendChild(span);
+      });
     }
     buildFilters();
     render();
