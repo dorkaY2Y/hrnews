@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-13T20:34:58.885Z",
+  "lastUpdated": "2026-03-14T07:19:30.313Z",
   "articles": [
     {
       "id": "1773434098846_9345",
@@ -96,18 +96,6 @@
       "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_13_2244892408.jpg"
     },
     {
-      "id": "art_1773421410791_2_md4w",
-      "title": "The Map of U.S. Prosperity Is Changing. Here’s Where Companies Should Invest.",
-      "title_hu": "Átrajzolódik az amerikai gazdasági erőtér – hová fektessenek a vállalatok?",
-      "summary_hu": "Egy új kutatáson alapuló index megmutatja, mely amerikai városok képesek ellenállni a demográfiai visszaesésnek, az éghajlati sokkoknak és az AI-disrupciónak. A tehetségszerzési és telephelyválasztási döntések előtt érdemes megvizsgálni, hol koncentrálódik a jövő munkaereje.",
-      "source": "Harvard Business Review",
-      "url": "https://hbr.org/2026/03/the-map-of-u-s-prosperity-is-changing-heres-where-companies-should-invest",
-      "pubDate": "2026-03-13T07:00:00.000Z",
-      "geo": "🇺🇸 USA",
-      "excerpt": "A new research-backed index of American cities can help companies navigate issues such as demographic decline, climate shock, and AI disruption.",
-      "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_13_2216503438.jpg"
-    },
-    {
       "id": "art_1773421410791_3_m3t4",
       "title": "Anthropic: AI’s influence over the labor market is only beginning to be felt",
       "title_hu": "Az AI hatása a munkaerőpiacra: csak a kezdetén vagyunk",
@@ -146,7 +134,7 @@
       "id": "art_1773421410791_6_2zh1",
       "title": "And the Oscar Goes to … HR! 4 Ways to Be an Even Better HR Leader This Year",
       "title_hu": "Az Oscar a HR-é! 4 tipp a még jobb HR-vezetéshez",
-      "summary_hu": "2026-ban először kap Oscar-díjat valaki kifejezetten HR-munkájáért – ez is jelzi, mennyire elismerté vált a szerepek megfelelő betöltésének tudománya. A cikk négy konkrét tippet ad, hogyan fejlesztheti a HR-vezető a saját teljesítményét ebben az évben.",
+      "summary_hu": "Az Oscar-gála szezonjában a HR-szakma is reflektorfénybe kerül: a cikk négy konkrét tippet ad, hogyan fejlesztheti a HR-vezető saját teljesítményét és szerezhessen igazán kivételes szerepet a szervezetben. Nem díjak kellenek – hanem olyan döntések, amelyek valódi hatást hagynak.",
       "source": "HRMorning",
       "url": "https://www.hrmorning.com/articles/and-the-oscar-goes-to-hr/",
       "pubDate": "2026-03-13T07:00:00.000Z",
@@ -203,18 +191,6 @@
       "image": "https://hrexecutive.com/wp-content/uploads/2019/01/EEOC700.jpg"
     },
     {
-      "id": "art_1773421410791_11_yojm",
-      "title": "Debate: Should the Treasury Department destroy all BOI reporting data?",
-      "title_hu": "Vita: megsemmisítse-e az Állmkincstár a vállalati tulajdonosi adatokat?",
-      "summary_hu": "Miután a BOI adatszolgáltatás már nem kötelező, vita tárgya, hogy az Egyesült Államok Kincstára megsemmisítheti-e az összegyűjtött adatokat. A kérdés a vállalati compliance és adatkezelési döntéseket egyaránt érinti.",
-      "source": "HR Executive",
-      "url": "https://hrexecutive.com/debate-do-you-agree-treasury-department-should-destroy-all-boi-reporting-data/",
-      "pubDate": "2026-03-13T07:00:00.000Z",
-      "geo": "🇺🇸 USA",
-      "excerpt": "What should companies insist on now that BOI reporting data is no longer required? The post Debate: Should the Treasury Department destroy all BOI reporting data? appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/AdobeStock_1237233998_Editorial_Use_Only.jpg"
-    },
-    {
       "id": "art_1773421410791_12_9wnu",
       "title": "Dayforce top AI exec’s advice on closing the readiness gap",
       "title_hu": "AI-felkészültségi rés: hogyan zárd be a lemaradást?",
@@ -237,18 +213,6 @@
       "geo": "🌍 Global",
       "excerpt": "For remote and hybrid success, all-hands meetings must be designed with intention, grounded in people-first principles and reinforced long after the event ends. The post Transform all-hands meetings to strengthen remote culture appeared first on HR Executive.",
       "image": "https://hrexecutive.com/wp-content/uploads/2022/12/Leadership.-Business-meeting.-Adobe.-12.15.22.jpeg"
-    },
-    {
-      "id": "art_1773421410791_14_mvsi",
-      "title": "Trump Accounts move forward as Treasury issues proposed rules",
-      "title_hu": "Trump Accounts: az Állmkincstár részletezi az új megtakarítási szabályokat",
-      "summary_hu": "Az IRS és az Állmkincstár közzétette a Trump Accounts (gyermekmegtakarítási számlák) részleteit, de a munkáltatók szerepéről egyelőre nincs útmutatás. A HR-eseknek figyelniük kell a közelgő munkáltatói kötelezettségekre.",
-      "source": "HR Executive",
-      "url": "https://hrexecutive.com/trump-accounts-move-forward-as-treasury-issues-proposed-rules/",
-      "pubDate": "2026-03-13T07:00:00.000Z",
-      "geo": "🇺🇸 USA",
-      "excerpt": "The IRS and Treasury Department last week unveiled details on the new Trump Accounts, but guidance on employer involvement remains pending. The post Trump Accounts move forward as Treasury issues proposed rules appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/2019/03/GettyImages-172722566moneymicroscope700.jpg"
     },
     {
       "id": "art_1773421410791_15_uo61",
@@ -285,18 +249,6 @@
       "geo": "🌍 Global",
       "excerpt": "\"In times of geopolitical uncertainty, attempting to predict events is less important than preparing for rapid change,\" says Georg Winter, CEO of risk advisory firm GrECo. The post Middle East crisis puts Amazon, Google and Nvidia’s duty of care to the test appeared first on HR Executive.",
       "image": "https://hrexecutive.com/wp-content/uploads/Screenshot_6-3-2026_11612_www.concur.com_.jpeg"
-    },
-    {
-      "id": "art_1773421410791_18_niif",
-      "title": "Warnings over UK growth as Iran conflict clouds economic forecasts",
-      "title_hu": "Figyelmeztetések az Egyesült Királyság gazdasági növekedéséről az iráni konfliktus árnyékában",
-      "summary_hu": "Az Egyesült Királyság gazdasága januárban váratlanul stagnált a decemberi 0,1%-os növekedés után. A bizonytalanság közvetlenül érinti a brit munkáltatók munkaerő-tervezési döntéseit is.",
-      "source": "Personnel Today",
-      "url": "https://www.personneltoday.com/hr/warnings-over-uk-growth-as-iran-conflict-clouds-economic-forecasts/",
-      "pubDate": "2026-03-13T07:00:00.000Z",
-      "geo": "🇪🇺 EU",
-      "excerpt": "The UK economy unexpectedly recorded zero growth in January, following growth of 0.1% in December. The post Warnings over UK growth as Iran conflict clouds economic forecasts appeared first on Personnel Today.",
-      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/shutterstock_161617841-3-1.jpg"
     },
     {
       "id": "art_1773421410791_19_sv3r",
@@ -522,48 +474,6 @@
       "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_12_157649603.jpg"
     },
     {
-      "id": "art_1773386084739_4",
-      "source": "Harvard Business Review",
-      "category": "Leadership",
-      "color": "#991b1b",
-      "title": "Healthcare Uses Specialized Language. It Needs Specialized AI, Too.",
-      "title_hu": "Az egészségügy szaknyelvet használ – specializált AI-t is igényel",
-      "url": "https://hbr.org/2026/03/healthcare-uses-specialized-language-it-needs-specialized-ai-too",
-      "published": "2026-03-11T12:25:45.000Z",
-      "excerpt": "Large language models often misinterpret the clinical dialects used across medical fields.",
-      "summary_hu": "Az általános célú nagy nyelvi modellek rendszeresen félreértelmezik az orvosi szaknyelvet, ami komoly kockázatot jelent a klinikai döntéstámogatásban. Az egészségügyi AI-fejlesztők egyre inkább specializált, területspecifikus modelleket igényelnek a megbízhatóbb működéshez.",
-      "geo": "🌍 Global",
-      "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_11_-2253407050.jpg"
-    },
-    {
-      "id": "art_1773386084739_5",
-      "source": "Harvard Business Review",
-      "category": "Leadership",
-      "color": "#991b1b",
-      "title": "What Should Your Company's AI Sound Like to Customers?",
-      "title_hu": "Milyen hangon szóljon a vállalat AI-ja az ügyfelekhez?",
-      "url": "https://hbr.org/2026/03/what-should-your-companys-ai-sound-like-to-customers",
-      "published": "2026-03-11T12:15:51.000Z",
-      "excerpt": "Tone can matter just as much as content.",
-      "summary_hu": "Az AI-alapú ügyfélkommunikáció hangvétele legalább annyira meghatározza a márkaképet, mint a tartalom maga. A cikk azt vizsgálja, hogyan találhatják meg a vállalatok az autentikus, márkával konzisztens AI-hangot – és miért kell ezt tudatos döntésként kezelni.",
-      "geo": "🌍 Global",
-      "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_11_200440918-001_2153096896.jpg"
-    },
-    {
-      "id": "art_1773386084739_6",
-      "source": "Harvard Business Review",
-      "category": "Leadership",
-      "color": "#991b1b",
-      "title": "Looking Back on Nike's Evolution from Startup to Global Enterprise",
-      "title_hu": "Visszatekintés a Nike útjára: a startuptól a globális birodalomig",
-      "url": "https://hbr.org/podcast/2026/03/looking-back-on-nikes-evolution-from-startup-to-global-enterprise",
-      "published": "2026-03-11T10:05:50.000Z",
-      "excerpt": "A conversation with Phil Knight, co-founder and former CEO of Nike, on the company's enduring culture of innovation.",
-      "summary_hu": "Phil Knight, a Nike alapítója visszatekint arra, hogyan vált a cég egy raktárból globális sportmárka-birodalommá, és mi tartotta fenn az innovációs kultúrát a növekedés során. Az interjú tanulságos olvasmány a szervezeti kultúra és az idő próbáján való helytállás szempontjából.",
-      "geo": "🌍 Global",
-      "image": "https://hbr.org/resources/images/article_assets/2024/11/wide-hbr-on-leadership-24.png"
-    },
-    {
       "id": "art_1773386084739_7",
       "source": "Harvard Business Review",
       "category": "Leadership",
@@ -660,20 +570,6 @@
       "summary_hu": "Egy Cornell-kutatás kimutatta, hogy az üres vállalati szólamokra fogékony munkavállalók gyengébb analitikus gondolkodást mutatnak. A szerzők szerint a hitelességet nélkülöző kommunikáció elfojtja a kritikus gondolkodást, ami hosszú távon szervezeti hatékonysági problémákhoz vezet.",
       "geo": "🌍 Global",
       "image": "https://imgproxy.divecdn.com/WGdWiGsmYZvC-4p3p5WNb49SE1QJACCPdM-nNFoR9R4/g:nowe:0:98/c:4271:2413/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNDczMzM3ODkuanBn.webp"
-    },
-    {
-      "id": "art_1773386084739_14",
-      "source": "HR Dive",
-      "category": "HR News",
-      "color": "#0369a1",
-      "title": "Bravo, Warner Bros. can't compel arbitration in former Real Housewives cast member lawsuit, judge orders",
-      "title_hu": "Bíró: A Bravo és Warner Bros. nem kényszerítheti arbitrációra a volt Real Housewives-szereplőt",
-      "url": "https://www.hrdive.com/news/bravo-warner-bros-cant-compel-arbitration-real-housewives-lawsuit/814449/",
-      "published": "2026-03-11T20:47:00.000Z",
-      "excerpt": "The defendants didn't bring up arbitration for more than a year after the lawsuit was filed.",
-      "summary_hu": "Egy szövetségi bíró kimondta, hogy a Bravo és a Warner Bros. nem kényszerítheti arbitrációra a volt Real Housewives-szereplőt, mivel az arbitrációs igényt több mint egy évnyi mulasztás után terjesztette elő. Az eset rámutat az arbitrációs záradékok időben való érvényesítésének fontosságára.",
-      "geo": "🌍 Global",
-      "image": "https://imgproxy.divecdn.com/BoNKe4tU3sQiiLuIP1lrR9DfxsGHwlp9SnuE9p2D-RY/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzQ3NTgzMTY1LmpwZw==.webp"
     },
     {
       "id": "art_1773386084739_15",
