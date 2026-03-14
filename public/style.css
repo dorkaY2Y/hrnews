@@ -335,34 +335,30 @@ body {
 }
 
 /* ---- SEARCH ---- */
-.search-wrap {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 24px 28px 0;
-}
-
 .search-inner {
   position: relative;
-  max-width: 460px;
+  width: 200px;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .search-icon {
   position: absolute;
-  left: 14px; top: 50%;
+  left: 10px; top: 50%;
   transform: translateY(-50%);
-  width: 16px; height: 16px;
+  width: 14px; height: 14px;
   color: var(--muted);
   pointer-events: none;
 }
 
 .search-input {
   width: 100%;
-  padding: 10px 14px 10px 40px;
+  padding: 6px 10px 6px 32px;
   border: 1px solid var(--border-2);
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 20px;
+  font-size: 12px;
   font-family: inherit;
-  background: var(--surface);
+  background: var(--bg);
   color: var(--text);
   transition: border-color .15s, box-shadow .15s;
   outline: none;
@@ -1034,7 +1030,7 @@ body {
   .articles-grid  { grid-template-columns: 1fr; gap: 10px; }
   .card.card--wide { grid-column: span 1; }
   .main-content   { padding: 16px 14px 56px; }
-  .search-wrap    { padding: 16px 14px 0; }
+  .search-inner   { width: 130px; }
 
   /* Mobile cards: kep nelkuli cover elrejtve; kepesnel kisebb cover marad */
   .card:not(.featured) .card-cover:not(.has-image) { display: none; }
