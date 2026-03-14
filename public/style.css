@@ -421,9 +421,9 @@ body {
   align-items: flex-end;
   padding: 10px 16px 11px;
   background: linear-gradient(
-    155deg,
-    color-mix(in srgb, var(--geo-color, #c9a84c) 24%, #f0ebe2) 0%,
-    #faf8f4 100%
+    135deg,
+    color-mix(in srgb, var(--geo-color, #c9a84c) 72%, #111) 0%,
+    color-mix(in srgb, var(--geo-color, #c9a84c) 40%, #000) 100%
   );
 }
 
@@ -434,7 +434,7 @@ body {
   transform: translateY(-50%);
   font-size: 60px;
   line-height: 1;
-  opacity: 0.1;
+  opacity: 0.18;
   pointer-events: none;
   user-select: none;
 }
@@ -470,8 +470,8 @@ body {
   font-size: 8.5px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--geo-color, #c9a84c);
-  opacity: 0.75;
+  color: rgba(255,255,255,0.9);
+  opacity: 1;
   line-height: 1.4;
   max-width: calc(100% - 56px);
   word-break: break-word;

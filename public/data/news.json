@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-14T07:19:30.313Z",
+  "lastUpdated": "2026-03-14T07:23:33.427Z",
   "articles": [
     {
       "id": "1773434098846_9345",
@@ -81,7 +81,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "Editor at large Adi Ignatius connects with IBM&#8217;s chief human resources officer Nickle LaMoreaux to understand the company&#8217;s talent strategy in the age of AI.",
-      "image": "https://hbr.org/resources/images/article_assets/2026/03/03_12_Agenda_AIEntryLevel_2220248957.jpg"
+      "image": "https://hbr.org/resources/images/article_assets/2026/03/03_12_Agenda_AIEntryLevel_2220248957.jpg",
+      "color": "#991b1b"
     },
     {
       "id": "art_1773421410791_1_5oxl",
@@ -93,7 +94,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "The platforms treat storytelling, experimentation, and monetization as one integrated system&#8212;and the operating logic travels well beyond entertainment.",
-      "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_13_2244892408.jpg"
+      "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_13_2244892408.jpg",
+      "color": "#991b1b"
     },
     {
       "id": "art_1773421410791_3_m3t4",
@@ -105,7 +107,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "The Claude developer found that hiring seems to have slowed for younger workers in certain occupations.",
-      "image": "https://imgproxy.divecdn.com/mOyU7rqKcKTZkVeKlY7EPJJDGZ_AMtmgZULsKkYPKtc/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjE0Mzg4NDgwLmpwZw==.webp"
+      "image": "https://imgproxy.divecdn.com/mOyU7rqKcKTZkVeKlY7EPJJDGZ_AMtmgZULsKkYPKtc/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjE0Mzg4NDgwLmpwZw==.webp",
+      "color": "#0369a1"
     },
     {
       "id": "art_1773421410791_4_jkjw",
@@ -117,7 +120,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "“If every message carries a sense of urgency, employees begin to tune out rather than listen closer,” a Gallagher exec said.",
-      "image": "https://imgproxy.divecdn.com/GKl1vpF6iZv1KWdqE1qm_RRuae8MY29RT4sVXWiW-14/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjI0Njg2NTQ4LmpwZw==.webp"
+      "image": "https://imgproxy.divecdn.com/GKl1vpF6iZv1KWdqE1qm_RRuae8MY29RT4sVXWiW-14/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjI0Njg2NTQ4LmpwZw==.webp",
+      "color": "#0369a1"
     },
     {
       "id": "art_1773421410791_5_6agc",
@@ -128,7 +132,9 @@
       "url": "https://www.hrbartender.com/2026/strategy-planning/job-analysis-4-methods-gathering-data/",
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
-      "excerpt": "Learn how job analysis can improve organizational efficiency, enhance job descriptions, and inform automation decisions. The post Job Analysis: 4 Methods for Gathering Data appeared first on hr bartender."
+      "excerpt": "Learn how job analysis can improve organizational efficiency, enhance job descriptions, and inform automation decisions. The post Job Analysis: 4 Methods for Gathering Data appeared first on hr bartender.",
+      "image": "https://www.hrbartender.com/wp-content/uploads/2026/03/Job-Analysis-Data.jpeg",
+      "color": "#c2410c"
     },
     {
       "id": "art_1773421410791_6_2zh1",
@@ -140,7 +146,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "Whether you love or hate the Academy Awards ceremonies, you have a reason to pay attention this year. That’s because 2026 is the first year someone in HR will win an Oscar for their job, putting people in the right roles. Can you hear it now? … And the Oscar goes to … HR! The […]",
-      "image": "https://www.hrmorning.com/wp-content/uploads/2024/04/HRM_Blog_Oscar_HR_PRO.png"
+      "image": "https://www.hrmorning.com/wp-content/uploads/2024/04/HRM_Blog_Oscar_HR_PRO.png",
+      "color": "#0284c7"
     },
     {
       "id": "art_1773421410791_7_vd8u",
@@ -152,7 +159,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇺🇸 USA",
       "excerpt": "Widespread uncertainty and rapid policy shifts during the first year of Trump 2.0 have been a “roller coaster for employers,” according to a new report from the Littler Workplace Policy Institute (WPI). To gauge employer concerns amid this uncertainty, WPI surveyed more than 300 HR professionals, C-suite execs and in-house attorneys, asking about issues most […]",
-      "image": "https://www.hrmorning.com/wp-content/uploads/2026/03/HRM_Blog_Employer_Concerns_On_Rise.jpg"
+      "image": "https://www.hrmorning.com/wp-content/uploads/2026/03/HRM_Blog_Employer_Concerns_On_Rise.jpg",
+      "color": "#0284c7"
     },
     {
       "id": "art_1773421410791_8_d7ky",
@@ -164,7 +172,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "The author and leadership expert says HR can make small shifts that could drive meaningful results as they lead through the disruption of AI. The post Simon Sinek: 3 phrases HR needs to abandon in the age of AI appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/SimonSinek-04-e1773328269253.jpg"
+      "image": "https://hrexecutive.com/wp-content/uploads/SimonSinek-04-e1773328269253.jpg",
+      "color": "#7c3aed"
     },
     {
       "id": "art_1773421410791_9_hx7z",
@@ -176,7 +185,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇺🇸 USA",
       "excerpt": "HR leaders watching Oracle got product momentum and no answers on layoffs in the company's third-quarter fiscal 2026 earnings call. The post Oracle beats expectations and stays quiet on job cut speculation appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/oracle-hq-austin.jpg"
+      "image": "https://hrexecutive.com/wp-content/uploads/oracle-hq-austin.jpg",
+      "color": "#7c3aed"
     },
     {
       "id": "art_1773421410791_10_83y5",
@@ -188,7 +198,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇺🇸 USA",
       "excerpt": "EEOC Chair Andrea Lucas sent a warning to CEOs over DEI programs, signaling federal litigation is on the table. The post From Nike to Coca-Cola: EEOC puts Fortune 500 on notice over DEI appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/2019/01/EEOC700.jpg"
+      "image": "https://hrexecutive.com/wp-content/uploads/2019/01/EEOC700.jpg",
+      "color": "#7c3aed"
     },
     {
       "id": "art_1773421410791_12_9wnu",
@@ -200,7 +211,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "Nearly two out of three business leaders say they see data and AI skills gaps in their organization, according to a new survey of business leaders out of the U.S. and the U.K. from learning platform DataCamp. Yet less than half say their organizations provide even basic AI literacy training. And among those who have […] The post Dayforce top AI exec’s advice on closing the readiness gap appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/IMG_6020-scaled.jpg"
+      "image": "https://hrexecutive.com/wp-content/uploads/IMG_6020-scaled.jpg",
+      "color": "#7c3aed"
     },
     {
       "id": "art_1773421410791_13_geop",
@@ -212,7 +224,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "For remote and hybrid success, all-hands meetings must be designed with intention, grounded in people-first principles and reinforced long after the event ends. The post Transform all-hands meetings to strengthen remote culture appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/2022/12/Leadership.-Business-meeting.-Adobe.-12.15.22.jpeg"
+      "image": "https://hrexecutive.com/wp-content/uploads/2022/12/Leadership.-Business-meeting.-Adobe.-12.15.22.jpeg",
+      "color": "#7c3aed"
     },
     {
       "id": "art_1773421410791_15_uo61",
@@ -224,7 +237,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "As organizations increase managers' spans of control, they risk losing significant performance; yet, agentic AI can transform that challenge into an opportunity. The post From busywork to better work: Amplify manager results with agentic AI appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/AdobeStock_1702342545.jpg"
+      "image": "https://hrexecutive.com/wp-content/uploads/AdobeStock_1702342545.jpg",
+      "color": "#7c3aed"
     },
     {
       "id": "art_1773421410791_16_p4v0",
@@ -236,7 +250,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇺🇸 USA",
       "excerpt": "Oracle is reportedly weighing cuts of up to 30,000 employees to fund AI data center expansion. Here's what HR leaders need to watch. The post Oracle’s potential mass layoff signals an AI trade-off appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/AIWorld_Ellison_Keynote2-scaled.jpg"
+      "image": "https://hrexecutive.com/wp-content/uploads/AIWorld_Ellison_Keynote2-scaled.jpg",
+      "color": "#7c3aed"
     },
     {
       "id": "art_1773421410791_17_k6j5",
@@ -248,7 +263,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "\"In times of geopolitical uncertainty, attempting to predict events is less important than preparing for rapid change,\" says Georg Winter, CEO of risk advisory firm GrECo. The post Middle East crisis puts Amazon, Google and Nvidia’s duty of care to the test appeared first on HR Executive.",
-      "image": "https://hrexecutive.com/wp-content/uploads/Screenshot_6-3-2026_11612_www.concur.com_.jpeg"
+      "image": "https://hrexecutive.com/wp-content/uploads/Screenshot_6-3-2026_11612_www.concur.com_.jpeg",
+      "color": "#7c3aed"
     },
     {
       "id": "art_1773421410791_19_sv3r",
@@ -260,7 +276,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇪🇺 EU",
       "excerpt": "The number of open employment tribunals has increased by 12% and some cases will wait until 2029 to be heard. The post Tribunal claims up 12% as pressure grows on system appeared first on Personnel Today.",
-      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/tribunal-claims_Shutterstock_1778875313.jpg"
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/tribunal-claims_Shutterstock_1778875313.jpg",
+      "color": "#1e40af"
     },
     {
       "id": "art_1773421410791_20_4yxz",
@@ -272,7 +289,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇪🇺 EU",
       "excerpt": "National searches for apprenticeships and vocational training rose by 9% in 2025. The post Interest in apprenticeships on the rise in UK appeared first on Personnel Today.",
-      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/shutterstock_2634963445-1-2.jpg"
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/shutterstock_2634963445-1-2.jpg",
+      "color": "#1e40af"
     },
     {
       "id": "art_1773421410791_21_abaw",
@@ -284,7 +302,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇪🇺 EU",
       "excerpt": "17 March 2026 | Register now for our webinar examining changes to sexual harassment and whistleblowing rules in the Employment Rights Act. The post Sexual harassment and the Employment Rights Act (webinar) appeared first on Personnel Today.",
-      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/02/sexual-harassment-whistleblowing-employment-rights-act-webinar-shutterstock_2310717313-1200x675-1.jpg"
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/02/sexual-harassment-whistleblowing-employment-rights-act-webinar-shutterstock_2310717313-1200x675-1.jpg",
+      "color": "#1e40af"
     },
     {
       "id": "art_1773421410791_22_vsl8",
@@ -296,7 +315,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇪🇺 EU",
       "excerpt": "One of the most closely watched indicators – staff advocacy – fell marginally in 2025. The post NHS staff survey reveals stability, not improvement appeared first on Personnel Today.",
-      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/02/nhs-overpayments-bailiffs-payroll-errors-shutterstock_1742946248.jpg"
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/02/nhs-overpayments-bailiffs-payroll-errors-shutterstock_1742946248.jpg",
+      "color": "#1e40af"
     },
     {
       "id": "art_1773421410791_23_2tes",
@@ -308,7 +328,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇪🇺 EU",
       "excerpt": "More than a third of workers think that their employer is ineffective at training managers to support neurodiversity at work. The post Neurodiversity: better training is needed for managers appeared first on Personnel Today.",
-      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/shutterstock_2482312083-3.jpg"
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/shutterstock_2482312083-3.jpg",
+      "color": "#1e40af"
     },
     {
       "id": "art_1773421410791_24_0qln",
@@ -320,7 +341,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇪🇺 EU",
       "excerpt": "Of the 752 GPs who replied, 540 said they had never refused a fit note request, while 162 said they had turned at least one down. The post New GP survey highlights fit note failures appeared first on Personnel Today.",
-      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/shutterstock_2367985557-2-3-1.jpg"
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/shutterstock_2367985557-2-3-1.jpg",
+      "color": "#1e40af"
     },
     {
       "id": "art_1773421410791_25_2oby",
@@ -332,7 +354,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇪🇺 EU",
       "excerpt": "Judicial review lodged at the Court of Session seeks to scrap the Community union's gender equality strategy. The post Union faces legal challenge over gender policy appeared first on Personnel Today.",
-      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/community-union-gender-policy-judicial-review-court-of-session-shutterstock_2549944143.jpg"
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/community-union-gender-policy-judicial-review-court-of-session-shutterstock_2549944143.jpg",
+      "color": "#1e40af"
     },
     {
       "id": "art_1773421410792_26_tlf8",
@@ -344,7 +367,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🇪🇺 EU",
       "excerpt": "John Lewis Partnership gives staff first bonus in four years, with ‘partners’ receiving a 2% payout after retailer reports profit of £134m. The post John Lewis restores staff bonus with 2% payout appeared first on Personnel Today.",
-      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/shutterstock_2425417119-3-1.jpg"
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/shutterstock_2425417119-3-1.jpg",
+      "color": "#1e40af"
     },
     {
       "id": "art_1773421410792_27_qzx7",
@@ -356,7 +380,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "HR data sets are rare in the public domain because workforce data is among the most sensitive information an organization holds. It often includes personal, financial, and performance-related details that require careful protection. At the same time, HR teams are placing greater focus on data-driven decision-making. SHRM highlights the growing role of people analytics in… The post 9 HR Datasets to Practice Your People Analytics Skills appeared first on AIHR.",
-      "image": "https://www.aihr.com/wp-content/uploads/hr-datasets-Thumbnail.png"
+      "image": "https://www.aihr.com/wp-content/uploads/hr-datasets-Thumbnail.png",
+      "color": "#0891b2"
     },
     {
       "id": "art_1773421410792_28_9mh6",
@@ -368,7 +393,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "A letter of recommendation is still a vital part of the recruitment process, even as recruitment becomes more data-driven. Over 80% of Fortune 500 companies use background screening services to manage compliance and reduce hiring risks. These services primarily cover employment verification (35%) and criminal record checks (40%), indicating an emphasis on due diligence in… The post Letter of Recommendation for Employee: 4 Templates + How to Write One appeared first on AIHR.",
-      "image": "https://www.aihr.com/wp-content/uploads/Writing-a-Letter-of-Recommendation-Checklist-social.png"
+      "image": "https://www.aihr.com/wp-content/uploads/Writing-a-Letter-of-Recommendation-Checklist-social.png",
+      "color": "#0891b2"
     },
     {
       "id": "art_1773421410792_29_5n52",
@@ -380,7 +406,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "A career map template gives HR a practical way to turn career development into a visible system that builds skills and fills critical roles from within. This is especially important since 49% of learning and talent development professionals say executives are concerned employees lack the right skills to execute their organizations’ strategies. Widening skills gaps… The post FREE Career Map Template: How To Create a Career Map in 12 Steps appeared first on AIHR.",
-      "image": "https://www.aihr.com/wp-content/uploads/Career-Map-Template-Thumbnail-2.png"
+      "image": "https://www.aihr.com/wp-content/uploads/Career-Map-Template-Thumbnail-2.png",
+      "color": "#0891b2"
     },
     {
       "id": "art_1773421410792_30_xonv",
@@ -392,7 +419,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
       "excerpt": "UNLEASH explored McKinsey's State of Organization 2026 data. Read on to find out the three actions that leaders and organizations need to take now to thrive in these uncertain and challenging times.",
-      "image": "https://www.unleash.ai/wp-content/uploads/2026/03/AdobeStock_1838138729.jpeg"
+      "image": "https://www.unleash.ai/wp-content/uploads/2026/03/AdobeStock_1838138729.jpeg",
+      "color": "#db2777"
     },
     {
       "id": "art_1773421410792_31_x511",
@@ -403,7 +431,9 @@
       "url": "https://sloanreview.mit.edu/video/leaders-at-all-levels-kraft-heinzs-5x-speed-secret/",
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌍 Global",
-      "excerpt": "Is 36 months too long for a new-product cycle? It was for Kraft Heinz. So, starting with a pilot project, it was able to cut time to market to just six months by redesigning how people worked. Today, units throughout the company are applying that model’s step-by-step approach to change and are seeing measurable improvements […]"
+      "excerpt": "Is 36 months too long for a new-product cycle? It was for Kraft Heinz. So, starting with a pilot project, it was able to cut time to market to just six months by redesigning how people worked. Today, units throughout the company are applying that model’s step-by-step approach to change and are seeing measurable improvements […]",
+      "image": "https://sloanreview.mit.edu/wp-content/uploads/2026/03/LAAL-Episode7-2400x1260-1-1200x630.jpg",
+      "color": "#9f1239"
     },
     {
       "id": "art_1773421410792_32_monu",
@@ -415,7 +445,8 @@
       "pubDate": "2026-03-13T07:00:00.000Z",
       "geo": "🌏 Ázsia",
       "excerpt": "Hybrid work is accelerating women’s career progression, with new research showing flexibility boosts productivity, collaboration, and retention across organisations.",
-      "image": "https://hrmasia.com/wp-content/uploads/2026/03/240612425_m-1024x683.jpg"
+      "image": "https://hrmasia.com/wp-content/uploads/2026/03/240612425_m-1024x683.jpg",
+      "color": "#065f46"
     },
     {
       "id": "art_1773386084739_0",
