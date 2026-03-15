@@ -573,6 +573,16 @@ async function fetchRSSFeeds() {
     articles:     newArticles
   }, null, 2));
 
+  // Mindig frissítjük a lastUpdated-et news.json-ban, még ha nincs is új cikk
+  try {
+    const newsData = JSON.parse(fs.readFileSync(NEWS_JSON, 'utf8'));
+    newsData.lastUpdated = new Date().toISOString();
+    fs.writeFileSync(NEWS_JSON, JSON.stringify(newsData, null, 2));
+    console.log(`🕐 lastUpdated frissítve: ${newsData.lastUpdated}`);
+  } catch (e) {
+    console.warn('lastUpdated frissítés sikertelen:', e.message);
+  }
+
   console.log(`\n✅ Kész. ${newArticles.length} új cikk (${allFetched.length} összesen).`);
   console.log(`📄 Mentve: ${RAW_OUTPUT}`);
   return newArticles.length;
