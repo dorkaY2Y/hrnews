@@ -260,7 +260,17 @@ body {
   animation: live-pulse 2.5s ease-in-out infinite;
 }
 
-.update-time { color: rgba(234,229,219,0.8); font-weight: 700; }
+.update-time { color: rgba(234,229,219,0.9); font-weight: 700; }
+
+.header-refresh-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.refresh-label { color: rgba(234,229,219,0.3); font-weight: 500; }
+.refresh-time  { color: rgba(234,229,219,0.5); font-weight: 600; }
 
 @keyframes live-pulse {
   0%, 100% { opacity: 1; transform: scale(1); }

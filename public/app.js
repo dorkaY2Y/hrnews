@@ -4,10 +4,22 @@ const grid          = document.getElementById('articlesGrid');
 const geoInner      = document.getElementById('geoBar').querySelector('.geo-inner');
 const searchInput   = document.getElementById('searchInput');
 const lastUpdatedEl = document.getElementById('lastUpdated');
+const liveClockEl   = document.getElementById('liveClock');
 const headerStats   = document.getElementById('headerStats');
 
 let allArticles  = [];
 let activeGeo    = 'all';
+
+// Élő óra — minden percben frissül
+function updateLiveClock() {
+  if (!liveClockEl) return;
+  const now = new Date();
+  const hh  = String(now.getHours()).padStart(2, '0');
+  const mm  = String(now.getMinutes()).padStart(2, '0');
+  liveClockEl.textContent = hh + ':' + mm;
+}
+updateLiveClock();
+setInterval(updateLiveClock, 10000);
 
 async function loadNews() {
   showSkeletons();
@@ -15,7 +27,7 @@ async function loadNews() {
     const res  = await fetch('data/news.json?t=' + Date.now());
     const data = await res.json();
     allArticles = data.articles || [];
-    if (data.lastUpdated) lastUpdatedEl.textContent = formatDate(data.lastUpdated, true);
+    if (data.lastUpdated && lastUpdatedEl) lastUpdatedEl.textContent = formatDate(data.lastUpdated, true);
   // Date display
   const dateEl = document.getElementById('headerDate');
   if (dateEl) {
