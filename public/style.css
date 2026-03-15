@@ -142,6 +142,8 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .masthead-wordmark {
@@ -172,9 +174,9 @@ body {
 .masthead-name {
   font-family: 'Exo 2', sans-serif;
   font-weight: 800;
-  font-size: 52px;
+  font-size: 76px;
   color: var(--text);
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -183,18 +185,17 @@ body {
   display: block;
   font-size: 11px;
   color: rgba(234,229,219,0.45);
-  letter-spacing: 1.2px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .masthead-desc {
   display: block;
   font-size: 13px;
-  color: rgba(234,229,219,0.52);
+  color: rgba(234,229,219,0.45);
   line-height: 1.6;
-  margin-top: 6px;
-  max-width: 480px;
+  margin-top: 4px;
   font-style: italic;
   letter-spacing: 0.2px;
 }
@@ -1064,7 +1065,7 @@ body {
   .read-link { min-height: 44px; padding: 0 4px; }
   /* Header mobilon */
   .header-inner { gap: 6px; padding: 20px 18px 16px; }
-  .masthead-name { font-size: 32px; letter-spacing: -1px; }
+  .masthead-name { font-size: 34px; letter-spacing: -1px; }
   .masthead-sub { margin-top: 10px; }
   .masthead-desc { font-size: 12px; margin-top: 4px; }
 }
