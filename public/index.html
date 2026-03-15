@@ -55,30 +55,37 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="masthead">
-        <div class="masthead-wordmark">
-          <div class="masthead-row">
-            <span class="masthead-pre">Y2Y</span>
-            <span class="masthead-name">up2date</span>
-          </div>
-          <span class="masthead-sub">maradj képben.</span>
-          <span class="masthead-desc">Ami ma náluk, az holnap nálunk.</span>
-        </div>
-      </div>
-      <div class="header-right">
-        <div class="header-kicker" id="headerDate"></div>
-        <div class="header-meta-row">
-          <span id="headerStats" class="header-stats"></span>
-          <span class="live-indicator">
-            <span class="live-dot"></span>
-            <span id="liveClock" class="update-time">–</span>
-          </span>
-        </div>
+
+      <!-- BAL: stats -->
+      <div class="header-col header-col-left">
+        <span id="headerStats" class="header-stats"></span>
         <div class="header-refresh-row">
           <span class="refresh-label">↻ frissítve:</span>
           <span id="lastUpdated" class="refresh-time">–</span>
         </div>
       </div>
+
+      <!-- KÖZÉP: masthead -->
+      <div class="header-col header-col-center">
+        <span class="masthead-pre">Y2Y</span>
+        <div class="masthead-name">up2date</div>
+      </div>
+
+      <!-- JOBB: dátum + óra -->
+      <div class="header-col header-col-right">
+        <div class="header-kicker" id="headerDate"></div>
+        <span class="live-indicator">
+          <span class="live-dot"></span>
+          <span id="liveClock" class="update-time">–</span>
+        </span>
+      </div>
+
+    </div>
+    <!-- Tagline sáv -->
+    <div class="masthead-tagline-bar">
+      <span class="masthead-sub">maradj képben.</span>
+      <span class="tagline-dot">·</span>
+      <span class="masthead-desc">Ami ma náluk, az holnap nálunk.</span>
     </div>
     <div class="header-gold-stripe"></div>
   </header>
