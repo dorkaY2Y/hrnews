@@ -995,6 +995,28 @@ body {
   .cta-headline { font-size: 26px; }
   .cta-btn-primary { width: 100%; justify-content: center; }
   .footer-cta-right { width: 100%; }
+
+  /* Footer top: egymás alá mobilon */
+  .footer-top {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .footer-brand-block { grid-column: 1; grid-row: auto; }
+  .footer-manifesto   { grid-column: 1; grid-row: auto; }
+  .footer-li-card     { grid-column: 1; grid-row: auto; }
+  .footer-stats-row   { grid-column: 1; grid-row: auto; flex-wrap: wrap; gap: 8px 16px; }
+
+  /* LinkedIn gomb: ne csússzon ki */
+  .li-subscribe-btn {
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  .footer-li-card { padding: 20px 16px; }
 }
 
 /* ---- RESULT COUNT ---- */
@@ -1051,8 +1073,12 @@ body {
   .masthead-pre      { font-size: 8px; letter-spacing: 4px; }
   .masthead-tagline-bar { padding: 4px 18px; justify-content: flex-start; }
   .header-kicker     { font-size: 9px; }
-  .articles-grid  { grid-template-columns: 1fr; gap: 10px; }
-  .card.card--wide { grid-column: span 1; }
+  /* 2-col grid váltakozó mérettel */
+  .articles-grid  { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .card.featured  { grid-column: 1 / -1; }
+  .card.card--wide { grid-column: 1 / -1; }
+  /* Minden 5. normál kártya teljes szélességű */
+  .card:not(.featured):not(.card--wide):nth-child(5n+2) { grid-column: 1 / -1; }
   .main-content   { padding: 16px 14px 56px; }
   .search-inner   { width: 130px; }
 

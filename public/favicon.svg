@@ -1,10 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Sötét háttér -->
-  <circle cx="16" cy="16" r="16" fill="#0d0d12"/>
-  <!-- Fehér kör középen -->
-  <circle cx="16" cy="16" r="11" fill="#ffffff"/>
-  <!-- Y2Y felirat -->
-  <text x="16" y="20" font-family="Arial Black, sans-serif" font-weight="900" font-size="7.5" fill="#0d0d12" text-anchor="middle" letter-spacing="0.5">Y2Y</text>
-  <!-- Zöld karika -->
-  <circle cx="16" cy="16" r="14.5" fill="none" stroke="#4ade80" stroke-width="1.8"/>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+  <circle cx='32' cy='32' r='31' fill='none' stroke='#22c55e' stroke-width='5'/>
+  <circle cx='32' cy='32' r='27' fill='none' stroke='#c9a84c' stroke-width='1.5'/>
+  <circle cx='32' cy='32' r='25' fill='none' stroke='#9e9488' stroke-width='3'/>
+  <circle cx='32' cy='32' r='23' fill='#ffffff'/>
+  <path d='M18 20 L27 32 L18 44 L22 44 L31 32 L22 20 Z' fill='#8a7f70'/>
+  <path d='M29 20 L40 27 L36 44 L27 36 Z' fill='#c9a84c'/>
+  <line x1='29.5' y1='20' x2='29.5' y2='44' stroke='#ffffff' stroke-width='1.5'/>
 </svg>
