@@ -1347,9 +1347,14 @@ body {
   letter-spacing: 0.3px;
 }
 
-.footer-impresszum strong {
+.footer-impresszum a {
   color: var(--muted);
-  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.footer-impresszum a:hover {
+  color: var(--gold);
 }
 /* ---- LINKEDIN SUBSCRIBE BAR ---- */
 .li-subscribe-section {
