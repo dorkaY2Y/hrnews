@@ -36,14 +36,14 @@ async function loadNews() {
   }
     const sources = [...new Set(allArticles.map(a => a.source))].sort();
     if (headerStats) {
-      headerStats.textContent = allArticles.length + ' cikk · ' + sources.length + ' forrás';
+      headerStats.textContent = allArticles.length + ' cikk · 20+ forrás';
     }
     // Footer: forrásszám + lista dinamikusan
     const footerSrcCount = document.querySelector('.footer-stat strong:nth-child(1)');
     const footerSrcItems = document.querySelector('.footer-sources');
     if (footerSrcCount) {
       const statEls = document.querySelectorAll('.footer-stat');
-      statEls.forEach(el => { if (el.textContent.includes('forrás')) el.querySelector('strong').textContent = sources.length; });
+      statEls.forEach(el => { if (el.textContent.includes('forrás')) el.querySelector('strong').textContent = '20+'; });
     }
     if (footerSrcItems) {
       const label = footerSrcItems.querySelector('.footer-src-label');
