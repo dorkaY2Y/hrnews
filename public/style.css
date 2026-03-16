@@ -1339,6 +1339,18 @@ body {
   opacity: 1;
   letter-spacing: 0.5px;
 }
+
+.footer-impresszum {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 12px;
+  letter-spacing: 0.3px;
+}
+
+.footer-impresszum strong {
+  color: var(--muted);
+  font-weight: 600;
+}
 /* ---- LINKEDIN SUBSCRIBE BAR ---- */
 .li-subscribe-section {
   background: #0d0d14;
