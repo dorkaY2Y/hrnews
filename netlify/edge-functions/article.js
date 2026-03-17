@@ -22,9 +22,12 @@ export default async (request) => {
     if (!article && articles.length) article = articles[0];
   } catch (_) { /* fallback */ }
 
-  const title   = article ? (article.title_hu || article.title || 'up2date by Y2Y') : 'up2date by Y2Y';
-  const desc    = article ? (article.summary_hu || '').slice(0, 250) : 'Globális HR-trendek naponta, magyar összefoglalóval.';
-  const image   = (article && article.image) ? article.image : 'https://up2date.hu/og-image.png';
+  const title      = article ? (article.title_hu || article.title || 'up2date by Y2Y') : 'up2date by Y2Y';
+  const desc       = article ? (article.summary_hu || '').slice(0, 250) : 'Globális HR-trendek naponta, magyar összefoglalóval.';
+  const rawImage   = (article && article.image) ? article.image : '';
+  const image      = rawImage
+    ? 'https://up2date.hu/.netlify/functions/og-img?img=' + encodeURIComponent(rawImage)
+    : 'https://up2date.hu/og-image.png';
   const pageUrl = reqUrl.toString();
 
   const html = `<!DOCTYPE html>
