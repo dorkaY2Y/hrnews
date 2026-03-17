@@ -228,7 +228,7 @@ function cardHTML(a, idx) {
 
   const shareUrls = makeShareUrls(a);
   const su = esc(a.url);
-  const shareHtml = '<div class="card-share" onclick="event.stopPropagation()">'
+  const shareHtml = '<div class="card-share">'
     + '<span class="share-label">Megoszt</span>'
     + '<button class="share-btn share-btn--copy" data-copy-url="' + su + '" title="Szöveg + link másolása" aria-label="Másolás">'
     + '<svg class="icon-copy" viewBox="0 0 16 16" fill="none"><rect x="5" y="4" width="8" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M3 11V3a1 1 0 011-1h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
