@@ -31,6 +31,11 @@
  *   HRweb.at:          https://www.hrweb.at/feed/
  *   Parlons RH:        https://www.parlonsrh.com/feed/
  *   CHRO.nl:           https://chro.nl/feed/
+ *   HR Daily Advisor:  https://hrdailyadvisor.blr.com/feed/
+ *   HR Reporter (CA):  https://www.hrreporter.com/rss/
+ *   HR Grapevine:      https://www.hrgrapevine.com/rss
+ *   HR.Asia:           https://hr.asia/feed/
+ *   HCA Mag Asia:      https://www.hcamag.com/asia/rss
  *
  * Y2Y: no RSS – scrapes OG meta tags from y2y.hu/blog post pages
  */
@@ -113,6 +118,20 @@ const FEEDS = [
     color: '#b45309',
     geo: '🇺🇸 USA'
   },
+  {
+    name: 'HR Daily Advisor',
+    url: 'https://hrdailyadvisor.blr.com/feed/',
+    category: 'HR News',
+    color: '#0369a1',
+    geo: '🇺🇸 USA'
+  },
+  {
+    name: 'HR Reporter',
+    url: 'https://www.hrreporter.com/rss/',
+    category: 'HR News',
+    color: '#d9000d',
+    geo: '🇨🇦 Kanada'
+  },
   // ──────────────────── 🇬🇧 UK ────────────────────
   {
     name: 'Personnel Today',
@@ -126,6 +145,13 @@ const FEEDS = [
     url: 'https://www.peoplemanagement.co.uk/feed',
     category: 'HR Policy',
     color: '#0c4a6e',
+    geo: '🇬🇧 UK'
+  },
+  {
+    name: 'HR Grapevine',
+    url: 'https://www.hrgrapevine.com/rss',
+    category: 'HR News',
+    color: '#7c3aed',
     geo: '🇬🇧 UK'
   },
   // ──────────────────── 🌍 Globális ────────────────
@@ -177,6 +203,20 @@ const FEEDS = [
     url: 'https://www.hrinasia.com/feed/',
     category: 'HR News',
     color: '#0d9488',
+    geo: '🌏 Ázsia'
+  },
+  {
+    name: 'HR.Asia',
+    url: 'https://hr.asia/feed/',
+    category: 'HR News',
+    color: '#0369a1',
+    geo: '🌏 Ázsia'
+  },
+  {
+    name: 'HCA Mag Asia',
+    url: 'https://www.hcamag.com/asia/rss',
+    category: 'HR News',
+    color: '#065f46',
     geo: '🌏 Ázsia'
   },
   {
@@ -295,13 +335,14 @@ const FEEDS = [
   //   China HR Development – nincs feed
   //   Haufe.de/personal – nincs publikus RSS
   //   Personalmagazin.de – RSS scriptek nem érhetők el
-  //   HR Grapevine – 403 blokkolja
   //   Equipos y Talento – nincs feed
   //   RRHH Digital – JS-alapú (nem RSS)
   //   Kadry.infor.pl – nincs RSS
-  //   HRstandard.pl – connection timeout
+  //   HRstandard.pl – lejárt SSL-tanúsítvány
   //   Consultancy.eu – 403 blokkolja
   //   Editions Tissot – connection timeout
+  //   SightsinPlus – nincs RSS feed
+  //   HR Economic Times (IN) – 403 blokkolja
 ];
 
 const PROJECT_ROOT = path.join(__dirname, '..');
