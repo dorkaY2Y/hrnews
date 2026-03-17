@@ -672,12 +672,21 @@ body {
 }
 
 .share-btn svg { width: 15px; height: 15px; }
+.share-btn { background: none; border: none; cursor: pointer; }
 
 .share-btn:hover { opacity: 1; transform: translateY(-1px); }
 
-.share-btn--email:hover   { background: #f0f0f0; color: #333; }
-.share-btn--linkedin:hover { background: #e8f0f8; color: #0a66c2; }
-.share-btn--facebook:hover { background: #e8edf8; color: #1877f2; }
+.share-btn--email:hover     { background: #f0f0f0; color: #333; }
+.share-btn--linkedin:hover  { background: #e8f0f8; color: #0a66c2; }
+.share-btn--facebook:hover  { background: #e8edf8; color: #1877f2; }
+.share-btn--messenger:hover { background: #eae8fc; color: #7b5ea7; }
+
+/* Copy button */
+.share-btn--copy .icon-check { display: none; }
+.share-btn--copy.copied .icon-copy  { display: none; }
+.share-btn--copy.copied .icon-check { display: block; }
+.share-btn--copy.copied { opacity: 1; color: #16a34a; background: #dcfce7; }
+.share-btn--copy:hover  { background: #f5f5f5; color: #333; }
 
 /* ---- EMPTY STATE ---- */
 .empty-state {
