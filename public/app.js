@@ -188,13 +188,27 @@ function cardHTML(a, idx) {
     +   '<p class="card-summary">' + sum + '</p>'
     + '</div>';
 
+  const shareUrls = makeShareUrls(a);
+  const shareHtml = '<div class="card-share" onclick="event.stopPropagation()">'
+    + '<span class="share-label">Megoszt</span>'
+    + '<a class="share-btn share-btn--email" href="' + shareUrls.email + '" title="Küldés emailben" aria-label="Email">'
+    + '<svg viewBox="0 0 16 16" fill="none"><rect x="2" y="3.5" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
+    + '</a>'
+    + '<a class="share-btn share-btn--linkedin" href="' + shareUrls.linkedin + '" target="_blank" rel="noopener" title="Megosztás LinkedIn-en" aria-label="LinkedIn">'
+    + '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 2A1.5 1.5 0 102 3.5 1.5 1.5 0 003.5 2zM2 5.5h3V14H2zm4.5 0H9v1.1c.5-.8 1.4-1.3 2.5-1.3C13.5 5.3 14 7 14 9V14h-3V9.5c0-1.1-.4-1.8-1.3-1.8A1.4 1.4 0 008.4 8.6c-.1.2-.1.5-.1.7V14H6.5V5.5z"/></svg>'
+    + '</a>'
+    + '<a class="share-btn share-btn--facebook" href="' + shareUrls.fb + '" target="_blank" rel="noopener" title="Megosztás Facebookon" aria-label="Facebook">'
+    + '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M9.5 5.5V4c0-.6.4-1 1-1H12V1h-1.5C8.6 1 7.5 2.1 7.5 3.5V5.5H5.5V8h2v8h2V8h2l.5-2.5H9.5z"/></svg>'
+    + '</a>'
+    + '</div>';
+
   const footer = '<div class="card-footer">'
     +   '<a class="read-link" href="' + esc(a.url) + '" target="_blank" rel="noopener">'
     +     'Olvasd el'
     +     '<svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     +   '</a>'
+    +   shareHtml
     +   '<div class="card-footer-right">'
-    +     (date && !isFeat ? '<span class="pub-date pub-date-footer">' + date + '</span>' : '')
     +     '<span class="read-time">' + readTime + ' perc</span>'
     +     '<span class="card-num">' + num + '</span>'
     +   '</div>'
@@ -207,6 +221,23 @@ function cardHTML(a, idx) {
   return '<article class="card' + (isFeat ? ' featured' : isWide ? ' card--wide' : '') + '" data-geo="' + esc(a.geo || '') + '" data-url="' + esc(a.url) + '" style="--geo-color:' + geoColor + ';cursor:pointer">'
     + inner
     + '</article>';
+}
+
+function makeShareUrls(a) {
+  const title   = a.title_hu || a.title || '';
+  const summary = a.summary_hu || '';
+  const srcUrl  = a.url || '';
+  const siteUrl = 'https://up2date.hu';
+  const short   = summary.length > 260 ? summary.slice(0, 257) + '…' : summary;
+  const fbText  = title + '\n\n' + short;
+  const emailBody = title + '\n\n' + summary
+    + '\n\nForrás: ' + srcUrl
+    + '\n\nOlvasd naponta: ' + siteUrl;
+  return {
+    fb:       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(siteUrl) + '&quote=' + encodeURIComponent(fbText),
+    linkedin: 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(siteUrl) + '&title=' + encodeURIComponent(title) + '&summary=' + encodeURIComponent(short),
+    email:    'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(emailBody)
+  };
 }
 
 // Azonos forrasok szetszorasahoz: ne legyenek egymas mellett

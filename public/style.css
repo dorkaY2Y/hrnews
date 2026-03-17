@@ -637,6 +637,48 @@ body {
 
 .read-link:hover svg { transform: translateX(2px); }
 
+/* ---- SHARE BUTTONS ---- */
+.card-share {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 auto;
+}
+
+.share-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--card-muted);
+  opacity: 0;
+  transition: opacity .2s;
+  pointer-events: none;
+}
+
+.card-footer:hover .share-label { opacity: 1; }
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  opacity: 0.35;
+  transition: opacity .15s, background .15s, transform .12s;
+  color: var(--card-text2);
+}
+
+.share-btn svg { width: 15px; height: 15px; }
+
+.share-btn:hover { opacity: 1; transform: translateY(-1px); }
+
+.share-btn--email:hover   { background: #f0f0f0; color: #333; }
+.share-btn--linkedin:hover { background: #e8f0f8; color: #0a66c2; }
+.share-btn--facebook:hover { background: #e8edf8; color: #1877f2; }
+
 /* ---- EMPTY STATE ---- */
 .empty-state {
   grid-column: 1 / -1;
