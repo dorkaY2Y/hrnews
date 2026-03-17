@@ -292,11 +292,15 @@ function makeShareUrls(a) {
 // Azonos forrasok szetszorasahoz: ne legyenek egymas mellett
 function interleaveBySource(articles) {
   const result = [];
-  const pool = [...articles];
+  const pool = [...articles]; // already sorted newest-first
+  const LOOKAHEAD = 3; // only look this far ahead to avoid date order disruption
   while (pool.length) {
     const lastSrc = result.length ? result[result.length - 1].source : null;
-    const idx = pool.findIndex(a => a.source !== lastSrc);
-    result.push(...pool.splice(idx === -1 ? 0 : idx, 1));
+    let picked = -1;
+    for (let i = 0; i < Math.min(LOOKAHEAD, pool.length); i++) {
+      if (pool[i].source !== lastSrc) { picked = i; break; }
+    }
+    result.push(...pool.splice(picked === -1 ? 0 : picked, 1));
   }
   return result;
 }
