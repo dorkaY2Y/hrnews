@@ -1,6 +1,8 @@
 const sharp  = require('sharp');
 const https  = require('https');
 const http   = require('http');
+const path   = require('path');
+const fs     = require('fs');
 
 // Fetch any image (follows redirects, supports JPEG + WebP + PNG + GIF)
 function fetchBuffer(url, depth = 0) {
@@ -36,18 +38,12 @@ exports.handler = async (event) => {
   try {
     const imgBuffer = await fetchBuffer(imgUrl);
 
-    // Dark branding bar + up2date.hu logo text as SVG overlay
-    const svg = Buffer.from(
-      '<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">' +
-      '  <rect x="0" y="554" width="1200" height="76" fill="#0d0d12" fill-opacity="0.90"/>' +
-      '  <text x="28" y="601" font-family="\'Helvetica Neue\',Arial,sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="0.3">up2date.hu</text>' +
-      '  <text x="192" y="601" font-family="\'Helvetica Neue\',Arial,sans-serif" font-size="22" fill="#999999">· by Y2Y – HR hírek naponta, magyarul</text>' +
-      '</svg>'
-    );
+    // Branding bar PNG (pre-rendered with fonts on dev machine — no font deps on Lambda)
+    const brandingBar = fs.readFileSync(path.join(__dirname, 'branding-bar.png'));
 
     const output = await sharp(imgBuffer)
       .resize(1200, 630, { fit: 'cover', position: 'centre' })
-      .composite([{ input: svg, top: 0, left: 0 }])
+      .composite([{ input: brandingBar, top: 554, left: 0 }])
       .jpeg({ quality: 88, progressive: true })
       .toBuffer();
 
