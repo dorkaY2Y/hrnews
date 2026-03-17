@@ -26,6 +26,11 @@
  *   G7.hu:             https://g7.hu/feed
  *   Telex.hu:          https://telex.hu/rss/all-articles
  *   BBJ:               https://bbj.hu/rss
+ *   Personalwirtschaft:https://www.personalwirtschaft.de/feed/
+ *   HR Manager DE:     https://www.humanresourcesmanager.de/feed/
+ *   HRweb.at:          https://www.hrweb.at/feed/
+ *   Parlons RH:        https://www.parlonsrh.com/feed/
+ *   CHRO.nl:           https://chro.nl/feed/
  *
  * Y2Y: no RSS – scrapes OG meta tags from y2y.hu/blog post pages
  */
@@ -114,14 +119,14 @@ const FEEDS = [
     url: 'https://www.personneltoday.com/feed/',
     category: 'HR News',
     color: '#1e40af',
-    geo: '🇪🇺 EU'
+    geo: '🇬🇧 UK'
   },
   {
     name: 'People Management',
     url: 'https://www.peoplemanagement.co.uk/feed',
     category: 'HR Policy',
     color: '#0c4a6e',
-    geo: '🇪🇺 EU'
+    geo: '🇬🇧 UK'
   },
   // ──────────────────── 🌍 Globális ────────────────
   {
@@ -230,7 +235,7 @@ const FEEDS = [
     url: 'https://www.hrzone.com/feed/',
     category: 'HR Strategy',
     color: '#6b21a8',
-    geo: '🇪🇺 EU'
+    geo: '🇬🇧 UK'
   },
   // ──────────────────── 🌍 Global – extra ────────────────────
   {
@@ -239,6 +244,45 @@ const FEEDS = [
     category: 'HR Tech',
     color: '#0f766e',
     geo: '🌍 Global'
+  },
+  // ──────────────────── 🇩🇪 Németország ────────────────────
+  {
+    name: 'Personalwirtschaft',
+    url: 'https://www.personalwirtschaft.de/feed/',
+    category: 'HR News',
+    color: '#1d4ed8',
+    geo: '🇩🇪 Németország'
+  },
+  {
+    name: 'Human Resources Manager',
+    url: 'https://www.humanresourcesmanager.de/feed/',
+    category: 'HR Strategy',
+    color: '#1e40af',
+    geo: '🇩🇪 Németország'
+  },
+  // ──────────────────── 🇦🇹 Ausztria ────────────────────
+  {
+    name: 'HRweb.at',
+    url: 'https://www.hrweb.at/feed/',
+    category: 'HR News',
+    color: '#dc2626',
+    geo: '🇦🇹 Ausztria'
+  },
+  // ──────────────────── 🇫🇷 Franciaország ────────────────────
+  {
+    name: 'Parlons RH',
+    url: 'https://www.parlonsrh.com/feed/',
+    category: 'HR News',
+    color: '#2563eb',
+    geo: '🇫🇷 Franciaország'
+  },
+  // ──────────────────── 🇳🇱 Hollandia ────────────────────
+  {
+    name: 'CHRO.nl',
+    url: 'https://chro.nl/feed/',
+    category: 'HR Strategy',
+    color: '#f97316',
+    geo: '🇳🇱 Hollandia'
   },
   // 🇭🇺 Magyar: csak Y2Y (scraper, lásd lent)
   // ─────────────────────────────────────────────────────────
@@ -249,6 +293,15 @@ const FEEDS = [
   //   McKinsey People & Org – nincs section RSS
   //   Gallup Workplace – nincs feed
   //   China HR Development – nincs feed
+  //   Haufe.de/personal – nincs publikus RSS
+  //   Personalmagazin.de – RSS scriptek nem érhetők el
+  //   HR Grapevine – 403 blokkolja
+  //   Equipos y Talento – nincs feed
+  //   RRHH Digital – JS-alapú (nem RSS)
+  //   Kadry.infor.pl – nincs RSS
+  //   HRstandard.pl – connection timeout
+  //   Consultancy.eu – 403 blokkolja
+  //   Editions Tissot – connection timeout
 ];
 
 const PROJECT_ROOT = path.join(__dirname, '..');
