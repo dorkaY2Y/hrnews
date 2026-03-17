@@ -95,6 +95,7 @@ geoInner.querySelector('[data-geo="all"]').addEventListener('click', () => setGe
 
 // Whole card is clickable — skip if user clicked an actual link/button
 grid.addEventListener('click', e => {
+  // Copy button
   const copyBtn = e.target.closest('.share-btn--copy');
   if (copyBtn) {
     e.stopPropagation();
@@ -108,6 +109,28 @@ grid.addEventListener('click', e => {
       copyBtn.classList.add('copied');
       setTimeout(() => copyBtn.classList.remove('copied'), 2200);
     });
+    return;
+  }
+  // Social share buttons (button[data-share])
+  const shareBtn = e.target.closest('button[data-share]');
+  if (shareBtn) {
+    e.stopPropagation();
+    const art = allArticles.find(a => a.url === shareBtn.dataset.shareUrl);
+    if (!art) return;
+    const urls = makeShareUrls(art);
+    const type = shareBtn.dataset.share;
+    if (type === 'fb') {
+      window.open(urls.fb, 'share-fb', 'width=620,height=520,resizable=yes');
+    } else if (type === 'linkedin') {
+      window.open(urls.linkedin, 'share-li', 'width=700,height=560,resizable=yes');
+    } else if (type === 'messenger') {
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = 'fb-messenger://share/?link=' + encodeURIComponent(art.url);
+      } else {
+        window.open('https://www.messenger.com/new', '_blank', 'width=900,height=600');
+      }
+    }
     return;
   }
   if (e.target.closest('a, button')) return;
@@ -204,24 +227,25 @@ function cardHTML(a, idx) {
     + '</div>';
 
   const shareUrls = makeShareUrls(a);
+  const su = esc(a.url);
   const shareHtml = '<div class="card-share" onclick="event.stopPropagation()">'
     + '<span class="share-label">Megoszt</span>'
-    + '<button class="share-btn share-btn--copy" data-copy-url="' + esc(a.url) + '" title="Szöveg + link másolása" aria-label="Másolás">'
+    + '<button class="share-btn share-btn--copy" data-copy-url="' + su + '" title="Szöveg + link másolása" aria-label="Másolás">'
     + '<svg class="icon-copy" viewBox="0 0 16 16" fill="none"><rect x="5" y="4" width="8" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M3 11V3a1 1 0 011-1h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
     + '<svg class="icon-check" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     + '</button>'
     + '<a class="share-btn share-btn--email" href="' + shareUrls.email + '" title="Küldés emailben" aria-label="Email">'
     + '<svg viewBox="0 0 16 16" fill="none"><rect x="2" y="3.5" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
     + '</a>'
-    + '<a class="share-btn share-btn--messenger" href="' + shareUrls.messenger + '" target="_blank" rel="noopener" title="Megosztás Messengeren" aria-label="Messenger">'
+    + '<button class="share-btn share-btn--messenger" data-share="messenger" data-share-url="' + su + '" title="Megosztás Messengeren" aria-label="Messenger">'
     + '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1C4.134 1 1 3.9 1 7.5c0 1.9.82 3.6 2.14 4.82V14l2.12-1.16A7.4 7.4 0 008 13c3.866 0 7-2.9 7-6.5S11.866 1 8 1zm.72 8.75L6.9 7.83 3.5 9.75l3.78-4 1.82 1.92 3.4-1.92-3.78 4z"/></svg>'
-    + '</a>'
-    + '<a class="share-btn share-btn--linkedin" href="' + shareUrls.linkedin + '" target="_blank" rel="noopener" title="Megosztás LinkedIn-en" aria-label="LinkedIn">'
+    + '</button>'
+    + '<button class="share-btn share-btn--linkedin" data-share="linkedin" data-share-url="' + su + '" title="Megosztás LinkedIn-en" aria-label="LinkedIn">'
     + '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 2A1.5 1.5 0 102 3.5 1.5 1.5 0 003.5 2zM2 5.5h3V14H2zm4.5 0H9v1.1c.5-.8 1.4-1.3 2.5-1.3C13.5 5.3 14 7 14 9V14h-3V9.5c0-1.1-.4-1.8-1.3-1.8A1.4 1.4 0 008.4 8.6c-.1.2-.1.5-.1.7V14H6.5V5.5z"/></svg>'
-    + '</a>'
-    + '<a class="share-btn share-btn--facebook" href="' + shareUrls.fb + '" target="_blank" rel="noopener" title="Megosztás Facebookon" aria-label="Facebook">'
+    + '</button>'
+    + '<button class="share-btn share-btn--facebook" data-share="fb" data-share-url="' + su + '" title="Megosztás Facebookon" aria-label="Facebook">'
     + '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M9.5 5.5V4c0-.6.4-1 1-1H12V1h-1.5C8.6 1 7.5 2.1 7.5 3.5V5.5H5.5V8h2v8h2V8h2l.5-2.5H9.5z"/></svg>'
-    + '</a>'
+    + '</button>'
     + '</div>';
 
   const footer = '<div class="card-footer">'
