@@ -389,6 +389,14 @@ function extractMeta(html, property) {
 }
 
 
+// ─── URL filter: skip non-HR press releases (e.g. HR.Asia media-outreach) ────
+const SKIP_URL_PATTERNS = [
+  /hr\.asia\/media-outreach\//i,   // HR.Asia press releases (nem HR-tartalom)
+];
+function shouldSkipUrl(url) {
+  return SKIP_URL_PATTERNS.some(p => p.test(url));
+}
+
 // ─── Extract image URL from RSS item ─────────────────────────────────────────
 // Sablon/brand OG kepek kizarasa (nem cikk-specifikus kepek)
 const TEMPLATE_IMAGE_PATTERNS = [
@@ -589,6 +597,7 @@ async function fetchRSSFeeds() {
 
         const url = item.link || item.guid || '';
         if (!url) continue;
+        if (shouldSkipUrl(url)) continue;
 
         const excerpt = (
           item.contentSnippet ||
