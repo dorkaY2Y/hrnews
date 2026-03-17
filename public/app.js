@@ -275,14 +275,15 @@ function makeShareUrls(a) {
   const srcUrl  = a.url || '';
   const siteUrl = 'https://up2date.hu';
   const short   = summary.length > 260 ? summary.slice(0, 257) + '…' : summary;
-  const fbText  = short + '\n\n📌 via up2date.hu';
+  const fbText  = title + '\n\n' + short + '\n\n📌 Forrás: ' + srcUrl;
+  const liText  = short + '\n\n📌 Forrás: ' + srcUrl;
   const emailBody = title + '\n\n' + summary
     + '\n\nForrás: ' + srcUrl
     + '\n\nOlvasd naponta: ' + siteUrl;
   return {
-    fb:        'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(srcUrl) + '&quote=' + encodeURIComponent(fbText),
-    linkedin:  'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(srcUrl) + '&title=' + encodeURIComponent(title) + '&summary=' + encodeURIComponent(short + '\n\nvia up2date.hu'),
-    messenger: 'fb-messenger://share/?link=' + encodeURIComponent(srcUrl),
+    fb:        'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(siteUrl) + '&quote=' + encodeURIComponent(fbText),
+    linkedin:  'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(siteUrl) + '&title=' + encodeURIComponent(title) + '&summary=' + encodeURIComponent(liText),
+    messenger: 'fb-messenger://share/?link=' + encodeURIComponent(siteUrl),
     email:     'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(emailBody)
   };
 }
