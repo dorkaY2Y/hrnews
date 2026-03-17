@@ -155,7 +155,12 @@ function render() {
       || (a.category   || '').toLowerCase().includes(q)
       || (a.source     || '').toLowerCase().includes(q);
     return matchGeo && matchQ;
-  }).sort((a, b) => new Date(b.published) - new Date(a.published));
+  }).sort((a, b) => {
+    // Ha van addedAt (mikor kerult be a rendszerbe), az dontso — igy az ujabban hozzaadott cikkek mindig elokelobb helyen lesznek
+    const aTime = new Date(a.addedAt || a.published);
+    const bTime = new Date(b.addedAt || b.published);
+    return bTime - aTime;
+  });
 
   // Y2Y cikkek ne legyenek az első 5 között (hirdetés-érzet elkerülése)
   const y2yArts = [];
