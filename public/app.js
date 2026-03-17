@@ -124,11 +124,17 @@ grid.addEventListener('click', e => {
     } else if (type === 'linkedin') {
       window.open(urls.linkedin, 'share-li', 'width=700,height=560,resizable=yes');
     } else if (type === 'messenger') {
+      const sharePageUrl = makeShareUrls(art).messengerPage;
       const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       if (isMobile) {
-        window.location.href = 'fb-messenger://share/?link=' + encodeURIComponent(art.url);
+        window.location.href = 'fb-messenger://share/?link=' + encodeURIComponent(sharePageUrl);
       } else {
-        window.open('https://www.messenger.com/new', '_blank', 'width=900,height=600');
+        // Desktop: Facebook Send dialog (Messengerre is küldhető app_id nélkül)
+        window.open(
+          'https://www.facebook.com/dialog/send?link=' + encodeURIComponent(sharePageUrl) +
+          '&redirect_uri=' + encodeURIComponent('https://up2date.hu'),
+          'share-msg', 'width=700,height=500,resizable=yes'
+        );
       }
     }
     return;
@@ -287,10 +293,10 @@ function makeShareUrls(a) {
     + '\n\nForrás: ' + srcUrl
     + '\n\nOlvasd naponta: ' + siteUrl;
   return {
-    fb:        'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(sharePageUrl) + '&quote=' + encodeURIComponent(fbText),
-    linkedin:  'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(sharePageUrl) + '&title=' + encodeURIComponent(title) + '&summary=' + encodeURIComponent(liText),
-    messenger: 'fb-messenger://share/?link=' + encodeURIComponent(sharePageUrl),
-    email:     'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(emailBody)
+    fb:           'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(sharePageUrl) + '&quote=' + encodeURIComponent(fbText),
+    linkedin:     'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(sharePageUrl) + '&title=' + encodeURIComponent(title) + '&summary=' + encodeURIComponent(liText),
+    messengerPage: sharePageUrl,
+    email:        'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(emailBody)
   };
 }
 
