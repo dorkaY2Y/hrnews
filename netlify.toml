@@ -24,3 +24,9 @@
   for = "/"
   [headers.values]
     Cache-Control = "no-cache, no-store, must-revalidate"
+
+# Route /article?u=... to the serverless function for dynamic OG tags
+[[redirects]]
+  from = "/article"
+  to = "/.netlify/functions/article"
+  status = 200
