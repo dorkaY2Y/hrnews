@@ -14,6 +14,8 @@ $skillFile = "C:\Users\dorka\.claude\scheduled-tasks\hrnews-daily-update\SKILL.m
 $prompt    = Get-Content $skillFile -Raw
 
 # claude -p = non-interactive print mode, --dangerouslySkipPermissions = no approval prompts
-$prompt | & claude -p --dangerouslySkipPermissions 2>&1 | Tee-Object -FilePath $logFile -Append
+# Teljes elérési út — nincs PATH-ban a Task Scheduler kontextusban
+$claudeExe = "C:\Users\dorka\AppData\Roaming\Claude\claude-code\2.1.76\claude.exe"
+$prompt | & $claudeExe -p --dangerously-skip-permissions 2>&1 | Tee-Object -FilePath $logFile -Append
 
 "=== Vége: $(Get-Date -Format 'HH:mm:ss') ===" | Tee-Object -FilePath $logFile -Append
