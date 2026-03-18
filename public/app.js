@@ -127,23 +127,39 @@ grid.addEventListener('click', e => {
     if (!art) return;
     const urls = makeShareUrls(art);
     const type = shareBtn.dataset.share;
+
+    // Vágólapra másoljuk az összefoglalót + linket, utána nyitjuk a share dialogot
+    // Így a user csak paste-el és ott a teljes magyar összefoglaló
+    const shareText = (art.title_hu || art.title || '')
+      + '\n\n' + (art.summary_hu || '')
+      + '\n\n📌 Forrás: ' + art.url
+      + '\n\nOlvasd naponta: https://up2date.hu';
+
+    function openAfterCopy(openFn) {
+      navigator.clipboard.writeText(shareText).then(() => {
+        showShareToast(shareBtn);
+        setTimeout(openFn, 600);
+      }).catch(() => openFn());
+    }
+
     if (type === 'fb') {
-      window.open(urls.fb, 'share-fb', 'width=620,height=520,resizable=yes');
+      openAfterCopy(() => window.open(urls.fb, 'share-fb', 'width=620,height=520,resizable=yes'));
     } else if (type === 'linkedin') {
-      window.open(urls.linkedin, 'share-li', 'width=700,height=560,resizable=yes');
+      openAfterCopy(() => window.open(urls.linkedin, 'share-li', 'width=700,height=560,resizable=yes'));
     } else if (type === 'messenger') {
-      const sharePageUrl = makeShareUrls(art).messengerPage;
+      const sharePageUrl = urls.messengerPage;
       const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      if (isMobile) {
-        window.location.href = 'fb-messenger://share/?link=' + encodeURIComponent(sharePageUrl);
-      } else {
-        // Desktop: Facebook Send dialog (Messengerre is küldhető app_id nélkül)
-        window.open(
-          'https://www.facebook.com/dialog/send?link=' + encodeURIComponent(sharePageUrl) +
-          '&redirect_uri=' + encodeURIComponent('https://up2date.hu'),
-          'share-msg', 'width=700,height=500,resizable=yes'
-        );
-      }
+      openAfterCopy(() => {
+        if (isMobile) {
+          window.location.href = 'fb-messenger://share/?link=' + encodeURIComponent(sharePageUrl);
+        } else {
+          window.open(
+            'https://www.facebook.com/dialog/send?link=' + encodeURIComponent(sharePageUrl) +
+            '&redirect_uri=' + encodeURIComponent('https://up2date.hu'),
+            'share-msg', 'width=700,height=500,resizable=yes'
+          );
+        }
+      });
     }
     return;
   }
@@ -351,6 +367,20 @@ function strHash(s) {
 function esc(str) {
   return String(str || '')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// Share toast: "Szöveg vágólapra másolva — illeszd be a posztba!"
+function showShareToast(anchor) {
+  let toast = document.getElementById('shareToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'shareToast';
+    toast.className = 'share-toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = '\u2705 Sz\u00f6veg v\u00e1g\u00f3lapra m\u00e1solva \u2014 illeszd be a posztba!';
+  toast.classList.add('visible');
+  setTimeout(() => toast.classList.remove('visible'), 3000);
 }
 
 loadNews();
