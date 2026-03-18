@@ -282,6 +282,17 @@ body {
 }
 .refresh-label { color: rgba(234,229,219,0.3); font-weight: 500; }
 .refresh-time  { color: rgba(234,229,219,0.5); font-weight: 600; }
+.refresh-time.stale {
+  color: #f87171;
+  animation: stale-blink 2s ease-in-out infinite;
+}
+.refresh-time.stale::after {
+  content: ' ⚠';
+}
+@keyframes stale-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
 
 @keyframes live-pulse {
   0%, 100% { opacity: 1; transform: scale(1); }

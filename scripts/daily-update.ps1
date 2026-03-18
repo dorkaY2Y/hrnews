@@ -13,9 +13,30 @@ Set-Location "C:\Users\dorka\OneDrive\Desktop\HRNEWS"
 $skillFile = "C:\Users\dorka\.claude\scheduled-tasks\hrnews-daily-update\SKILL.md"
 $prompt    = Get-Content $skillFile -Raw
 
-# claude -p = non-interactive print mode, --dangerouslySkipPermissions = no approval prompts
-# Teljes elérési út — nincs PATH-ban a Task Scheduler kontextusban
-$claudeExe = "C:\Users\dorka\AppData\Roaming\Claude\claude-code\2.1.76\claude.exe"
+# ── Claude CLI keresése (verziófrissítés-álló) ──────────────────────────────
+# A Roaming mappa alatti legújabb claude.exe-t keresi — nem hardcoded verzió
+$claudeBase = "$env:APPDATA\Claude\claude-code"
+$claudeExe  = $null
+
+if (Test-Path $claudeBase) {
+    $claudeExe = Get-ChildItem -Path $claudeBase -Filter "claude.exe" -Recurse -ErrorAction SilentlyContinue |
+        Sort-Object LastWriteTime -Descending |
+        Select-Object -First 1 -ExpandProperty FullName
+}
+
+# Fallback: PATH-ban elérhető claude
+if (-not $claudeExe) {
+    $claudeExe = (Get-Command claude -ErrorAction SilentlyContinue).Source
+}
+
+if (-not $claudeExe) {
+    "HIBA: claude.exe nem található! Ellenőrizd, hogy telepítve van-e a Claude Code." | Tee-Object -FilePath $logFile -Append
+    exit 1
+}
+
+"Claude CLI: $claudeExe" | Tee-Object -FilePath $logFile -Append
+
 $prompt | & $claudeExe -p --dangerously-skip-permissions 2>&1 | Tee-Object -FilePath $logFile -Append
 
-"=== Vége: $(Get-Date -Format 'HH:mm:ss') ===" | Tee-Object -FilePath $logFile -Append
+$exitCode = $LASTEXITCODE
+"=== Vége: $(Get-Date -Format 'HH:mm:ss') (exit: $exitCode) ===" | Tee-Object -FilePath $logFile -Append

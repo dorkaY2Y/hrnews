@@ -27,7 +27,15 @@ async function loadNews() {
     const res  = await fetch('data/news.json?t=' + Date.now());
     const data = await res.json();
     allArticles = data.articles || [];
-    if (data.lastUpdated && lastUpdatedEl) lastUpdatedEl.textContent = formatDate(data.lastUpdated, true);
+    if (data.lastUpdated && lastUpdatedEl) {
+      lastUpdatedEl.textContent = formatDate(data.lastUpdated, true);
+      // Staleness warning: ha >14 órája nem frissült, kimaradt egy ütemezett futás
+      const ageHours = (Date.now() - new Date(data.lastUpdated)) / 3600000;
+      if (ageHours > 14) {
+        lastUpdatedEl.classList.add('stale');
+        lastUpdatedEl.title = 'Figyelem: több mint 14 órája nem frissült!';
+      }
+    }
   // Date display
   const dateEl = document.getElementById('headerDate');
   if (dateEl) {

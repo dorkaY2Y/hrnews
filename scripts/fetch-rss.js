@@ -348,6 +348,7 @@ const FEEDS = [
 const PROJECT_ROOT = path.join(__dirname, '..');
 const RAW_OUTPUT   = path.join(PROJECT_ROOT, 'data', 'raw-new-articles.json');
 const NEWS_JSON    = path.join(PROJECT_ROOT, 'public', 'data', 'news.json');
+const LAST_RUN     = path.join(PROJECT_ROOT, 'public', 'data', 'last-run.json');
 
 // ─── HTTP GET helper with redirect support ───────────────────────────────────
 function httpGet(url, maxRedirects = 5) {
@@ -688,10 +689,36 @@ async function fetchRSSFeeds() {
 
   console.log(`\n✅ Kész. ${newArticles.length} új cikk (${allFetched.length} összesen).`);
   console.log(`📄 Mentve: ${RAW_OUTPUT}`);
+
+  // ── Last-run tracking ──────────────────────────────────────────────────────
+  // Elmenti az utolsó 20 futás adatait, így ellenőrizhető, hogy rendszeresen fut-e
+  let runHistory = [];
+  try { runHistory = JSON.parse(fs.readFileSync(LAST_RUN, 'utf8')); } catch { /* first run */ }
+  runHistory.unshift({
+    timestamp: new Date().toISOString(),
+    status: 'ok',
+    newArticles: newArticles.length,
+    totalFetched: allFetched.length,
+    feedCount: FEEDS.length + SCRAPERS.length
+  });
+  if (runHistory.length > 20) runHistory.length = 20;
+  fs.writeFileSync(LAST_RUN, JSON.stringify(runHistory, null, 2));
+  console.log(`📊 last-run.json frissítve (${runHistory.length} bejegyzés)`);
+
   return newArticles.length;
 }
 
 fetchRSSFeeds().catch(err => {
   console.error('Fetch hiba:', err);
+  // Hiba esetén is naplózzuk
+  let runHistory = [];
+  try { runHistory = JSON.parse(fs.readFileSync(LAST_RUN, 'utf8')); } catch { /* */ }
+  runHistory.unshift({
+    timestamp: new Date().toISOString(),
+    status: 'error',
+    error: err.message
+  });
+  if (runHistory.length > 20) runHistory.length = 20;
+  try { fs.writeFileSync(LAST_RUN, JSON.stringify(runHistory, null, 2)); } catch { /* */ }
   process.exit(1);
 });
