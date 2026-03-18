@@ -1,8 +1,7 @@
-const sharp  = require('sharp');
+const Jimp   = require('jimp');
 const https  = require('https');
 const http   = require('http');
 const path   = require('path');
-const fs     = require('fs');
 
 // Fetch any image (follows redirects, supports JPEG + WebP + PNG + GIF)
 function fetchBuffer(url, depth = 0) {
@@ -37,15 +36,18 @@ exports.handler = async (event) => {
 
   try {
     const imgBuffer = await fetchBuffer(imgUrl);
+    const brandingBarPath = path.join(__dirname, 'branding-bar.png');
 
-    // Branding bar PNG (pre-rendered with fonts on dev machine — no font deps on Lambda)
-    const brandingBar = fs.readFileSync(path.join(__dirname, 'branding-bar.png'));
+    const [image, brandingBar] = await Promise.all([
+      Jimp.read(imgBuffer),
+      Jimp.read(brandingBarPath),
+    ]);
 
-    const output = await sharp(imgBuffer)
-      .resize(1200, 630, { fit: 'cover', position: 'centre' })
-      .composite([{ input: brandingBar, top: 554, left: 0 }])
-      .jpeg({ quality: 88, progressive: true })
-      .toBuffer();
+    image
+      .cover(1200, 630)
+      .composite(brandingBar, 0, 554);
+
+    const output = await image.quality(88).getBufferAsync(Jimp.MIME_JPEG);
 
     return {
       statusCode: 200,

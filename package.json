@@ -2,6 +2,6 @@
   "name": "hrnews",
   "version": "1.0.0",
   "dependencies": {
-    "sharp": "0.33.5"
+    "jimp": "0.16.13"
   }
 }
