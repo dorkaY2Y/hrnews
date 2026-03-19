@@ -23,12 +23,42 @@ export default async (request) => {
   } catch (_) { /* fallback */ }
 
   const title      = article ? (article.title_hu || article.title || 'up2date by Y2Y') : 'up2date by Y2Y';
+  const titleEn    = article ? (article.title || title) : title;
   const desc       = article ? (article.summary_hu || '').slice(0, 250) : 'Globális HR-trendek naponta, magyar összefoglalóval.';
   const rawImage   = (article && article.image) ? article.image : '';
   const image      = rawImage
     ? 'https://up2date.hu/.netlify/functions/og-img?img=' + encodeURIComponent(rawImage)
     : 'https://up2date.hu/og-image.png';
-  const pageUrl = reqUrl.toString();
+  const pageUrl    = reqUrl.toString();
+  const published  = article ? (article.published || '') : '';
+  const source     = article ? (article.source || 'up2date by Y2Y') : 'up2date by Y2Y';
+  const category   = article ? (article.category || 'HR') : 'HR';
+
+  const jsonLd = article ? JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    'headline': title,
+    'name': title,
+    'description': desc,
+    'image': image,
+    'datePublished': published,
+    'dateModified': published,
+    'url': pageUrl,
+    'isPartOf': { '@id': 'https://up2date.hu/#website' },
+    'publisher': {
+      '@type': 'Organization',
+      '@id': 'https://up2date.hu/#organization',
+      'name': 'up2date by Y2Y',
+      'logo': { '@type': 'ImageObject', 'url': 'https://up2date.hu/og-image.png' }
+    },
+    'author': {
+      '@type': 'Organization',
+      'name': source
+    },
+    'articleSection': category,
+    'inLanguage': 'hu-HU',
+    'mainEntityOfPage': pageUrl
+  }) : 'null';
 
   const html = `<!DOCTYPE html>
 <html lang="hu">
@@ -36,15 +66,21 @@ export default async (request) => {
   <meta charset="UTF-8">
   <title>${escapeHtml(title)} – up2date by Y2Y</title>
 
-  <meta property="og:type"        content="article">
-  <meta property="og:site_name"   content="up2date by Y2Y">
-  <meta property="og:title"       content="${escapeHtml(title)}">
-  <meta property="og:description" content="${escapeHtml(desc)}">
-  <meta property="og:image"       content="${escapeHtml(image)}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:url"         content="${escapeHtml(pageUrl)}">
-  <meta property="og:locale"      content="hu_HU">
+  <meta property="og:type"               content="article">
+  <meta property="og:site_name"          content="up2date by Y2Y">
+  <meta property="og:title"             content="${escapeHtml(title)}">
+  <meta property="og:description"       content="${escapeHtml(desc)}">
+  <meta property="og:image"             content="${escapeHtml(image)}">
+  <meta property="og:image:width"       content="1200">
+  <meta property="og:image:height"      content="630">
+  <meta property="og:url"               content="${escapeHtml(pageUrl)}">
+  <meta property="og:locale"            content="hu_HU">
+  ${published ? `<meta property="article:published_time" content="${escapeHtml(published)}">` : ''}
+  ${published ? `<meta property="article:modified_time"  content="${escapeHtml(published)}">` : ''}
+  <meta property="article:author"       content="${escapeHtml(source)}">
+  <meta property="article:section"      content="${escapeHtml(category)}">
+  <meta property="article:tag"          content="HR">
+  <meta property="article:tag"          content="${escapeHtml(category)}">
 
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="${escapeHtml(title)}">
@@ -53,6 +89,7 @@ export default async (request) => {
 
   <link rel="canonical" href="https://up2date.hu">
   <meta http-equiv="refresh" content="0;url=https://up2date.hu">
+  ${jsonLd !== 'null' ? `<script type="application/ld+json">${jsonLd}</script>` : ''}
 </head>
 <body>
   <p>Átirányítás… <a href="https://up2date.hu">up2date.hu</a></p>
