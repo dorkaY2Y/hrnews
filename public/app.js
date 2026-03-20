@@ -119,7 +119,21 @@ grid.addEventListener('click', e => {
     if (!art) return;
     const urls = makeShareUrls(art);
     const type = shareBtn.dataset.share;
-    if (type === 'fb') {
+    if (type === 'native') {
+      // Native Web Share API (mobile)
+      if (navigator.share) {
+        const shareTitle = art.title_hu || art.title || '';
+        const shareText = (art.summary_hu || '').slice(0, 200)
+          + '\n\n📌 Forrás: ' + art.url
+          + '\n\nOlvasd naponta: https://up2date.hu';
+        navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: urls.messengerPage
+        }).catch(() => {});
+      }
+      return;
+    } else if (type === 'fb') {
       window.open(urls.fb, 'share-fb', 'width=620,height=520,resizable=yes');
     } else if (type === 'linkedin') {
       window.open(urls.linkedin, 'share-li', 'width=700,height=560,resizable=yes');
@@ -241,6 +255,9 @@ function cardHTML(a, idx) {
   const su = esc(a.url);
   const shareHtml = '<div class="card-share">'
     + '<span class="share-label">Megoszt</span>'
+    + '<button class="share-btn share-btn--native" data-share="native" data-share-url="' + su + '" title="Megosztás" aria-label="Megosztás">'
+    + '<svg viewBox="0 0 16 16" fill="none"><path d="M8 2v9M4.5 5.5L8 2l3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 10v3a1 1 0 001 1h8a1 1 0 001-1v-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
+    + '</button>'
     + '<button class="share-btn share-btn--copy" data-copy-url="' + su + '" title="Szöveg + link másolása" aria-label="Másolás">'
     + '<svg class="icon-copy" viewBox="0 0 16 16" fill="none"><rect x="5" y="4" width="8" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M3 11V3a1 1 0 011-1h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
     + '<svg class="icon-check" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
