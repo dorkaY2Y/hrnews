@@ -12,11 +12,15 @@ export default async (request) => {
 
   const articleUrls = articles
     .filter(a => a.url && a.addedAt)
-    .slice(0, 200)
+    .slice(0, 500)
     .map(a => {
       const loc      = `${base}/article?u=${encodeURIComponent(a.url)}`;
       const lastmod  = (a.addedAt || a.published || '').slice(0, 10) || now;
-      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>never</changefreq>\n    <priority>0.6</priority>\n  </url>`;
+      const ageMs    = Date.now() - new Date(a.addedAt || a.published).getTime();
+      const isRecent = ageMs < 3 * 24 * 3600 * 1000; // 3 days
+      const priority = isRecent ? '0.8' : '0.6';
+      const freq     = isRecent ? 'daily' : 'weekly';
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${freq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
     .join('\n');
 
@@ -27,6 +31,12 @@ export default async (request) => {
     <lastmod>${now}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>${base}/impresszum.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 ${articleUrls}
 </urlset>`;

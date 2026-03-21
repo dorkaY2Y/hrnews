@@ -444,6 +444,13 @@ body {
   border-color: var(--geo-color, var(--gold));
 }
 
+.card-cover-img {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
 .card-cover {
   position: relative;
   height: 96px;
@@ -1471,3 +1478,30 @@ body {
   line-height: 1.6;
   max-width: 480px;
 }
+
+/* Screen-reader only (SEO hidden content) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Noscript SEO content for crawlers */
+.seo-content {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 32px;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.seo-content h2 { font-size: 24px; margin-bottom: 16px; color: var(--gold); }
+.seo-content h3 { font-size: 18px; margin: 24px 0 12px; color: var(--text); }
+.seo-content ul { padding-left: 24px; margin-bottom: 16px; }
+.seo-content li { margin-bottom: 6px; }

@@ -34,3 +34,22 @@
   for = "/sitemap.xml"
   [headers.values]
     Cache-Control = "public, max-age=3600, s-maxage=3600"
+
+# Security headers (SEO trust signal)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Long cache for static assets
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
