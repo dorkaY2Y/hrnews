@@ -218,7 +218,9 @@ function cardHTML(a, idx) {
   const h        = strHash(a.url || a.title || String(idx));
   const imgSrc   = a.image || '';
   const imgStyle = imgSrc ? ' style="background-image:url(\'' + imgSrc + '\')"' : '';
+  const imgTag   = imgSrc ? '<img src="' + imgSrc + '" alt="' + esc(title) + '" loading="lazy" class="card-cover-img" width="400" height="225">' : '';
   const cover = '<div class="card-cover' + (imgSrc ? ' has-image' : '') + '"' + imgStyle + '>'
+    + imgTag
     + '<span class="card-flag">' + flag + '</span>'
     + '<span class="card-cover-src">' + esc(a.source) + '</span>'
     + '</div>';
@@ -231,7 +233,7 @@ function cardHTML(a, idx) {
     +     (isNew ? '<span class="badge-new">&#9679; &Uacute;J</span>' : '')
     +     '<span class="pub-date">' + date + '</span>'
     +   '</div>'
-    +   '<h2 class="card-title">' + esc(title) + '</h2>'
+    +   '<h3 class="card-title">' + esc(title) + '</h3>'
     +   '<div class="card-divider"></div>'
     +   '<p class="summary-label">Magyar &ouml;sszefoglal&oacute;</p>'
     +   '<p class="card-summary">' + sum + '</p>'

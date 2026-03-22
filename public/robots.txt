@@ -2,4 +2,26 @@ User-agent: *
 Allow: /
 Disallow: /data/
 
+# AI crawlers – explicitly allowed for AI SEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 Sitemap: https://up2date.hu/sitemap.xml
