@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-24T06:39:54.255Z",
+  "lastUpdated": "2026-03-24T06:44:29.443Z",
   "articles": [
     {
       "source": "HR Executive",
@@ -11,7 +11,7 @@
       "url": "https://hrexecutive.com/the-kiss-cam-people-leader-opens-up-to-oprah-with-insights-for-hr/",
       "published": "2026-03-23T11:30:02.000Z",
       "excerpt": "A former CPO discusses the fallout from a viral incident and what HR leaders can learn about credibility and institutional trust.",
-      "image": "",
+      "image": "https://hrexecutive.com/wp-content/uploads/2021/10/Phone-App.-Adobe.-6.23.21.jpeg",
       "summary_hu": "Egy volt HR-igazgató (CPO) beszélt Oprah-nak arról, milyen következményei voltak egy virális incidensnek a karrierére. A cikk azt vizsgálja, hogyan építhetik és védhetik meg a HR-vezetők a hitelességüket, és milyen fontos az intézményi bizalom megőrzése még nehéz helyzetekben is.",
       "id": "1774265402000_4420",
       "addedAt": "2026-03-24T06:39:54.255Z"
@@ -26,7 +26,7 @@
       "url": "https://www.personneltoday.com/hr/jobs-continue-to-rise-but-sunny-outlook-could-be-temporary/",
       "published": "2026-03-23T00:01:29.000Z",
       "excerpt": "The number of active job postings went up by 5% in February from the month before, showing renewed activity.",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/labour-market-outlook_shutterstock_2674043935.jpg",
       "summary_hu": "Az aktív álláshirdetések száma 5%-kal nőtt februárban az előző hónaphoz képest, ami megújult aktivitást jelez a brit munkaerőpiacon. Ugyanakkor elemzők figyelmeztetnek, hogy a geopolitikai feszültségek és az áremelkedés hatásaira a javulás átmeneti lehet.",
       "id": "1774224089000_7188",
       "addedAt": "2026-03-24T06:39:54.255Z"
@@ -41,7 +41,7 @@
       "url": "https://www.personneltoday.com/hr/act-now-to-prepare-for-benefits-in-kind-bik-changes-urge-experts/",
       "published": "2026-03-23T07:21:51.000Z",
       "excerpt": "Employers are being urged to register with HMRC in preparation for the mandatory payrolling of benefits in kind (BiK) from April 2027.",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/benefits-in-kind-changes_shutterstock_98140292.jpg",
       "summary_hu": "Szakertők sürgetik a brit munkáltatókat, hogy regisztráljanak a HMRC-nél a béren kívüli juttatások (Benefits in Kind) kötelező bérszámfejtési elszámolására való felkészülésként, amely 2027 áprilistól lép életbe. A változás érinti a cégautokat, egészségbiztosítást és egyéb juttatásokat.",
       "id": "1774250511000_5518",
       "addedAt": "2026-03-24T06:39:54.255Z"
@@ -56,7 +56,7 @@
       "url": "https://www.personneltoday.com/hr/working-clocks-go-forward-employers-handle-losing-hour/",
       "published": "2026-03-23T00:00:29.000Z",
       "excerpt": "The clocks go forward an hour on Sunday 29 March 2026. But what does this mean for employers with staff on night shifts?",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2017/03/clocks-going-forward.jpg",
       "summary_hu": "2026. március 29-én éjjel egy órával előre állítjuk az órákat. A cikk áttekinti, milyen kötelezettségeik vannak a munkáltatóknak az éjszakai műszakban dolgozók felé: fizessék-e ki a hiányzó órát, és hogyan kezeljék a munkaidő-nyilvántartást.",
       "id": "1774224029000_1016",
       "addedAt": "2026-03-24T06:39:00.507Z"
@@ -71,7 +71,7 @@
       "url": "https://www.personneltoday.com/hr/fca-misconduct-reports/",
       "published": "2026-03-23T00:30:45.000Z",
       "excerpt": "Reports of breaches of conduct to the Financial Conduct Authority went up by 10% in 2024, data analysis reveals.",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/fca-misconduct_shutterstock_2306106309.jpeg",
       "summary_hu": "A Financial Conduct Authority (FCA) felé érkező magatartási szabályszegési jelentések száma 10%-kal nőtt 2024-ben. Ez a HR-esek számára jelzi, hogy a pénzügyi szektorban fokozott figyelmet kell fordítani az etikai képzésekre, a belső jelentési csatornákra és a compliance-kultúrára.",
       "id": "1774225845000_3134",
       "addedAt": "2026-03-24T06:39:00.507Z"
@@ -86,7 +86,7 @@
       "url": "https://www.personneltoday.com/hr/why-what-we-say-after-a-death-matters/",
       "published": "2026-03-24T00:00:15.000Z",
       "excerpt": "A high proportion of adults believe they do not receive enough support following a bereavement.",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/bereavement_shutterstock_2055670112.jpg",
       "summary_hu": "A felnőttek jelentős része úgy érzi, nem kap elegendő támogatást gyászeset után. A cikk arra hívja fel a munkáltatók figyelmét, hogy a gyászoló munkavállalókkal való kommunikáció hangvétele és időzítése közvetlenül befolyásolja a visszatérésüket és jóllétüket.",
       "id": "1774310415000_5704",
       "addedAt": "2026-03-24T06:39:00.507Z"
@@ -116,7 +116,7 @@
       "url": "https://www.hrmorning.com/articles/contract-roles-workforce-planning/",
       "published": "2026-03-23T12:41:43.000Z",
       "excerpt": "Organizations with lean teams face execution gaps that hiring alone cannot solve.",
-      "image": "",
+      "image": "https://www.hrmorning.com/wp-content/uploads/2024/11/IndependentContractors.png",
       "summary_hu": "A karcsúsított csapatok gyakran képtelenek az összes feladatot elvégezni, és a teljes állású felvétel nem mindig a jó válasz. A cikk bemutatja, hogyan segíthetnek a szerződéses és szabaduszos szakemberek a végrehajtási hézagok betöltésében, és hogyan építheti be a HR a kontingensmukaerőt a munkaerő-tervezésbe.",
       "id": "1774269703000_5594",
       "addedAt": "2026-03-24T06:39:00.507Z"
@@ -131,7 +131,7 @@
       "url": "https://www.hrmorning.com/articles/motivate-team-of-work-misfits/",
       "published": "2026-03-23T14:38:00.000Z",
       "excerpt": "Managers often think they have a strong team in place, when in reality, they're managing individuals with different motivations.",
-      "image": "",
+      "image": "https://www.hrmorning.com/wp-content/uploads/2024/05/Resourceful-Manager-for-HRMorning-Posts-31.png",
       "summary_hu": "A vezetők gyakran azt hiszik, hogy összeszokott csapatuk van, miközben valójában különböző motivációjú egyéneket irányítanak. A cikk 8 gyakorlati stratégiát mutat be: SMART célok kitűzése, az erősségek kiaknázása, eredmények ünneplése és a pszichológiai biztonság megépítése a kulcs.",
       "id": "1774276680000_2447",
       "addedAt": "2026-03-24T06:39:00.507Z"
@@ -146,7 +146,7 @@
       "url": "https://hrexecutive.com/aca-exchange-enrollment-could-fall-by-more-than-2-6-million/",
       "published": "2026-03-23T11:15:28.000Z",
       "excerpt": "New KFF survey data suggests total ACA marketplace enrollment may decline significantly below current forecasts in coming months.",
-      "image": "",
+      "image": "https://hrexecutive.com/wp-content/uploads/AdobeStock_423336069_Editorial_Use_Only-2.jpg",
       "summary_hu": "A KFF felmérése szerint az ACA (Affordable Care Act) egészségbiztosítási piactéren a regisztrációk száma jelentősen, akár 2,6 millióval is csökkenhet. Ez a HR-esek számára azt jelenti, hogy több munkavállaló fordulhat majd a munkáltatói egészségbiztosítás felé, ami növelni fogja a vállalati juttatási költségeket.",
       "id": "1774264528000_9760",
       "addedAt": "2026-03-24T06:39:00.507Z"
@@ -161,7 +161,7 @@
       "url": "https://hrexecutive.com/pay-transparency-laws-surge-how-to-turn-compliance-into-strategy/",
       "published": "2026-03-23T11:30:08.000Z",
       "excerpt": "Pay transparency regulations are rapidly evolving globally, with most organizations implementing strategies to address compliance requirements.",
-      "image": "",
+      "image": "https://hrexecutive.com/wp-content/uploads/2023/09/salary-for-newsletter.jpg",
       "summary_hu": "A bérátláthatósági szabályozás gyorsan terjed világszerte, és a legtöbb szervezet már kidolgozta a megfelelési stratégiáját. A cikk bemutatja, hogyan lehet a jogi kötelezettséget versenyelrőnnyé alakítani: az őszinte bérkommunikáció növeli a jelöltek bizalmát és a meglévő munkavállalók elkötelezettségét.",
       "id": "1774265408000_6037",
       "addedAt": "2026-03-24T06:39:00.507Z"
@@ -176,7 +176,7 @@
       "url": "https://hrexecutive.com/a-first-look-at-the-white-house-ai-policy-framework/",
       "published": "2026-03-23T11:45:13.000Z",
       "excerpt": "The White House released its AI Policy Framework with recommendations for how Congress should guide ethical AI development and implementation.",
-      "image": "",
+      "image": "https://hrexecutive.com/wp-content/uploads/2021/09/White-House.-Adobe.-9.9.21.jpeg",
       "summary_hu": "A Fehér Ház közzétette AI-szabályozási keretrendszerét, amely iránymutatást ad a Kongresszusnak az etikus mesterséges intelligencia fejlesztéséhez és alkalmazásához. A HR-esek számára különösen fontos, hogy a keretrendszer kitér az AI munkahelyi használatára, a döntéshozatali átláthatóságra és a diszkriminaciómenteségre.",
       "id": "1774266313000_7846",
       "addedAt": "2026-03-24T06:39:00.507Z"
@@ -191,7 +191,7 @@
       "url": "https://hrexecutive.com/5-practical-steps-to-creating-hr-shared-services-for-your-company/",
       "published": "2026-03-23T11:45:15.000Z",
       "excerpt": "Even modest shifts in how HR work is organized through shared services can create efficiency gains and a better employee experience.",
-      "image": "",
+      "image": "https://hrexecutive.com/wp-content/uploads/AdobeStock_1750132789.jpg",
       "summary_hu": "A HR shared services (közös szolgáltató központ) kialakítása még kisebb szervezeteknél is jelentős hatékonyságnövekedést és jobb munkavállalói élményt eredményezhet. A cikk öt konkrét lépést mutat be: a szolgáltatási modell meghatározásától a technológiai platform kiválasztásán át a folyamatos fejlesztésig.",
       "id": "1774266315000_5855",
       "addedAt": "2026-03-24T06:39:00.507Z"
@@ -206,7 +206,7 @@
       "url": "https://www.personneltoday.com/hr/adhd-tribunal-lidl-toghill-rejection-sensitivity/",
       "published": "2026-03-23T00:00:00.000Z",
       "excerpt": "A supermarket worker who has ADHD was unfairly dismissed and subjected to unfavourable treatment due to his disability, a tribunal ruled.",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2025/12/lidl-rejection-sensitivity-adhd-tribunal-shutterstock_1869954826.jpg",
       "summary_hu": "Egy ADHD-vel élő Lidl-alkalmazottat jogellenesen bocsátottak el, és hátrányos bánásmódban részesítették fogyatékossága miatt – döntött a brit munkaügyi bíróság, amely 45 000 font kártérítést ítélt meg. Az eset rámutat, hogy az ADHD és más neurodivergenciák a fogyatékossági törvény hatálya alá tartoznak.",
       "id": "1774224000000_2665",
       "addedAt": "2026-03-24T06:37:09.109Z"
@@ -221,7 +221,7 @@
       "url": "https://www.personneltoday.com/hr/brewdog-fire-and-rehire/",
       "published": "2026-03-23T09:41:07.000Z",
       "excerpt": "The Unite union has accused Brewdog of using 'fire and rehire' practices after it asked staff in Scotland to reapply for their jobs.",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/brewdog_fire_rehire_shutterstock_2596377197.jpg",
       "summary_hu": "A Unite szakszervezet azzal vádolta meg a Brewdog sörcéget, hogy fire and rehire módszerrel próbálja meg újranyitni skóciai bárjait: a dolgozókat elbocsátották, majd rosszabb feltételekkel kínálták nekik az újrafelvételt. Ez a gyakorlat az új brit munkajogi szabályozás szerint egyre korlátozottabb.",
       "id": "1774258867000_3440",
       "addedAt": "2026-03-24T06:37:09.109Z"
@@ -236,7 +236,7 @@
       "url": "https://www.personneltoday.com/hr/iran-conflict-tuc-calls-for-emergency-taskforce-to-save-jobs/",
       "published": "2026-03-23T09:52:22.000Z",
       "excerpt": "TUC calls for an emergency taskforce to help protect the UK from the economic fallout of US-Israeli war with Iran.",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/iran-conflict-TUC-emergency-taskforce-shutterstock_2262730745.jpg",
       "summary_hu": "A brit Szakszervezeti Szövetség (TUC) sürgősségi munkacsoportot követel, hogy megvédjék a brit gazdaságot és munkahelyeket az amerikai-izraeli–iráni konfliktus gazdasági hatásaitól. Az olajválság és az ellátási lánc zavarai különösen a feldolgozóipart és a logisztikát érintik.",
       "id": "1774259542000_8334",
       "addedAt": "2026-03-24T06:37:09.109Z"
@@ -251,7 +251,7 @@
       "url": "https://www.personneltoday.com/hr/sme-invest-in-hr-amid-era-reforms/",
       "published": "2026-03-23T15:27:33.000Z",
       "excerpt": "SMEs increasingly investing in HR as reforms from the Employment Rights Act 2025 come into force.",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/sme-hr-demand-employment-hero-shutterstock_1030536982.jpg",
       "summary_hu": "A brit kis- és középvállalkozások egyre többet fektetnek HR-kapacitásuk fejlesztésébe, mivel az Employment Rights Act 2025 reformjai újabb szabályozási kötelezettségeket rónak rájuk. A változások érintik a munkajogot, a rugalmas munkavégzést és az elbocsátási eljárásokat.",
       "id": "1774279653000_6733",
       "addedAt": "2026-03-24T06:37:09.109Z"
@@ -266,7 +266,7 @@
       "url": "https://www.personneltoday.com/hr/economic-insecurity-fuelling-rise-in-job-huggers/",
       "published": "2026-03-24T00:01:32.000Z",
       "excerpt": "Employees are staying put in jobs despite feeling disengaged, according to research from LinkedIn.",
-      "image": "",
+      "image": "https://www.personneltoday.com/wp-content/uploads/sites/8/2026/03/job-huggers_shutterstock_2146530933.jpeg",
       "summary_hu": "A LinkedIn kutatása szerint egyre több munkavállaló marad az állásában annak ellenére, hogy nem érzi magát elköteleződve. A gazdasági bizonytalanság és a háborús helyzet miatt az emberek inkább a biztonságot választják a karriérváltás helyett. A HR-nek figyelnie kell a csendben elégedetlen munkavállalókra, mert az elkötelezettség-hiány hosszú távon rombolja a produktivitást.",
       "id": "1774310492000_1626",
       "addedAt": "2026-03-24T06:37:09.109Z"
@@ -281,7 +281,7 @@
       "url": "https://hrexecutive.com/as-eightfold-workday-suits-show-ai-legal-risks-are-building-for-hr/",
       "published": "2026-03-23T11:35:20.000Z",
       "excerpt": "Multiple lawsuits against HR tech firms illustrate the growing legal exposure employers face when deploying AI in recruiting and people practices.",
-      "image": "",
+      "image": "https://hrexecutive.com/wp-content/uploads/2019/12/AI_Legal.jpg",
       "summary_hu": "Több per is indult HR-technológiai cégek ellen – köztük az Eightfold és a Workday ellen –, amelyek rávilágítanak az AI-alapú toborzási és munkavállalói rendszerek jogi kockázataira. A munkáltatók is felelősségre vonhatók, ha a használt AI-eszközök diszkriminatív döntéseket hoznak. A cikk arra figyelmeztet, hogy a HR-nek aktívan kell felügyelnie és auditálnia az AI-rendszereit.",
       "id": "1774265720000_1445",
       "addedAt": "2026-03-24T06:35:37.061Z"
