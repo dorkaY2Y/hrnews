@@ -27,9 +27,7 @@ function getDailyQA() {
     published: new Date().toISOString(),
     addedAt: new Date().toISOString(),
     excerpt: qa.a,
-    summary_hu: qa.a + '
-
-→ Teljes válasz: paytransparency.hu',
+    summary_hu: qa.a + '\n\n→ Teljes válasz: paytransparency.hu',
     isQA: true
   };
 }
