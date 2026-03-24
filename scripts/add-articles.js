@@ -554,9 +554,16 @@ console.log('Adding', toAdd.length, 'new articles');
 const cutoff = new Date(Date.now() - 30*24*60*60*1000).toISOString();
 const kept = existing.articles.filter(a => a.published >= cutoff);
 
+const mergedSeen = new Set();
+const deduped = [...toAdd, ...kept].filter(a => {
+  if (mergedSeen.has(a.url)) return false;
+  mergedSeen.add(a.url);
+  return true;
+});
+
 const updated = {
   lastUpdated: now,
-  articles: [...toAdd, ...kept]
+  articles: deduped
 };
 
 fs.writeFileSync(newsPath, JSON.stringify(updated, null, 2), 'utf8');
