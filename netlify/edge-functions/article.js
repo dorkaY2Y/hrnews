@@ -26,9 +26,8 @@ export default async (request) => {
   const titleEn    = article ? (article.title || title) : title;
   const desc       = article ? (article.summary_hu || '').slice(0, 300) : 'Globális HR-trendek naponta, magyar összefoglalóval.';
   const rawImage   = (article && article.image) ? article.image : '';
-  const image      = rawImage
-    ? 'https://up2date.hu/.netlify/functions/og-img?img=' + encodeURIComponent(rawImage)
-    : 'https://up2date.hu/og-image.png';
+  // Use article's raw image directly — FB/LI crawlers can't wait for og-img cold start+processing
+  const image      = rawImage || 'https://up2date.hu/og-image.png';
   const pageUrl    = reqUrl.toString();
   const published  = article ? (article.published || '') : '';
   const source     = article ? (article.source || 'up2date by Y2Y') : 'up2date by Y2Y';
