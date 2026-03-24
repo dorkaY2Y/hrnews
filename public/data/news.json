@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-03-24T06:39:00.507Z",
+  "lastUpdated": "2026-03-24T06:39:54.255Z",
   "articles": [
+    {
+      "source": "HR Executive",
+      "category": "HR Strategy",
+      "color": "#7c3aed",
+      "geo": "🇺🇸 USA",
+      "title": "The 'kiss cam' people leader opens up to Oprah, with insights for HR",
+      "title_hu": "A 'kiss cam' HR-vezető Oprah-nak nyilatkozott – tanulságok a HR számára",
+      "url": "https://hrexecutive.com/the-kiss-cam-people-leader-opens-up-to-oprah-with-insights-for-hr/",
+      "published": "2026-03-23T11:30:02.000Z",
+      "excerpt": "A former CPO discusses the fallout from a viral incident and what HR leaders can learn about credibility and institutional trust.",
+      "image": "",
+      "summary_hu": "Egy volt HR-igazgató (CPO) beszélt Oprah-nak arról, milyen következményei voltak egy virális incidensnek a karrierére. A cikk azt vizsgálja, hogyan építhetik és védhetik meg a HR-vezetők a hitelességüket, és milyen fontos az intézményi bizalom megőrzése még nehéz helyzetekben is.",
+      "id": "1774265402000_4420",
+      "addedAt": "2026-03-24T06:39:54.255Z"
+    },
+    {
+      "source": "Personnel Today",
+      "category": "HR News",
+      "color": "#1e40af",
+      "geo": "🇬🇧 UK",
+      "title": "Labour market growth continues but sunny outlook could be temporary",
+      "title_hu": "A munkaerőpiac tovább nő, de a derűs kilátás átmeneti lehet",
+      "url": "https://www.personneltoday.com/hr/jobs-continue-to-rise-but-sunny-outlook-could-be-temporary/",
+      "published": "2026-03-23T00:01:29.000Z",
+      "excerpt": "The number of active job postings went up by 5% in February from the month before, showing renewed activity.",
+      "image": "",
+      "summary_hu": "Az aktív álláshirdetések száma 5%-kal nőtt februárban az előző hónaphoz képest, ami megújult aktivitást jelez a brit munkaerőpiacon. Ugyanakkor elemzők figyelmeztetnek, hogy a geopolitikai feszültségek és az áremelkedés hatásaira a javulás átmeneti lehet.",
+      "id": "1774224089000_7188",
+      "addedAt": "2026-03-24T06:39:54.255Z"
+    },
+    {
+      "source": "Personnel Today",
+      "category": "HR News",
+      "color": "#1e40af",
+      "geo": "🇬🇧 UK",
+      "title": "Act now to prepare for BiK changes, urge experts",
+      "title_hu": "Szakertők figyelmeztetnek: készüljenek a béren kívüli juttatások szabályváltozásaira",
+      "url": "https://www.personneltoday.com/hr/act-now-to-prepare-for-benefits-in-kind-bik-changes-urge-experts/",
+      "published": "2026-03-23T07:21:51.000Z",
+      "excerpt": "Employers are being urged to register with HMRC in preparation for the mandatory payrolling of benefits in kind (BiK) from April 2027.",
+      "image": "",
+      "summary_hu": "Szakertők sürgetik a brit munkáltatókat, hogy regisztráljanak a HMRC-nél a béren kívüli juttatások (Benefits in Kind) kötelező bérszámfejtési elszámolására való felkészülésként, amely 2027 áprilistól lép életbe. A változás érinti a cégautokat, egészségbiztosítást és egyéb juttatásokat.",
+      "id": "1774250511000_5518",
+      "addedAt": "2026-03-24T06:39:54.255Z"
+    },
     {
       "source": "Personnel Today",
       "category": "HR News",
