@@ -1,5 +1,5 @@
 /* up2date Service Worker — Offline cache + PWA support */
-const CACHE_NAME  = 'up2date-v2';
+const CACHE_NAME  = 'up2date-v3';
 const STATIC_URLS = [
   '/',
   '/index.html',
@@ -18,12 +18,14 @@ self.addEventListener('install', event => {
   self.skipWaiting();
 });
 
-// Activate: clean old caches
+// Activate: clean old caches and reload all open clients
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys =>
       Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
-    )
+    ).then(() => self.clients.matchAll({ type: 'window' })).then(clients => {
+      clients.forEach(client => client.navigate(client.url));
+    })
   );
   self.clients.claim();
 });
