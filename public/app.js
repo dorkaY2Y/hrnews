@@ -147,7 +147,19 @@ grid.addEventListener('click', e => {
     if (!art) return;
     const urls = makeShareUrls(art);
     const type = shareBtn.dataset.share;
-    if (type === 'fb') {
+    if (type === 'native') {
+      // Web Share API - mobile native sharing with image + summary + link
+      const shareText = (art.title_hu || art.title || '') + '\n\n' +
+        (art.summary_hu || '').slice(0, 280) + '\n\n📌 up2date.hu – Globális HR hírek';
+      if (navigator.share) {
+        navigator.share({ title: art.title_hu || art.title || '', text: shareText, url: art.url }).catch(() => {});
+      } else {
+        // Fallback: copy
+        navigator.clipboard.writeText(shareText + '\n\n' + art.url).catch(() => {});
+        shareBtn.textContent = '✓';
+        setTimeout(() => { shareBtn.innerHTML = '<svg viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5L13.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Megosztva!'; shareBtn.style.color = '#16a34a'; }, 200);
+      }
+    } else if (type === 'fb') {
       window.open(urls.fb, 'share-fb', 'width=620,height=520,resizable=yes');
     } else if (type === 'linkedin') {
       window.open(urls.linkedin, 'share-li', 'width=700,height=560,resizable=yes');
@@ -281,8 +293,13 @@ function cardHTML(a, idx) {
 
   const shareUrls = makeShareUrls(a);
   const su = esc(a.url);
+  // Mobile-first native share button (Web Share API)
+  const nativeShareBtn = '<button class="share-btn share-btn--native" data-share="native" data-share-url="' + su + '" title="Megosztás" aria-label="Megosztás">'
+    + '<svg viewBox="0 0 16 16" fill="none"><circle cx="12.5" cy="3.5" r="1.5" stroke="currentColor" stroke-width="1.4"/><circle cx="3.5" cy="8" r="1.5" stroke="currentColor" stroke-width="1.4"/><circle cx="12.5" cy="12.5" r="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 7l6-3M5 9l6 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
+    + '</button>';
   const shareHtml = '<div class="card-share">'
     + '<span class="share-label">Megoszt</span>'
+    + nativeShareBtn
     + '<button class="share-btn share-btn--copy" data-copy-url="' + su + '" title="Szöveg + link másolása" aria-label="Másolás">'
     + '<svg class="icon-copy" viewBox="0 0 16 16" fill="none"><rect x="5" y="4" width="8" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M3 11V3a1 1 0 011-1h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
     + '<svg class="icon-check" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
