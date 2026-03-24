@@ -1,0 +1,61 @@
+name: HR News Daily Update
+
+on:
+  schedule:
+    # 5:00 UTC (7:00 CET) and 13:00 UTC (15:00 CET)
+    - cron: '0 5 * * *'
+    - cron: '0 13 * * *'
+  workflow_dispatch: # Manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm ci --ignore-scripts || npm install
+
+      - name: Fetch RSS feeds
+        working-directory: scripts
+        run: node fetch-rss.js
+        timeout-minutes: 5
+
+      - name: Show raw fetch results
+        run: |
+          echo "=== Fetch results ==="
+          node -e "const d=JSON.parse(require('fs').readFileSync('data/raw-new-articles.json','utf8')); console.log('New articles:', d.newCount, '/ Total fetched:', d.totalFetched)"
+
+      - name: Translate and merge new articles
+        if: success()
+        run: node scripts/translate-and-merge.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        timeout-minutes: 5
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add public/data/news.json data/raw-new-articles.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update: $(date -u '+%Y-%m-%d %H:%M') UTC
+
+          $(node -e "const d=JSON.parse(require('fs').readFileSync('data/raw-new-articles.json','utf8')); console.log(d.newCount + ' new articles from ' + d.articles.map(a=>a.source).filter((v,i,a)=>a.indexOf(v)===i).join(', '))" 2>/dev/null || echo 'Daily news update')"
+            git push
+          fi
