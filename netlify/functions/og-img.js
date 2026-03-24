@@ -1,15 +1,17 @@
-const Jimp   = require('jimp');
-const https  = require('https');
-const http   = require('http');
-const path   = require('path');
+const sharp   = require('sharp');
+const https   = require('https');
+const http    = require('http');
 
-// Fetch any image (follows redirects, supports JPEG + WebP + PNG + GIF)
+// Fetch any image (follows redirects, supports JPEG + WebP + PNG + GIF + AVIF)
 function fetchBuffer(url, depth = 0) {
   if (depth > 4) return Promise.reject(new Error('too many redirects'));
   return new Promise((resolve, reject) => {
     const client = url.startsWith('https') ? https : http;
     const req = client.get(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; up2date-og/1.0)' },
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; up2date-og/2.0)',
+        'Accept': 'image/webp,image/avif,image/*,*/*',
+      },
     }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         const next = res.headers.location.startsWith('http')
@@ -36,18 +38,30 @@ exports.handler = async (event) => {
 
   try {
     const imgBuffer = await fetchBuffer(imgUrl);
+    const path = require('path');
     const brandingBarPath = path.join(__dirname, 'branding-bar.png');
+    const fs = require('fs');
 
-    const [image, brandingBar] = await Promise.all([
-      Jimp.read(imgBuffer),
-      Jimp.read(brandingBarPath),
-    ]);
+    // Resize source image to 1200x630 (cover mode = crop to fill)
+    let image = sharp(imgBuffer)
+      .resize(1200, 630, { fit: 'cover', position: 'top' });
 
-    image
-      .cover(1200, 630)
-      .composite(brandingBar, 0, 554);
+    // Composite branding bar if it exists
+    if (fs.existsSync(brandingBarPath)) {
+      const brandingBar = await sharp(brandingBarPath)
+        .resize(1200, 76)
+        .toBuffer();
+      image = image.composite([{
+        input: brandingBar,
+        left: 0,
+        top: 630 - 76,
+        blend: 'over',
+      }]);
+    }
 
-    const output = await image.quality(88).getBufferAsync(Jimp.MIME_JPEG);
+    const output = await image
+      .jpeg({ quality: 88, progressive: true })
+      .toBuffer();
 
     return {
       statusCode: 200,
