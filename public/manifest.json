@@ -1,0 +1,32 @@
+{
+  "name": "up2date — HR Hírek",
+  "short_name": "up2date",
+  "description": "Napi HR hírek 20+ forrásból, magyar összefoglalókkal. A Telex a HR-eseknek.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#04080F",
+  "theme_color": "#00C8FF",
+  "orientation": "portrait-primary",
+  "lang": "hu",
+  "categories": ["news", "business"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": { "title": "title", "text": "text", "url": "url" }
+  }
+}
