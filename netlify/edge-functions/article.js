@@ -72,10 +72,7 @@ export default async (request) => {
     }
   }) : 'null';
 
-  // Build a richer HTML page for AI crawlers with actual content
-  const articleContent = summaryFull
-    ? `<article><h1>${escapeHtml(title)}</h1><p><strong>Forrás:</strong> ${escapeHtml(source)} | <strong>Kategória:</strong> ${escapeHtml(category)}${geo ? ' | <strong>Régió:</strong> ' + escapeHtml(geo) : ''}${published ? ' | <strong>Megjelent:</strong> ' + escapeHtml(published.slice(0, 10)) : ''}</p><h2>Magyar összefoglaló</h2><p>${escapeHtml(summaryFull)}</p>${titleEn !== title ? '<p><strong>Eredeti cím:</strong> ' + escapeHtml(titleEn) + '</p>' : ''}<p><a href="https://up2date.hu">← Vissza az up2date-ra</a></p></article>`
-    : `<p>Átirányítás… <a href="https://up2date.hu">up2date.hu</a></p>`;
+  const destUrl = articleUrl || 'https://up2date.hu';
 
   const html = `<!DOCTYPE html>
 <html lang="hu">
@@ -113,10 +110,32 @@ export default async (request) => {
   <meta name="twitter:image:alt"   content="${escapeHtml(title)}">
 
   ${jsonLd !== 'null' ? `<script type="application/ld+json">${jsonLd}</script>` : ''}
-  <meta http-equiv="refresh" content="0;url=https://up2date.hu">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f0f0f;color:#f0f0f0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
+    .splash{max-width:560px;width:100%;text-align:center}
+    .brand{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c9a84c;margin-bottom:24px}
+    h1{font-size:clamp(18px,4vw,26px);font-weight:700;line-height:1.3;margin-bottom:16px;color:#fff}
+    .summary{font-size:14px;line-height:1.6;color:#aaa;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+    .go-btn{display:inline-flex;align-items:center;gap:8px;background:#c9a84c;color:#0f0f0f;font-weight:700;font-size:14px;padding:12px 24px;border-radius:8px;text-decoration:none;letter-spacing:0.3px}
+    .go-btn:hover{background:#e0c060}
+    .back{display:block;margin-top:16px;font-size:12px;color:#666;text-decoration:none}
+    .back:hover{color:#aaa}
+    .progress{width:100%;height:2px;background:#333;border-radius:1px;margin-top:32px;overflow:hidden}
+    .progress-bar{height:100%;background:#c9a84c;width:0;animation:fill 3s linear forwards}
+    @keyframes fill{to{width:100%}}
+  </style>
+  <script>setTimeout(()=>{window.location.href=${JSON.stringify(destUrl)}},3000)</script>
 </head>
 <body>
-  ${articleContent}
+  <div class="splash">
+    <div class="brand">up2date by Y2Y · HR hírek naponta</div>
+    <h1>${escapeHtml(title)}</h1>
+    ${summaryFull ? `<p class="summary">${escapeHtml(summaryFull.slice(0,220))}…</p>` : ''}
+    <a class="go-btn" href="${escapeHtml(destUrl)}">Olvasd az eredeti cikket →</a>
+    <a class="back" href="https://up2date.hu">← Vissza az up2date-ra</a>
+    <div class="progress"><div class="progress-bar"></div></div>
+  </div>
 </body>
 </html>`;
 

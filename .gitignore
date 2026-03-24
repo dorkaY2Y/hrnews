@@ -3,3 +3,6 @@ data/raw-new-articles.json
 .env
 *.log
 .claude-token
+
+# Local Netlify folder
+.netlify

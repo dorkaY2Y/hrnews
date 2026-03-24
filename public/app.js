@@ -52,9 +52,22 @@ async function loadNews() {
     const res  = await fetch('data/news.json?t=' + Date.now());
     const data = await res.json();
     const raw = data.articles || [];
-    // Limit to 100 most recent articles to prevent crashes
+    // Kiegyensúlyozott kiválasztás: max ~25 cikk geo-csoportonként (4 csoport × 25 = 100)
     const dailyQA = getDailyQA();
-    allArticles = [dailyQA, ...raw.sort((a, b) => new Date(b.publishedAt || b.date || 0) - new Date(a.publishedAt || a.date || 0)).slice(0, 99)];
+    const sorted = raw.sort((a, b) => new Date(b.addedAt || b.published || 0) - new Date(a.addedAt || a.published || 0));
+    const perGroupMax = 25;
+    const groupCounts = {};
+    const balanced = [];
+    for (const art of sorted) {
+      const grp = geoGroup(art.geo || '');
+      groupCounts[grp] = (groupCounts[grp] || 0);
+      if (groupCounts[grp] < perGroupMax) {
+        balanced.push(art);
+        groupCounts[grp]++;
+      }
+      if (balanced.length >= 99) break;
+    }
+    allArticles = [dailyQA, ...balanced];
     if (data.lastUpdated && lastUpdatedEl) lastUpdatedEl.textContent = formatDate(data.lastUpdated, true);
   // Date display
   const dateEl = document.getElementById('headerDate');
@@ -83,26 +96,24 @@ function errorState(msg) {
 }
 
 function buildFilters() {
-  // GEO tabs
-  const geoOrder = ['🇺🇸 USA', '🇪🇺 EU', '🌍 Global', '🌏 Ázsia'];
-  const geoInData = new Set(allArticles.map(a => a.geo).filter(Boolean));
-  const geos = geoOrder.filter(g => geoInData.has(g));
+  // GEO tabs — csoportok alapján (USA=Amerika, EU=Európa+UK+DE+FR+HU, Globális, Ázsia)
+  const geoOrder = ['🇺🇸 USA', '🇪🇺 EU', '🌍 Globális', '🌏 Ázsia'];
+  const geoLabels = { '🇺🇸 USA': 'USA', '🇪🇺 EU': 'EU', '🌍 Globális': 'Global', '🌏 Ázsia': 'Ázsia' };
+  const geoFlags  = { '🇺🇸 USA': '🇺🇸', '🇪🇺 EU': '🇪🇺', '🌍 Globális': '🌍', '🌏 Ázsia': '🌏' };
 
-  geos.forEach(geo => {
-    const count = allArticles.filter(a => a.geo === geo).length;
-    const flag  = geo.split(' ')[0];
-    const label = geo.split(' ').slice(1).join(' ');
-    const geoColor = GEO_COLOR[geo] || '#c9a84c';
-    const btn   = document.createElement('button');
-    btn.className      = 'geo-btn';
-    btn.dataset.geo    = geo;
+  geoOrder.forEach(grp => {
+    const count = allArticles.filter(a => geoGroup(a.geo) === grp).length;
+    if (count === 0) return;
+    const geoColor = GEO_COLOR[grp] || '#c9a84c';
+    const btn = document.createElement('button');
+    btn.className   = 'geo-btn';
+    btn.dataset.geo = grp;
     btn.style.setProperty('--btn-color', geoColor);
-    btn.innerHTML      = flag + ' <span class="geo-label">' + label + '</span>'
-                       + '<span class="geo-count">' + count + '</span>';
-    btn.addEventListener('click', () => setGeo(geo));
+    btn.innerHTML   = geoFlags[grp] + ' <span class="geo-label">' + geoLabels[grp] + '</span>'
+                    + '<span class="geo-count">' + count + '</span>';
+    btn.addEventListener('click', () => setGeo(grp));
     geoInner.appendChild(btn);
   });
-
 }
 
 function setGeo(geo) {
@@ -152,7 +163,7 @@ grid.addEventListener('click', e => {
       const shareText = (art.title_hu || art.title || '') + '\n\n' +
         (art.summary_hu || '').slice(0, 280) + '\n\n📌 up2date.hu – Globális HR hírek';
       if (navigator.share) {
-        navigator.share({ title: art.title_hu || art.title || '', text: shareText, url: art.url }).catch(() => {});
+        navigator.share({ title: art.title_hu || art.title || '', text: shareText, url: makeShareUrls(art).messengerPage }).catch(() => {});
       } else {
         // Fallback: copy
         navigator.clipboard.writeText(shareText + '\n\n' + art.url).catch(() => {});
@@ -193,7 +204,7 @@ searchInput.addEventListener('input', () => {
 function render() {
   const q = searchInput.value.trim().toLowerCase();
   const filtered = allArticles.filter(a => {
-    const matchGeo = activeGeo === 'all' || a.geo === activeGeo;
+    const matchGeo = activeGeo === 'all' || geoGroup(a.geo) === activeGeo;
     const matchQ   = !q
       || (a.title_hu   || '').toLowerCase().includes(q)
       || (a.title      || '').toLowerCase().includes(q)
@@ -234,11 +245,35 @@ function render() {
 }
 
 const GEO_COLOR = {
-  '\u{1F1FA}\u{1F1F8} USA':     '#2563eb',   // blue
-  '\u{1F1EA}\u{1F1FA} EU':      '#dc2626',   // red
-  '\u{1F30D} Global':           '#0891b2',   // teal
-  '\u{1F30F} \u00C1zsia':       '#7c3aed',   // purple
+  '🇺🇸 USA':        '#2563eb',   // blue
+  '🇨🇦 Kanada':     '#2563eb',   // blue (Amerika csoport)
+  '🇪🇺 EU':         '#dc2626',   // red
+  '🇬🇧 UK':         '#dc2626',   // red (Európa csoport)
+  '🇩🇪 Németország':'#dc2626',   // red
+  '🇫🇷 Franciaország':'#dc2626', // red
+  '🇭🇺 Magyar':     '#dc2626',   // red
+  '🌍 Globális':    '#0891b2',   // teal
+  '🌍 Global':      '#0891b2',   // teal
+  '🌏 Ázsia':       '#7c3aed',   // purple
 };
+
+// Normalizálja a geo értékeket a 4 fő filter-kategóriára
+const GEO_GROUP = {
+  '🇺🇸 USA':          '🇺🇸 USA',
+  '🇨🇦 Kanada':       '🇺🇸 USA',      // Amerika
+  '🇬🇧 UK':           '🇪🇺 EU',
+  '🇩🇪 Németország':  '🇪🇺 EU',
+  '🇫🇷 Franciaország':'🇪🇺 EU',
+  '🇭🇺 Magyar':       '🇪🇺 EU',
+  '🇪🇺 EU':           '🇪🇺 EU',
+  '🌍 Globális':      '🌍 Globális',
+  '🌍 Global':        '🌍 Globális',
+  '🌏 Ázsia':         '🌏 Ázsia',
+};
+
+function geoGroup(geo) {
+  return GEO_GROUP[geo] || geo;
+}
 
 function cardHTML(a, idx) {
   // Q&A kártya: bértranszparencia napi kérdés
@@ -353,7 +388,7 @@ function makeShareUrls(a) {
     + '\n\nOlvasd naponta: ' + siteUrl;
   return {
     fb:           'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(sharePageUrl) + '&quote=' + encodeURIComponent(fbText),
-    linkedin:     'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(sharePageUrl) + '&title=' + encodeURIComponent(title) + '&summary=' + encodeURIComponent(liText),
+    linkedin:     'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(sharePageUrl),
     messengerPage: sharePageUrl,
     email:        'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(emailBody)
   };
