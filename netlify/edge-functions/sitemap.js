@@ -20,12 +20,22 @@ export default async (request) => {
       const isRecent = ageMs < 3 * 24 * 3600 * 1000; // 3 days
       const priority = isRecent ? '0.8' : '0.6';
       const freq     = isRecent ? 'daily' : 'weekly';
-      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${freq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+      const title    = escapeXml(a.title_hu || a.title || '');
+      const pubDate  = (a.published || a.addedAt || '').slice(0, 10) || now;
+      const keywords = [a.category, a.source, 'HR', 'munkaerőpiac'].filter(Boolean).map(escapeXml).join(', ');
+      const image    = a.image ? `\n    <image:image>\n      <image:loc>${escapeXml(a.image)}</image:loc>\n      <image:title>${title}</image:title>\n    </image:image>` : '';
+
+      // Google News entry for articles < 2 days old
+      const newsEntry = isRecent ? `\n    <news:news>\n      <news:publication>\n        <news:name>up2date by Y2Y</news:name>\n        <news:language>hu</news:language>\n      </news:publication>\n      <news:publication_date>${pubDate}</news:publication_date>\n      <news:title>${title}</news:title>\n      <news:keywords>${keywords}</news:keywords>\n    </news:news>` : '';
+
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${freq}</changefreq>\n    <priority>${priority}</priority>${newsEntry}${image}\n  </url>`;
     })
     .join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>${base}/</loc>
     <lastmod>${now}</lastmod>
@@ -49,5 +59,14 @@ ${articleUrls}
     },
   });
 };
+
+function escapeXml(str) {
+  return String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
 
 export const config = { path: '/sitemap.xml' };

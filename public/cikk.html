@@ -3,7 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>up2date by Y2Y</title>
+  <title>up2date by Y2Y – HR cikk</title>
+  <meta name="description" content="Globális HR hírek magyarul – rövid AI-összefoglalóval. Naponta frissülő munkaerőpiaci, leadership és szervezetfejlesztési hírek. by Y2Y." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://up2date.hu/" />
+
+  <!-- OG defaults (dynamically updated by JS) -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="up2date by Y2Y" />
+  <meta property="og:title" content="up2date by Y2Y – HR cikk" />
+  <meta property="og:description" content="Globális HR hírek magyarul – rövid AI-összefoglalóval." />
+  <meta property="og:image" content="https://up2date.hu/og-image.png" />
+  <meta property="og:locale" content="hu_HU" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="up2date by Y2Y – HR cikk" />
+  <meta name="twitter:description" content="Globális HR hírek magyarul – rövid AI-összefoglalóval." />
+  <meta name="twitter:image" content="https://up2date.hu/og-image.png" />
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -452,8 +469,54 @@
         });
       });
 
-      // Update page title + OG
-      document.title = (a.title_hu || a.title || 'Cikk') + ' – up2date by Y2Y';
+      // Update page title + OG meta tags
+      const pageTitle = (a.title_hu || a.title || 'Cikk') + ' – up2date by Y2Y';
+      document.title = pageTitle;
+      const summaryText = (a.summary_hu || '').slice(0, 300);
+
+      // Update OG/Twitter meta tags dynamically
+      const metaUpdates = {
+        'og:title': pageTitle,
+        'og:description': summaryText,
+        'og:image': a.image || 'https://up2date.hu/og-image.png',
+        'og:url': location.href,
+        'twitter:title': pageTitle,
+        'twitter:description': summaryText,
+        'twitter:image': a.image || 'https://up2date.hu/og-image.png'
+      };
+      Object.entries(metaUpdates).forEach(([prop, val]) => {
+        const meta = document.querySelector('meta[property="' + prop + '"], meta[name="' + prop + '"]');
+        if (meta) meta.setAttribute('content', val);
+      });
+
+      // Inject JSON-LD structured data for the article
+      const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'NewsArticle',
+        'headline': a.title_hu || a.title || '',
+        'alternativeHeadline': a.title || '',
+        'description': summaryText,
+        'image': a.image || '',
+        'datePublished': a.published || '',
+        'dateModified': a.published || '',
+        'url': location.href,
+        'isPartOf': { '@id': 'https://up2date.hu/#website' },
+        'publisher': {
+          '@type': 'Organization',
+          '@id': 'https://up2date.hu/#organization',
+          'name': 'up2date by Y2Y',
+          'logo': { '@type': 'ImageObject', 'url': 'https://up2date.hu/og-image.png' }
+        },
+        'author': { '@type': 'Organization', 'name': a.source || 'up2date by Y2Y' },
+        'articleSection': a.category || 'HR',
+        'inLanguage': 'hu-HU',
+        'mainEntityOfPage': location.href,
+        'keywords': ['HR', a.category, 'munkaerőpiac', a.source, 'HR trendek'].filter(Boolean).join(', ')
+      };
+      const ldScript = document.createElement('script');
+      ldScript.type = 'application/ld+json';
+      ldScript.textContent = JSON.stringify(jsonLd);
+      document.head.appendChild(ldScript);
 
       // Render related articles
       renderRelated(a);

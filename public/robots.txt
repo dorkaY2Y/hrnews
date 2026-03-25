@@ -1,15 +1,24 @@
 User-agent: *
 Allow: /
 Disallow: /data/
+Crawl-delay: 1
 
-# AI crawlers – explicitly allowed for AI SEO
+# Sitemap
+Sitemap: https://up2date.hu/sitemap.xml
+
+# AI crawlers – explicitly allowed for AI SEO / GEO
 User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-User-agent: ChatGPT-User
+User-agent: Googlebot
 Allow: /
 
 User-agent: PerplexityBot
@@ -20,8 +29,44 @@ Allow: /
 
 User-agent: ClaudeBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: anthropic-ai
+Allow: /
 
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://up2date.hu/sitemap.xml
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Phind
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
