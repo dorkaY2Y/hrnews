@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1774334150835_3694",
+    "source": "Harvard Business Review",
+    "category": "Leadership",
+    "color": "#991b1b",
+    "geo": "🇺🇸 USA",
+    "title": "Leaders Feel Their Agency Eroding—and They're Starting to Withdraw",
+    "title_hu": "Eltűnő mozgástér: miért húzódnak vissza a vezetők?",
+    "url": "https://hbr.org/2026/03/leaders-feel-their-agency-eroding-and-theyre-starting-to-withdraw",
+    "published": "2026-03-23T12:25:15.000Z",
+    "addedAt": "2026-03-24T06:35:50.833Z",
+    "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_23_2194721481.jpg",
+    "excerpt": "Years of upheaval and uncertainty have chipped away at their confidence.",
+    "summary_hu": "Az évek óta tartó bizonytalanság és szervezeti változások komolyan megrendítették a vezetők önbizalmát és cselekvési képességét. A cikk azt vizsgálja, hogyan veszi észre a vezető, hogy elveszíti saját mozgásterét, és milyen lépéseket tehet ennek visszaszerzéséért. A megoldás kulcsa az önreflexió és a tudatos döntéshozatal újratanulása."
+  },
+  {
+    "id": "1774334150836_4965",
+    "source": "Harvard Business Review",
+    "category": "Leadership",
+    "color": "#991b1b",
+    "geo": "🇺🇸 USA",
+    "title": "To Scale AI Agents Successfully, Think of Them Like Team Members",
+    "title_hu": "AI-ügynökök skálázása: kezeld őket csapattagként",
+    "url": "https://hbr.org/2026/03/to-scale-ai-agents-successfully-think-of-them-like-team-members",
+    "published": "2026-03-23T12:15:40.000Z",
+    "addedAt": "2026-03-24T06:35:50.833Z",
+    "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_23_JuliaAllum.jpg",
+    "excerpt": "Just like your human employees, each AI agent needs a role, a defined scope of authority, approved sources of truth, and clear escalation rules.",
+    "summary_hu": "Az AI-ügynökök sikeres bevezetéséhez ugyanolyan gondolkodásra van szükség, mint egy új munkatárs integrálásánál: szerepkört, felhatalmazási kereteket és egyértelmű eszkalációs szabályokat kell meghatározni. A cikk szerint azok a szervezetek járnak jól, amelyek az AI-t nem eszközként, hanem a csapat új tagjaként kezelik. Ez a megközelítés csökkenti a kockázatokat és növeli a hatékonyságot."
+  },
+  {
+    "id": "1774334150837_8795",
+    "source": "Harvard Business Review",
+    "category": "Leadership",
+    "color": "#991b1b",
+    "geo": "🇺🇸 USA",
+    "title": "How Senior Leaders Can Build Their Influence",
+    "title_hu": "Hogyan növelje a felsővezető a saját befolyását?",
+    "url": "https://hbr.org/2026/03/how-senior-leaders-can-build-their-influence",
+    "published": "2026-03-23T12:05:25.000Z",
+    "addedAt": "2026-03-24T06:35:50.833Z",
+    "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_23_71915540.jpg",
+    "excerpt": "Getting your peers to act on your ideas requires understanding what they care about.",
+    "summary_hu": "A felsővezetői befolyás nem az autoritásból fakad, hanem abból, hogy mennyire értjük mások döntési logikáját és motivációit. Aki el akarja fogadtatni az ötleteit a kollégáival, annak először meg kell értenie, mi fontos nekik. A cikk konkrét módszereket kínál a szervezeti hatás tudatos felépítéséhez."
+  }
+]

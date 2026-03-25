@@ -25,9 +25,22 @@ export default async (request) => {
   const title      = article ? (article.title_hu || article.title || 'up2date by Y2Y') : 'up2date by Y2Y';
   const titleEn    = article ? (article.title || title) : title;
   const desc       = article ? (article.summary_hu || '').slice(0, 300) : 'Globális HR-trendek naponta, magyar összefoglalóval.';
-  // Always use own branded OG image for social sharing — external article images are
-  // hotlink-protected and blocked by FB/LinkedIn crawlers (Referer check fails).
-  const image      = 'https://up2date.hu/og-image.png';
+  // Generate article-specific OG image:
+  // - If article has an image URL → proxy it through og-img with branding bar
+  // - Otherwise → generate a branded title card via og-img (SVG text on dark bg)
+  const articleImg = article && article.image ? article.image : null;
+  const ogImgBase  = 'https://up2date.hu/.netlify/functions/og-img';
+  let image;
+  if (articleImg) {
+    image = ogImgBase + '?img=' + encodeURIComponent(articleImg)
+          + '&title=' + encodeURIComponent((title || '').slice(0, 100))
+          + '&source=' + encodeURIComponent(source || '');
+  } else if (title && title !== 'up2date by Y2Y') {
+    image = ogImgBase + '?title=' + encodeURIComponent(title.slice(0, 100))
+          + '&source=' + encodeURIComponent(source || '');
+  } else {
+    image = 'https://up2date.hu/og-image.png';
+  }
   const pageUrl    = reqUrl.toString();
   const published  = article ? (article.published || '') : '';
   const source     = article ? (article.source || 'up2date by Y2Y') : 'up2date by Y2Y';

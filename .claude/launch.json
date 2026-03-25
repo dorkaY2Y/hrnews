@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hrnews",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "const http=require('http'),fs=require('fs'),path=require('path');const mime={'html':'text/html','css':'text/css','js':'application/javascript','json':'application/json','png':'image/png','svg':'image/svg+xml'};http.createServer((req,res)=>{let p=path.join('public',req.url.split('?')[0]);if(p.endsWith('/')||!path.extname(p))p=p.replace(/\\/?$/,'/index.html');try{const d=fs.readFileSync(p);res.writeHead(200,{'Content-Type':mime[p.split('.').pop()]||'text/plain'});res.end(d);}catch(e){res.writeHead(404);res.end('404');}}).listen(3333,()=>console.log('ready'));"],
+      "port": 3333
+    }
+  ]
+}

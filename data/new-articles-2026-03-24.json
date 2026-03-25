@@ -1,0 +1,622 @@
+[
+  {
+    "source": "Harvard Business Review", "category": "Leadership", "color": "#991b1b", "geo": "🇺🇸 USA",
+    "title": "Leaders Feel Their Agency Eroding—and They're Starting to Withdraw",
+    "title_hu": "Eltűnő mozgástér: miért húzódnak vissza a vezetők?",
+    "url": "https://hbr.org/2026/03/leaders-feel-their-agency-eroding-and-theyre-starting-to-withdraw",
+    "published": "2026-03-23T12:25:15.000Z",
+    "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_23_2194721481.jpg",
+    "excerpt": "Years of upheaval and uncertainty have chipped away at their confidence. Here's how they can get it back.",
+    "summary_hu": "Az évek óta tartó bizonytalanság és szervezeti változások komolyan megrendítették a vezetők önbizalmát és cselekvési képességét. A cikk azt vizsgálja, hogyan veszi észre a vezető, hogy elveszíti saját mozgásterét – és milyen lépéseket tehet ennek visszaszerzéséért. A megoldás kulcsa az önreflexió és a tudatos döntéshozatal újratanulása."
+  },
+  {
+    "source": "Harvard Business Review", "category": "Leadership", "color": "#991b1b", "geo": "🇺🇸 USA",
+    "title": "To Scale AI Agents Successfully, Think of Them Like Team Members",
+    "title_hu": "AI-ügynökök skálázása: kezeld őket csapattagként",
+    "url": "https://hbr.org/2026/03/to-scale-ai-agents-successfully-think-of-them-like-team-members",
+    "published": "2026-03-23T12:15:40.000Z",
+    "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_23_JuliaAllum.jpg",
+    "excerpt": "Just like your human employees, each AI agent needs a role, a defined scope of authority, approved sources of truth, and clear escalation rules.",
+    "summary_hu": "Az AI-ügynökök sikeres bevezetéséhez ugyanolyan gondolkodásra van szükség, mint egy új munkatárs integrálásánál: szerepkört, felhatalmazási kereteket és egyértelmű eszkalációs szabályokat kell meghatározni. A cikk szerint azok a szervezetek járnak jól, amelyek az AI-t nem eszközként, hanem a csapat új tagjaként kezelik. Ez a megközelítés csökkenti a kockázatokat és növeli a hatékonyságot."
+  },
+  {
+    "source": "Harvard Business Review", "category": "Leadership", "color": "#991b1b", "geo": "🇺🇸 USA",
+    "title": "How Senior Leaders Can Build Their Influence",
+    "title_hu": "Hogyan növelje a felsővezető a saját befolyását?",
+    "url": "https://hbr.org/2026/03/how-senior-leaders-can-build-their-influence",
+    "published": "2026-03-23T12:05:25.000Z",
+    "image": "https://hbr.org/resources/images/article_assets/2026/03/Mar26_23_71915540.jpg",
+    "excerpt": "Getting your peers to act on your ideas requires understanding what they care about and what drives their decisions.",
+    "summary_hu": "A felsővezetői befolyás nem az autoritásból fakad – hanem abból, hogy mennyire értjük mások döntési logikáját és motivációit. Aki el akarja fogadtatni az ötleteit a kollégáival, annak először meg kell értenie, mi fontos nekik. A cikk konkrét módszereket kínál a szervezeti hatás tudatos felépítéséhez."
+  },
+  {
+    "source": "HR Dive", "category": "HR News", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "DOL sends new joint employer rule to White House",
+    "title_hu": "Új foglalkoztatási szabályozás a Fehér Ház előtt",
+    "url": "https://www.hrdive.com/news/dol-2026-joint-employer-rule-sent-white-house/815457/",
+    "published": "2026-03-23T20:07:00.000Z",
+    "image": "",
+    "excerpt": "The forthcoming rule is expected to be friendlier to employers than present Fair Labor Standards Act regulations, one attorney told HR Dive.",
+    "summary_hu": "A Munkaügyi Minisztérium a Fehér Ház elé terjesztette az új közös munkáltató szabályt, amelynek célja a jelenlegi FLSA-előírásoknál munkáltatóbarátabb feltételrendszer kialakítása. Jogászok szerint a változás elsősorban a franchise-modellek és alvállalkozói hálózatok számára hoz enyhítést. A végleges rendelet kihirdetése az idén várható."
+  },
+  {
+    "source": "HR Dive", "category": "HR News", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "Bimbo Bakeries can't compel Massachusetts drivers to arbitrate misclassification",
+    "title_hu": "Besorolási vita: a sofőrök bíróságon maradhatnak",
+    "url": "https://www.hrdive.com/news/bimbo-bakeries-cant-compel-massachusetts-drivers-to-arbitrate/815398/",
+    "published": "2026-03-23T18:00:00.000Z",
+    "image": "",
+    "excerpt": "A federal district court said the drivers can pursue their state law case in court because they qualify as transportation workers excluded from coverage under the FAA.",
+    "summary_hu": "Egy szövetségi bíróság kimondta, hogy a Bimbo Bakeries nem kényszerítheti sofőrjeit kötelező választottbírósági eljárásra, mivel ők fuvarozási munkavállalóknak minősülnek, akiket az arbitrációs törvény hatálya alól kivesz. A döntés lehetővé teszi a sofőröknek, hogy állami bíróság előtt pereljék a céget munkavállalói besorolásuk miatt. Ez precedensértékű lehet más platformgazdasági perekre is."
+  },
+  {
+    "source": "HR Dive", "category": "HR News", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "A leader downplayed an HR investigation's findings. What now?",
+    "title_hu": "Egy vezető félresöpörte a HR-vizsgálat megállapításait – mi legyen?",
+    "url": "https://www.hrdive.com/news/hr-investigations-downplayed-what-to-do-next/815312/",
+    "published": "2026-03-23T16:00:00.000Z",
+    "image": "",
+    "excerpt": "It's a difficult place for professionals to find themselves, attorneys told HR Dive, and moving forward requires understanding of both personal and organizational risks.",
+    "summary_hu": "Ha egy vezető figyelmen kívül hagyja a HR-vizsgálat eredményeit, az komoly jogi és szervezeti kockázatokat idéz elő – mind a vállalat, mind az érintett HR-szakember számára. Jogászok szerint ilyenkor dokumentálni kell a kommunikációt, és szükség esetén magasabb szintre kell az ügyet vinni. A tétlenség önmagában is felelősséget vonhat maga után."
+  },
+  {
+    "source": "HR Dive", "category": "HR News", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "Week in review: Feds stay the course on marijuana testing",
+    "title_hu": "Heti összefoglaló: marihuána-tesztelés, AI-kockázatok és készségalapú felvétel",
+    "url": "https://www.hrdive.com/news/feds-stay-the-course-on-marijuana-testing/815280/",
+    "published": "2026-03-22T14:00:00.000Z",
+    "image": "",
+    "excerpt": "We're rounding up last week's stories, from negative viewpoints on artificial intelligence to the ROI of skills-based hiring practices.",
+    "summary_hu": "A HR Dive heti összefoglalója szerint a szövetségi szervek fenntartják a marihuána-tesztelésre vonatkozó előírásokat. Emellett szó esett az MI negatív megítéléséről a munkahelyeken, valamint a készségalapú felvétel megtérüléséről. A hét legfontosabb HR-témái változatlanul a szabályozás, a technológia és a tehetségszerzés körül forogtak."
+  },
+  {
+    "source": "HR Dive", "category": "HR Tech & Analytics", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "Why performance reviews are now continuous",
+    "title_hu": "Az éves teljesítményértékelés kora lejárt – jön a folyamatos visszajelzés",
+    "url": "https://www.hrdive.com/news/why-performance-reviews-are-now-continuous/815200/",
+    "published": "2026-03-22T12:00:00.000Z",
+    "image": "",
+    "excerpt": "Ken Lloyd, author of Performance Appraisals & Phrases for Dummies, spoke with HR Dive about what has shifted in talent development in 15 years.",
+    "summary_hu": "Az elmúlt 15 évben gyökeresen átalakult a teljesítményértékelés világa: az éves értékelőbeszélgetések helyét egyre inkább a folyamatos visszajelzés és a rendszeres fejlesztési párbeszéd veszi át. Ken Lloyd, a terület elismert szerzője szerint a munkavállalók ma már azonnali, konkrét visszajelzést várnak – nem évente egyszer összefoglalt véleményeket. A változás a tehetségfejlesztés alaplogikáját írja át."
+  },
+  {
+    "source": "HR Dive", "category": "Compensation & Benefits", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "How compensation teams can become strategic finance partners",
+    "title_hu": "Bérezési csapat mint stratégiai pénzügyi partner",
+    "url": "https://www.hrdive.com/spons/how-compensation-teams-can-become-strategic-finance-partners/815100/",
+    "published": "2026-03-22T10:00:00.000Z",
+    "image": "",
+    "excerpt": "Finance leaders are looking to comp teams for deeper insight into how workforce investments affect the bottom line.",
+    "summary_hu": "A pénzügyi vezetők egyre inkább elvárják a kompenzációs csapatoktól, hogy ne csak béreket kezeljenek, hanem mutassák meg, hogyan hatnak a munkaerő-befektetések az eredményre. A cikk stratégiákat kínál arra, hogyan válhat a bérezési terület valódi pénzügyi partneri szerepkörré. A kulcs az adatvezérelt megközelítés és a közös döntési folyamatok kialakítása."
+  },
+  {
+    "source": "HR Dive", "category": "Wellbeing", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "Insulin, fatigue and focus: the untold story of metabolic health at work",
+    "title_hu": "Metabolikus egészség a munkahelyen: amit az inzulinról nem tudtál",
+    "url": "https://www.hrdive.com/spons/insulin-fatigue-and-focus-the-untold-story-of-metabolic-health-at-work/815050/",
+    "published": "2026-03-22T08:00:00.000Z",
+    "image": "",
+    "excerpt": "Employees might not see it coming. With data, they can act before fatigue and focus issues show up.",
+    "summary_hu": "A munkahelyi fáradtság és koncentrációzavar mögött gyakran metabolikus okok – köztük inzulinszint-problémák – húzódnak, amelyeket a munkavállalók és a munkáltatók sem ismernek fel időben. Az adatalapú egészségprogramok lehetővé teszik, hogy a problémák még a tünetek megjelenése előtt kezelhetők legyenek. A proaktív metabolikus egészségügyi támogatás komoly termelékenységnövekedést hozhat."
+  },
+  {
+    "source": "HR Dive", "category": "Compensation & Benefits", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "More than GLP-1s: Here's what an obesity care benefits strategy needs",
+    "title_hu": "Nem csak GLP-1: mit kell tudni egy komplex elhízáskezelő juttatási programról?",
+    "url": "https://www.hrdive.com/spons/more-than-glp-s-heres-what-an-obesity-care-benefits-strategy/815030/",
+    "published": "2026-03-22T07:00:00.000Z",
+    "image": "",
+    "excerpt": "A successful strategy needs to integrate weight management into an employee benefits program and support the behavior changes essential to long-term weight management.",
+    "summary_hu": "A GLP-1 típusú fogyókúrás gyógyszerek divatja ellenére a valóban hatékony elhízáskezelő juttatási program ennél jóval többet igényel. A cikk szerint a tartós eredményhez a viselkedésváltozást támogató programokat is integrálni kell a munkavállalói juttatások közé. A munkáltatók, akik csak a gyógyszertámogatásra fókuszálnak, hosszú távon nem fognak áttörést elérni."
+  },
+  {
+    "source": "Talent Management", "category": "Talent", "color": "#6d28d9", "geo": "🇺🇸 USA",
+    "title": "Why high-talent teams still underperform",
+    "title_hu": "Miért teljesít alul a tehetséges csapat?",
+    "url": "https://www.chieftalentofficer.co/2026/03/23/why-high-talent-teams-still-underperform/",
+    "published": "2026-03-23T10:00:00.000Z",
+    "image": "",
+    "excerpt": "The difference between teams that succeed and those that struggle rarely comes down to talent. Rather, it is tied to how that talent interacts, aligns and connects within their team.",
+    "summary_hu": "A sikeres és a küzdő csapatok között a különbség szinte soha nem a tehetség szintjén dől el – hanem azon, hogyan működnek együtt a tagok, mennyire vannak összhangban a céljaikban. A csapatdinamika, az összehangoltság és a szervezeti kapcsolatok minősége fontosabb tényező, mint az egyéni képességek összessége. A tehetségmenedzsmentnek tehát a rendszerszintű együttműködésre kell fókuszálnia, nem csak az egyéni fejlesztésre."
+  },
+  {
+    "source": "HRMorning", "category": "Leadership", "color": "#0f766e", "geo": "🇺🇸 USA",
+    "title": "8 Ways to Motivate a Team of Misfits to Success",
+    "title_hu": "8 módszer a nehézkes csapat sikerre viteléhez",
+    "url": "https://www.hrmorning.com/articles/motivate-team-of-work-misfits/",
+    "published": "2026-03-23T09:00:00.000Z",
+    "image": "",
+    "excerpt": "How can I help a team of misfits succeed? Managers often think they have a pennant-winning Yankees lineup in place, when in reality, they're looking at a bench full of Bad News Bears.",
+    "summary_hu": "Nem minden vezető kap álomcsapatot – sokan olyanokkal dolgoznak, akik nem illeszkednek a klasszikus formába. A cikk 8 konkrét módszert kínál arra, hogyan lehet egy heterogén, nehezen kezelhető csapatot mégis eredményes egységgé formálni. A megoldás kulcsa az egyéni erősségek felismerése és a közös célban való egyesítés."
+  },
+  {
+    "source": "HRMorning", "category": "Talent", "color": "#0f766e", "geo": "🇺🇸 USA",
+    "title": "When Full-Time Headcount Isn't the Answer: How Contract Talent Is Closing Execution Gaps",
+    "title_hu": "Mikor nem a fejlesztés a megoldás? A szerződéses munkaerő szerepe",
+    "url": "https://www.hrmorning.com/articles/contract-roles-workforce-planning/",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "In many organizations, workforce planning still follows a familiar pattern. A business need arises, a requisition is opened, and HR teams begin the traditional recruitment process.",
+    "summary_hu": "A hagyományos munkaerő-tervezés reflexszerűen nyit új pozíciókat, ha üzleti igény merül fel – de ez nem mindig a legokosabb megközelítés. A cikk bemutatja, hogyan töltik be a végrehajtási réseket a szerződéses szakemberek: gyorsabban, rugalmasabban és sokszor olcsóbban. A rugalmas munkaerőstratégia egyre fontosabb versenyelőnnyé válik az agilis szervezetek számára."
+  },
+  {
+    "source": "HR Executive", "category": "HR Strategy", "color": "#b45309", "geo": "🇺🇸 USA",
+    "title": "5 practical steps to creating HR shared services for your company",
+    "title_hu": "5 lépés a HR megosztott szolgáltatások kiépítéséhez",
+    "url": "https://hrexecutive.com/5-practical-steps-to-creating-hr-shared-services-for-your-company/",
+    "published": "2026-03-23T14:00:00.000Z",
+    "image": "",
+    "excerpt": "Even modest shifts in how HR work is organized through shared services can create efficiency gains and a better employee experience.",
+    "summary_hu": "A HR megosztott szolgáltatások bevezetése nem csupán nagy vállalatok privilégiuma – már kisebb szervezetekben is komoly hatékonysági és munkavállalói élmény javulást hozhat. A cikk öt gyakorlati lépést mutat be, amelyekkel fokozatosan felépíthető egy működőképes shared services modell. A kulcs a folyamatok standardizálása és az önkiszolgáló eszközök bevezetése."
+  },
+  {
+    "source": "HR Executive", "category": "HR Tech & Analytics", "color": "#b45309", "geo": "🇺🇸 USA",
+    "title": "A first look at the White House AI Policy Framework",
+    "title_hu": "Fehér Ház AI-keretrendszer: mit jelent ez a HR-nek?",
+    "url": "https://hrexecutive.com/a-first-look-at-the-white-house-ai-policy-framework/",
+    "published": "2026-03-23T13:00:00.000Z",
+    "image": "",
+    "excerpt": "The White House on Friday released its AI Policy Framework—a vision for how Congress should guide AI development and implementation.",
+    "summary_hu": "A Fehér Ház közzétette mesterséges intelligencia politikai keretrendszerét, amely útmutatót kínál a Kongresszusnak az AI fejlesztésének és alkalmazásának szabályozásához. HR-szempontból különösen fontos a munkahelyi AI-alkalmazásokra vonatkozó iránymutatás. A keretrendszer a szövetségi szintű AI-szabályozás alapjait fekteti le, ami közvetlen hatással lesz a munkáltatói technológiai döntésekre."
+  },
+  {
+    "source": "HR Executive", "category": "HR Tech & Analytics", "color": "#b45309", "geo": "🇺🇸 USA",
+    "title": "As Eightfold, Workday suits show, AI legal risks are building for HR",
+    "title_hu": "AI-perek az Eightfold és Workday ellen: növekvő jogi kockázatok HR-technológiában",
+    "url": "https://hrexecutive.com/as-eightfold-workday-suits-show-ai-legal-risks-are-building-for-hr/",
+    "published": "2026-03-23T12:00:00.000Z",
+    "image": "",
+    "excerpt": "Several suits against HR tech firms highlight the AI legal risks facing employers deploying the tech in their people practices.",
+    "summary_hu": "Az Eightfold és a Workday ellen indított perek rávilágítanak arra, hogy az AI-alapú HR-technológia alkalmazása komoly jogi felelősséget vonhat maga után – nemcsak a szoftvercégek, hanem a felhasználó vállalatok számára is. A diszkriminációs és adatkezelési kockázatok egyre élesebben körvonalazódnak. HR-vezetőknek érdemes jogi szempontból is átvilágítani az alkalmazott AI-megoldásokat."
+  },
+  {
+    "source": "HR Executive", "category": "Compensation & Benefits", "color": "#b45309", "geo": "🌍 Globális",
+    "title": "Pay transparency laws surge: how to turn compliance into strategy",
+    "title_hu": "Bértransparencia-törvények előretörése: hogyan váljék stratégiává a megfelelőség?",
+    "url": "https://hrexecutive.com/pay-transparency-laws-surge-how-to-turn-compliance-into-strategy/",
+    "published": "2026-03-23T11:00:00.000Z",
+    "image": "",
+    "excerpt": "Pay transparency laws are quickly changing, both in the U.S. and globally, prompting employers to rethink compliance.",
+    "summary_hu": "A bértransparencia előírások egyre több országban és az USA több államában is bevezetésre kerülnek, komoly alkalmazkodási kényszert teremtve a munkáltatóknak. A cikk amellett érvel, hogy a jogi megfelelés helyett érdemes stratégiai lehetőségként tekinteni a nyílt bérkommunikációra – ez erősítheti a munkáltatói márkát és a munkavállalói bizalmat. Az előrelátó vállalatok versenyhelyzeti előnyt kovácsolhatnak belőle."
+  },
+  {
+    "source": "HR Executive", "category": "Leadership", "color": "#b45309", "geo": "🇺🇸 USA",
+    "title": "The 'kiss cam' people leader opens up to Oprah, with insights for HR",
+    "title_hu": "A kiss cam CPO megszólal: mit tanulhat ebből a HR?",
+    "url": "https://hrexecutive.com/the-kiss-cam-people-leader-opens-up-to-oprah-with-insights-for-hr/",
+    "published": "2026-03-23T10:00:00.000Z",
+    "image": "",
+    "excerpt": "The Coldplay kiss cam incident went viral last summer. Now, months later, the former CPO speaks with Oprah, and the lessons for HR have gotten sharper.",
+    "summary_hu": "A Coldplay-koncertes kiss cam eset tavaly nyáron robbant be a köztudatba – most az érintett CPO Oprahnak meséli el a történteket, és a tanulságok az azóta eltelt hónapokban még élesebbé váltak. A cikk a magán- és szakmai élet határainak megsértéséről, a szexuális zaklatásra vonatkozó vállalati politikákról és a HR felelősségéről szól. Ritka alkalom arra, hogy egy eset személyes és szervezeti szempontból egyaránt elemzésre kerüljön."
+  },
+  {
+    "source": "HR Executive", "category": "Compensation & Benefits", "color": "#b45309", "geo": "🇺🇸 USA",
+    "title": "ACA exchange enrollment could fall by more than 2.6 million",
+    "title_hu": "Több mint 2,6 millióval csökkenhet az ACA-s biztosítottak száma",
+    "url": "https://hrexecutive.com/aca-exchange-enrollment-could-fall-by-more-than-2-6-million/",
+    "published": "2026-03-23T09:00:00.000Z",
+    "image": "",
+    "excerpt": "New KFF survey results suggest the total could fall below exchange managers' 17.7 million forecast.",
+    "summary_hu": "A KFF legújabb felmérése szerint az ACA-s tőzsdei biztosítotti szám a vártnál nagyobb mértékben – akár 2,6 millióval – is csökkenhet, alulmúlva a 17,7 milliós prognózist. Ez közvetlen hatással van a munkáltatói egészségügyi juttatási stratégiákra, hiszen sokan kénytelenek lehetnek a munkahelyi biztosításra támaszkodni. HR-vezetőknek érdemes felkészülni a munkavállalói elvárások megváltozására."
+  },
+  {
+    "source": "HR Daily Advisor", "category": "HR Strategy", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "Beyond Retention: Reimagining HR for the Next Generation",
+    "title_hu": "Túl a megtartáson: HR újragondolva a következő generáció számára",
+    "url": "https://hrdailyadvisor.hci.org/2026/03/23/beyond-retention-reimagining-hr-for-the-next-generation/",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "HR professionals join the field with a clear-eyed mission to build better workplaces. But are mounting challenges and changes chipping away at our sense of optimism?",
+    "summary_hu": "A HR-szakma új generációja valódi értékteremtési vággyal érkezik – de a növekvő elvárások és változások veszélyeztetik ezt az optimizmust. A cikk azzal foglalkozik, hogy a megtartásnál tágabb perspektívában hogyan képzelhető el a HR jövőbeli szerepe. A következő generáció sikerének kulcsa az, hogy a HR ne csupán adminisztrációs funkcióként, hanem stratégiai változásvezetőként definiálja magát."
+  },
+  {
+    "source": "HR Daily Advisor", "category": "HR Tech & Analytics", "color": "#0369a1", "geo": "🇺🇸 USA",
+    "title": "HRDA Frankly Speaking: LinkedIn Leading the Human Plus World",
+    "title_hu": "LinkedIn és a Human Plus jövő: mit tanulhat ebből a HR?",
+    "url": "https://hrdailyadvisor.hci.org/2026/03/23/hrda-frankly-speaking-linkedin-leading-the-human-plus-world/",
+    "published": "2026-03-23T07:30:00.000Z",
+    "image": "",
+    "excerpt": "As the Director of Talent Development at LinkedIn, Dr. Chrissy Roth-Francis currently oversees the growth of 3,000 leaders. She is at the forefront of a major cultural shift: the Human Plus future.",
+    "summary_hu": "A LinkedIn tehetségfejlesztési igazgatója, Dr. Chrissy Roth-Francis 3000 vezető fejlődéséért felelős, és a Human Plus megközelítés élvonalában dolgozik – ahol az ember és a technológia nem verseng, hanem erősíti egymást. A kulturális váltás lényege: az emberi ítélőképességet és kapcsolatokat az AI nem helyettesíti, hanem felszabadítja. A cikk konkrét tanulságokat kínál HR-vezetőknek arra, hogyan vezessék be ezt a szemléletet saját szervezetükben."
+  },
+  {
+    "source": "HR Reporter", "category": "HR News", "color": "#047857", "geo": "🇨🇦 Kanada",
+    "title": "$815,000: Store manager must pay for excessive wages, expenses",
+    "title_hu": "815 000 dollár visszafizetése: túlzott bérek és kiadások egy üzletvezetőnél",
+    "url": "https://www.hrreporter.com/focus-areas/payroll/815000-store-manager-must-pay-for-excessive-wages-expenses/394210",
+    "published": "2026-03-23T15:00:00.000Z",
+    "image": "",
+    "excerpt": "Six-month termination delay does not equal condonation, BC court rules",
+    "summary_hu": "Egy brit kolumbiai bíróság kimondta, hogy az üzletvezető hat hónapos felmondási késedelme nem jelenti az indokolatlan bérek és kiadások jóváhagyását. A bíróság kötelezte a korábbi menedzsert 815 000 dollár visszafizetésére – egyértelmű üzenetet küldve arról, hogy a munkaadói hallgatás nem egyenértékű az elfogadással. Az ítélet fontos precedens a munkáltatói felelősség és a lojalitási kötelezettség megsértése tekintetében."
+  },
+  {
+    "source": "HR Reporter", "category": "HR News", "color": "#047857", "geo": "🇨🇦 Kanada",
+    "title": "When is the 'last straw'?",
+    "title_hu": "Mikor az utolsó csepp? A fokozatos fegyelmezés határai",
+    "url": "https://www.hrreporter.com/news/hr-news/when-is-the-last-straw/394206",
+    "published": "2026-03-23T13:00:00.000Z",
+    "image": "",
+    "excerpt": "Employment lawyers discuss what employers should and shouldn't do in their progressive discipline process",
+    "summary_hu": "Munkajogi ügyvédek elemzik, hogy a fokozatos fegyelmi eljárásban mikor érkezik el az a pont, amikor az egyetlen eset is elegendő indokot jelent az azonnali felmondáshoz. A last straw elv alkalmazása körültekintő dokumentációt és következetes eljárást igényel – különben a munkáltató kerülhet hátránnyal. A cikk konkrét eseteken keresztül mutatja be a helyes és helytelen megközelítéseket."
+  },
+  {
+    "source": "HR Reporter", "category": "Compensation & Benefits", "color": "#047857", "geo": "🇨🇦 Kanada",
+    "title": "What are the 3 top barriers to understanding benefits costs?",
+    "title_hu": "3 fő akadály a juttatási költségek megértésében",
+    "url": "https://www.hrreporter.com/focus-areas/compensation-and-benefits/what-are-the-3-top-barriers-to-understanding-benefits-costs/394204",
+    "published": "2026-03-23T11:00:00.000Z",
+    "image": "",
+    "excerpt": "Global survey highlights challenges for HR – along with uneven use of AI in employee benefits",
+    "summary_hu": "Egy globális felmérés rámutat, hogy a HR-szakemberek jelentős részének nehézséget okoz a juttatási programok valós költségeinek megértése és kommunikálása. A három leggyakoribb akadály az adatok fragmentáltsága, az AI egyenetlen alkalmazása és a döntéshozói szemlélet hiánya. A juttatások tényleges értékének bemutatása egyre fontosabb munkáltatói márkaépítési eszközzé válik."
+  },
+  {
+    "source": "HR Reporter", "category": "HR Tech & Analytics", "color": "#047857", "geo": "🇨🇦 Kanada",
+    "title": "From Phoenix to Dayforce: Auditor general warns of risks",
+    "title_hu": "Phoenix helyett Dayforce: a főkönyvvizsgáló kockázatokra figyelmeztet",
+    "url": "https://www.hrreporter.com/focus-areas/hr-technology/from-phoenix-to-dayforce-auditor-general-warns-of-risks/394202",
+    "published": "2026-03-23T10:00:00.000Z",
+    "image": "",
+    "excerpt": "Feds racing to replace Phoenix payroll system with $4.2-billion fix while slow rule changes, massive backlog and shortened rollout raise fears of another meltdown.",
+    "summary_hu": "A kanadai szövetségi kormány 4,2 milliárd dolláros beruházással cserélné le a hírhedten hibás Phoenix bérrendszert a Dayforce-ra – de a főkönyvvizsgáló szerint a sietős bevezetés és a hatalmas backlog új katasztrófát kockáztat. A lassú szabályozási változások és a rövidített ütemterv komoly aggodalmakat vet fel. A figyelmeztetés általánosabb tanulsággal is jár: a nagyrendszer-csere alapos tervezés nélkül mindig kockázatos."
+  },
+  {
+    "source": "HR Reporter", "category": "Workplace Safety", "color": "#047857", "geo": "🇨🇦 Kanada",
+    "title": "Air Canada crash leaves 2 pilots dead",
+    "title_hu": "Air Canada baleset: 2 pilóta életét vesztette – szakszervezetek az apronbiztonságért emelnek szót",
+    "url": "https://www.hrreporter.com/focus-areas/safety/air-canada-crash-leaves-2-pilots-dead/394200",
+    "published": "2026-03-23T09:00:00.000Z",
+    "image": "",
+    "excerpt": "After fatal runway collision, unions warn real danger zone is the tarmac, not the sky",
+    "summary_hu": "Egy halálos Air Canada futópályai ütközés után a szakszervezetek rámutatnak: a repülés igazi veszélyzónája nem a levegőben, hanem az apronon van. A baleset két pilóta halálát okozta, és az iparági munkavédelmi normák felülvizsgálatát sürgeti. A szakszervezetek azonnali intézkedéseket követelnek a földi közlekedésbiztonság javítására."
+  },
+  {
+    "source": "HR Reporter", "category": "HR News", "color": "#047857", "geo": "🇨🇦 Kanada",
+    "title": "Ottawa extends EI tariff relief for affected workers",
+    "title_hu": "Ottawa meghosszabbítja a vámintézkedések által érintett munkavállalók munkanélküli-segélyét",
+    "url": "https://www.hrreporter.com/focus-areas/payroll/ottawa-extends-ei-tariff-relief-for-affected-workers/394198",
+    "published": "2026-03-23T08:30:00.000Z",
+    "image": "",
+    "excerpt": "Feds also extending flexibility for work-sharing program",
+    "summary_hu": "A kanadai szövetségi kormány meghosszabbítja a vámintézkedések által munkahelyükből kipottyanó munkavállalók munkanélküli-segélyre való jogosultságát. Ezzel párhuzamosan a munkamegosztási program kereteit is rugalmasabbá teszik az érintett vállalatok számára. A döntés célja a kereskedelmi feszültségek munkaerőpiaci hatásainak mérséklése."
+  },
+  {
+    "source": "HR Reporter", "category": "HR Strategy", "color": "#047857", "geo": "🇨🇦 Kanada",
+    "title": "Heading up HR at one of Canada's fastest-growing cities",
+    "title_hu": "HR-vezető Kanada egyik leggyorsabban növekvő városában",
+    "url": "https://www.hrreporter.com/focus-areas/leadership-succession-planning/heading-up-hr-at-one-of-canadas-fastest-growing-cities/394196",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "CHRO Gregory Juliano talks about importance of tech amid rapid population growth and Alberta's preference for low taxes",
+    "summary_hu": "Gregory Juliano, egy gyorsan növekvő albertai város HR-igazgatója elmondja, hogyan kezeli a robbanásszerű népességnövekedés által generált munkaerőpiaci kihívásokat technológia segítségével. Alberta alacsony adókörnyezete vonzza a bevándorlókat és vállalkozásokat, ami soha nem látott nyomást helyez a közszolgálati HR-re. A cikk rámutat, hogy a közszféra HR-je épp olyan innovatív nyomás alatt van, mint a magánszektor."
+  },
+  {
+    "source": "Personnel Today", "category": "Employee Experience", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "Economic insecurity fuelling rise in 'job huggers'",
+    "title_hu": "Gazdasági bizonytalanság szüli a munkahely-ragaszkodókat",
+    "url": "https://www.personneltoday.com/hr/economic-insecurity-fuelling-rise-in-job-huggers/",
+    "published": "2026-03-23T10:00:00.000Z",
+    "image": "",
+    "excerpt": "Employees are staying put in jobs despite feeling disengaged, according to research from LinkedIn.",
+    "summary_hu": "A LinkedIn kutatása szerint egyre több brit munkavállaló ragaszkodik meglévő munkahelyéhez annak ellenére, hogy valójában nem érzi jól magát ott – a gazdasági bizonytalanság megakadályozza a váltást. Ez a job hugging jelenség csökkenti a produktivitást és a szervezeti energiát, miközben látszólag stabil fluktuációs mutatókat produkál. A HR-nek a valódi elköteleződésre kell fókuszálnia, nem csupán a megtartásra."
+  },
+  {
+    "source": "Personnel Today", "category": "Wellbeing", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "Why what we say after a death matters more than we realise",
+    "title_hu": "Amit halálesetkor mondunk, fontosabb, mint gondolnánk",
+    "url": "https://www.personneltoday.com/hr/why-what-we-say-after-a-death-matters-more-than-we-realise/",
+    "published": "2026-03-23T09:30:00.000Z",
+    "image": "",
+    "excerpt": "A high proportion of adults believe they do not receive enough support following a bereavement. Knowing what to say following the death of a loved one can be just as important as any policy.",
+    "summary_hu": "A felnőttek jelentős része úgy érzi, nem kap elegendő támogatást gyász idején – és a szavak, amelyeket ilyenkor hallanak, legalább annyit számítanak, mint bármely HR-szabályzat. A munkáltatóknak nemcsak megfelelő szabályzatot kell alkotniuk, hanem olyan kultúrát is, ahol a kollégák és a vezetők tudják, mit mondjanak egy veszteség után. A cikk gyakorlati útmutatást kínál a gyásztámogatás emberi oldalához."
+  },
+  {
+    "source": "Personnel Today", "category": "HR News", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "SMEs invest in HR amid ERA reforms",
+    "title_hu": "Brit kkv-k HR-be fektetnek az Employment Rights Act reformjai nyomán",
+    "url": "https://www.personneltoday.com/hr/sme-invest-in-hr-amid-era-reforms/",
+    "published": "2026-03-23T09:00:00.000Z",
+    "image": "",
+    "excerpt": "SMEs increasingly investing in HR as reforms from the Employment Rights Act 2025 come into force.",
+    "summary_hu": "A brit kis- és középvállalkozások egyre több erőforrást fordítanak HR-funkcióik fejlesztésére, ahogy a 2025-ös Employment Rights Act reformjai hatályba lépnek. A törvény új kötelezettségeket ró az kkv-kra a munkahelyi jogok terén, ami professzionálisabb HR-megközelítést tesz szükségessé. Ez egyszerre jelent terhet és lehetőséget a kisebb szervezeteknek."
+  },
+  {
+    "source": "Personnel Today", "category": "HR News", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "Iran conflict: TUC calls for emergency taskforce to save jobs",
+    "title_hu": "Iráni konfliktus: a TUC vészhelyzeti munkacsoportot sürget a brit munkahelyek védelmére",
+    "url": "https://www.personneltoday.com/hr/iran-conflict-tuc-calls-for-emergency-taskforce-to-save-jobs/",
+    "published": "2026-03-23T08:30:00.000Z",
+    "image": "",
+    "excerpt": "TUC calls for an emergency taskforce to help protect the UK from the economic fallout of US-Israeli war with Iran.",
+    "summary_hu": "A TUC brit szakszervezeti tömörülés vészhelyzeti munkacsoport felállítását sürgeti, hogy megvédjék a brit munkahelyeket az USA–Izrael–Irán konfliktus gazdasági következményeitől. A szakszervezetek szerint a geopolitikai instabilitás komoly ipari leállásokat és elbocsátáshullámot kockáztat. A cikk a HR geopolitikai kockázatkezelési felelősségét is felvillantja."
+  },
+  {
+    "source": "Personnel Today", "category": "HR News", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "Brewdog accused of using 'fire and rehire' to reopen bars",
+    "title_hu": "Brewdog: kirúgás és visszavétel – a Unite szakszervezet akcióba lép",
+    "url": "https://www.personneltoday.com/hr/brewdog-fire-and-rehire/",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "The Unite union has accused Brewdog of using fire and rehire practices after it asked staff in Scotland to reapply for their jobs.",
+    "summary_hu": "A Unite szakszervezet azzal vádolja a Brewdog-ot, hogy skóciai bárai újranyitásához kirúgás-és-visszavétel gyakorlatot alkalmaz: a meglévő személyzetet újra kellett pályázniuk saját pozícióikra. Ez az egyre inkább vitatott brit munkáltatói eszköz sérti a munkavállalói biztonságérzetet és rontja a vállalati reputációt. Az ügy jól illusztrálja az ERA-reformok szükségességét."
+  },
+  {
+    "source": "Personnel Today", "category": "Compensation & Benefits", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "Act now to prepare for BiK changes, urge experts",
+    "title_hu": "Cselekedj most: közeleg a természetbeni juttatások kötelező bérszámfejtésének határideje",
+    "url": "https://www.personneltoday.com/hr/act-now-to-prepare-for-benefits-in-kind-payrolling-changes/",
+    "published": "2026-03-23T07:30:00.000Z",
+    "image": "",
+    "excerpt": "Employers are being urged to register with HMRC in preparation for the mandatory payrolling of benefits in kind from April 2027.",
+    "summary_hu": "Brit szakértők arra figyelmeztetnek, hogy a munkáltatóknak most kell regisztrálniuk a HMRC-nél a természetbeni juttatások 2027 áprilisától kötelező bérszámfejtési rendszerébe való bevezetéséhez. A késlekedés komoly adminisztrációs és adókötelezettség-problémákat okozhat. A felkészülésre most van idő – a határidő rohamosan közeledik."
+  },
+  {
+    "source": "Personnel Today", "category": "HR News", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "Financial services misconduct reports up 10%",
+    "title_hu": "10%-kal nőtt a pénzügyi szektorbeli visszaélés-bejelentések száma",
+    "url": "https://www.personneltoday.com/hr/fca-misconduct-reports/",
+    "published": "2026-03-23T07:00:00.000Z",
+    "image": "",
+    "excerpt": "Reports of breaches of conduct to the Financial Conduct Authority went up by 10% in 2024, data analysis reveals.",
+    "summary_hu": "Az FCA brit pénzügyi felügyelet adatai szerint 10%-kal nőtt a viselkedési szabályszegéseket jelző bejelentések száma 2024-ben a pénzügyi szektorban. Ez az emelkedés rávilágít, hogy a munkáltatóknak komolyan kell venniük a szervezeti kultúra és az etikai normák betartatását. A HR-nek kulcsszerepe van az integritáskultúra erősítésében és a bejelentési csatornák biztonságosságának garantálásában."
+  },
+  {
+    "source": "Personnel Today", "category": "HR News", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "Labour market growth continues but sunny outlook could be temporary",
+    "title_hu": "Brit munkaerőpiac: biztatóan bővül, de a pozitív kép törékeny",
+    "url": "https://www.personneltoday.com/hr/jobs-continue-to-rise-but-sunny-outlook-could-be-temporary/",
+    "published": "2026-03-23T06:30:00.000Z",
+    "image": "",
+    "excerpt": "The number of active job postings went up by 5% in February from the month before, showing renewed activity.",
+    "summary_hu": "A brit munkaerőpiacon februárban 5%-kal nőtt az aktív állásajánlatok száma az előző hónaphoz képest, ami élénkülést mutat. Ugyanakkor a szakértők figyelmeztetnek, hogy ez az optimizmus törékeny lehet – a globális gazdasági és geopolitikai bizonytalanságok bármikor megfordíthatják a trendet. A HR-eseknek érdemes dinamikusan figyelni a foglalkoztatási mutatókat az elkövetkező hónapokban."
+  },
+  {
+    "source": "Personnel Today", "category": "HR News", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "Working when the clocks go forward: how should employers handle losing an hour?",
+    "title_hu": "Óraátállítás és éjszakai műszak: mit kell tudnia a munkáltatónak?",
+    "url": "https://www.personneltoday.com/hr/working-clocks-go-forward-employers-handle-losing-an-hour/",
+    "published": "2026-03-22T12:00:00.000Z",
+    "image": "",
+    "excerpt": "The clocks go forward an hour on Sunday 29 March 2026. But what does this mean for employers with staff on night shifts?",
+    "summary_hu": "Március 29-én hajnalban egy órával előre ugrik az óramutató Nagy-Britanniában – ez kényes helyzetet teremt az éjszakai műszakban dolgozóknak és munkáltatóiknak. A cikk részletezi, hogy ez a hiányzó óra hogyan érinti a bérszámfejtést, a munkaidő-nyilvántartást és a munkajogi kötelezettségeket. A proaktív tájékoztatás és a pontos dokumentáció megelőzheti a vitákat."
+  },
+  {
+    "source": "Personnel Today", "category": "HR News", "color": "#1d4ed8", "geo": "🇬🇧 UK",
+    "title": "Lidl worker unfairly dismissed with ADHD awarded £45k",
+    "title_hu": "45 ezer font kártérítés: ADHD-s Lidl-munkavállaló jogtalan elbocsátása",
+    "url": "https://www.personneltoday.com/hr/adhd-tribunal-lidl-toghill-rejection/",
+    "published": "2026-03-22T10:00:00.000Z",
+    "image": "",
+    "excerpt": "A supermarket worker who has ADHD was unfairly dismissed and subjected to unfavourable treatment due to his disability, a tribunal has ruled.",
+    "summary_hu": "Egy munkaügyi bíróság megállapította, hogy a Lidl ADHD-val élő munkavállalóját jogellenesen bocsátotta el és fogyatékossága miatt hátrányos bánásmódban részesítette. A döntés 45 000 font kártérítési kötelezettséget eredményezett, egyértelmű üzenetet küldve a munkáltatóknak a neurodiverzitás megfelelő kezeléséről. Az ügy arra emlékeztet, hogy a nem látható fogyatékosságokat is komolyan kell venni a HR-politikában."
+  },
+  {
+    "source": "HR Grapevine", "category": "HR Tech & Analytics", "color": "#7c3aed", "geo": "🇬🇧 UK",
+    "title": "Can AI really coach like a human? This live experiment says...",
+    "title_hu": "Tud-e az AI úgy coachingolni, mint egy ember? Élő kísérlet a válasz",
+    "url": "https://www.hrgrapevine.com/content/article/2026-03-23-can-ai-really-coach-like-a-human",
+    "published": "2026-03-23T09:00:00.000Z",
+    "image": "",
+    "excerpt": "A unique experiment recently took place: to see if an AI coach could be better than a real-life human one. HR Grapevine sat in on it to see what happened.",
+    "summary_hu": "A HR Grapevine részt vett egy különleges kísérleten: egy AI-coach és egy emberi coach teljesítményét hasonlították össze valós helyzetben. Az eredmény árnyalt: az AI egyes területeken meglepően jól teljesített, ám az emberi mélység, az intuíció és az érzelmi jelenlét területén egyértelműen elmaradt. A kísérlet rámutat, hol van az AI valódi helye a coaching ökoszisztémában."
+  },
+  {
+    "source": "HR Grapevine", "category": "HR News", "color": "#7c3aed", "geo": "🇬🇧 UK",
+    "title": "The Observer offers voluntary redundancy to all staff amid digital reset",
+    "title_hu": "The Observer önkéntes leépítést ajánl minden dolgozójának",
+    "url": "https://www.hrgrapevine.com/content/article/2026-03-23-the-observer-offers-voluntary-redundancy-to-all-staff",
+    "published": "2026-03-23T08:30:00.000Z",
+    "image": "",
+    "excerpt": "The Observer newspaper has offered voluntary redundancy to its entire workforce as the title undergoes a major strategic reset under new ownership.",
+    "summary_hu": "A brit The Observer napilap az új tulajdonos által elrendelt digitális stratégiai irányváltás részeként önkéntes leépítési csomagot ajánl fel teljes munkavállalói körének. A lépés a médiaipari átalakulás egyik látványos példája, ahol a szerkesztőségi kultúra és a munkaerő-struktúra alapvetően változik meg. A HR-szakmának érdemes figyelemmel kísérnie, hogyan vezeti át a szerkesztőség a szervezeti transzformációt."
+  },
+  {
+    "source": "HR Grapevine", "category": "Wellbeing", "color": "#7c3aed", "geo": "🇬🇧 UK",
+    "title": "When duty of care fails: lessons from the BAFTAs incident",
+    "title_hu": "Gondoskodási kötelezettség kudarca: tanulságok a BAFTA-incidens kapcsán",
+    "url": "https://www.hrgrapevine.com/content/article/moorepay-2026-03-18-when-duty-of-care-fails",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "In light of the recent BAFTAs incident, organisations should be looking closely at how they approach duty of care - especially when non-visible disabilities are involved.",
+    "summary_hu": "A legutóbbi BAFTA-incidens ráirányítja a figyelmet arra, hogyan kezeli a szervezet a gondoskodási kötelezettségét – különösen akkor, ha nem látható fogyatékossággal élő személyekről van szó. A cikk azt elemzi, mit tesznek rosszul a vállalatok, és milyen lépéseket kellene megtenniük a valódi befogadás érdekében. Az eset általánosabb tanulságot hordoz a pszichológiai biztonság és a méltányos munkakörnyezet kialakításáról."
+  },
+  {
+    "source": "AIHR", "category": "HR Tech & Analytics", "color": "#0891b2", "geo": "🌍 Globális",
+    "title": "AI in Employee Onboarding: 8 Practical Use Cases + Real-Life Examples",
+    "title_hu": "AI az onboardingban: 8 gyakorlati alkalmazás valós példákkal",
+    "url": "https://www.aihr.com/blog/ai-in-employee-onboarding/",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "Building a strong onboarding process means creating role-specific learning paths, keeping content up to date, and tailoring the experience to different functions and levels.",
+    "summary_hu": "Az AI nyolc konkrét területen forradalmasíthatja a belépési folyamatot: a szerepkör-specifikus tanulási utak kialakításától a tartalmak naprakészen tartásán át az egyénre szabott élmény megteremtéséig. Az AIHR valódi vállalati példákon keresztül mutatja be, hogyan működnek ezek a megoldások a gyakorlatban. Az AI-alapú onboarding csökkenti az adminisztratív terhet és felgyorsítja az új kollégák beilleszkedését."
+  },
+  {
+    "source": "Unleash", "category": "HR Strategy", "color": "#dc2626", "geo": "🌍 Globális",
+    "title": "3 ways HR was reinvented at UNLEASH America 2026",
+    "title_hu": "3 irány, amerre a HR tart – az UNLEASH America 2026 tanulságai",
+    "url": "https://www.unleash.ai/unleash-america/3-ways-hr-was-reinvented-at-unleash-america-2026/",
+    "published": "2026-03-23T10:00:00.000Z",
+    "image": "",
+    "excerpt": "The UNLEASH Editorial team was on-site in Las Vegas last week. Our Chief Reporter, Allie Nawrat, shares her key learnings from the show.",
+    "summary_hu": "A Las Vegas-i UNLEASH America 2026 konferencia három átfogó tanulságot hagyott a HR-szakmában: az emberi és gépi intelligencia integrációja, a munkavállalói élmény újraértelmezése és a szervezeti alkalmazkodóképesség felértékelődése. Allie Nawrat, az Unleash főriportere a helyszínen volt, és összefoglalta a legfontosabb irányokat. Ezek az irányvonalak meghatározzák a HR következő fejezetét."
+  },
+  {
+    "source": "MIT Sloan", "category": "Leadership", "color": "#9f1239", "geo": "🌍 Globális",
+    "title": "Why Leaders Lose the Room in High-Stakes Meetings",
+    "title_hu": "Miért veszítik el a vezetők a szobát téttel bíró megbeszéléseken?",
+    "url": "https://sloanreview.mit.edu/article/why-leaders-lose-the-room-in-high-stakes-meetings/",
+    "published": "2026-03-23T12:00:00.000Z",
+    "image": "",
+    "excerpt": "Most advice about leadership communication focuses on presentation skills. But the most consequential leadership failures happen not when leaders can't present, but when they can't read the room.",
+    "summary_hu": "A legtöbb kommunikációs tanács a prezentálásról szól – de a vezető akkor veszíti el igazán a figyelmet, amikor nem érzi a szoba hangulatát, nem olvassa le a csoport dinamikáját. Az MIT Sloan szerint a legkritikusabb tárgyalásokon a tartalom mögötti emberi folyamatok értelmezésének képessége tesz különbséget. A sikeres vezető nem csak előad, hanem folyamatosan alkalmazkodik ahhoz, ami a szobában történik."
+  },
+  {
+    "source": "HRM Asia", "category": "HR News", "color": "#0369a1", "geo": "🌏 Ázsia",
+    "title": "Singapore's tight labour market endures amid rising skills gaps and PMET restructuring",
+    "title_hu": "Szingapúr munkaerőpiaca feszes marad a képzettségi rés és a PMET-átalakulás ellenére",
+    "url": "https://hrmasia.com/singapores-tight-labour-market-endures-amid-rising-skills-gaps-and-pmet-restructuring/",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "Robust hiring demand kept Singapore's labour market tight, though skills mismatches and restructuring pressures continue to redefine workforce needs.",
+    "summary_hu": "Szingapúr munkaerőpiaca az erős keresleti nyomás miatt szoros maradt, miközben a képzettségi hiányosságok és a magasan képzett PMET munkaerő átstrukturálódása egyre inkább átrajzolja a munkaerő-szükségletek képét. A munkáltatóknak alkalmazkodniuk kell az eltolódó kompetenciaigényekhez, hogy a versenyképességüket megőrizzék. A képzés és az átképzés stratégiai prioritássá vált a szigetállamon."
+  },
+  {
+    "source": "HRM Asia", "category": "HR Tech & Analytics", "color": "#0369a1", "geo": "🌏 Ázsia",
+    "title": "Unlocking the balance sheet: How data-driven payroll is redefining workforce intelligence",
+    "title_hu": "Adatvezérelt bérszámfejtés: hogyan válik a payroll stratégiai eszközzé?",
+    "url": "https://hrmasia.com/unlocking-the-balance-sheet-how-data-driven-payroll-is-redefining-workforce-intelligence/",
+    "published": "2026-03-23T07:00:00.000Z",
+    "image": "",
+    "excerpt": "Jessica Zhang, Senior Vice-President for Asia-Pacific at ADP, believes payroll now shapes governance, risk, and workforce strategy.",
+    "summary_hu": "Az ADP Asia-Pacific alelnöke szerint a bérszámfejtés ma már jóval több puszta adminisztratív funkcióná: közvetlen hatással van a vállalatirányításra, a kockázatkezelésre és a munkaerő-stratégiára. Az adatvezérelt payroll-megoldások képesek feltárni olyan trendeket és kockázatokat, amelyek korábban láthatatlanok maradtak a mérlegben. A cikk bemutatja, hogyan válhat a bérszámfejtési adat valódi stratégiai intelligenciává."
+  },
+  {
+    "source": "HCA Mag Asia", "category": "HR Strategy", "color": "#0369a1", "geo": "🌏 Ázsia",
+    "title": "Wider uptake of HR certification urged in Singapore",
+    "title_hu": "Szingapúr HR-minősítések elterjesztését szorgalmazza",
+    "url": "https://www.hcamag.com/asia/specialisation/leadership/wider-uptake-of-hr-certification-urged-in-singapore/",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "HR certification highlighted as critical amid rapid workplace shifts",
+    "summary_hu": "A szingapúri HR-szakma vezető szereplői sürgetik a HR-minősítések szélesebb körű elterjedését, mivel a munkahelyi változások tempója megköveteli a folyamatos szakmai fejlődést. A minősített HR-szakemberek jobban tudnak reagálni a jogszabályi változásokra, a technológiai átalakulásra és a munkavállalói elvárások fejlődésére. A cikk szerint a képesítés ma már nem luxus, hanem alapkövetelmény."
+  },
+  {
+    "source": "HCA Mag Asia", "category": "HR Tech & Analytics", "color": "#0369a1", "geo": "🌏 Ázsia",
+    "title": "'AI workforce reset': Why job losses don't tell the full story for HR leaders",
+    "title_hu": "AI munkaerő-átalakulás: miért nem mondja el az egész igazságot az állásleépítések száma?",
+    "url": "https://www.hcamag.com/asia/news/general/ai-workforce-reset-why-job-losses-dont-tell-the-full-story-for-hr-leaders/",
+    "published": "2026-03-23T07:30:00.000Z",
+    "image": "",
+    "excerpt": "HR leaders can turn the AI workforce reset into a skills-first, psychologically safe transformation",
+    "summary_hu": "Az AI által generált állásleépítések híreit domináló narratíva elfedi azt a valódi képet, amelyet a HR-vezetőknek látniuk kell: az átalakulás komplex, és a készségalapú, pszichológiailag biztonságos megközelítéssel pozitív irányba terelhető. A cikk amellett érvel, hogy az AI-átállás legfontosabb kérdése nem a megszűnő pozíciók száma, hanem az átképzés és az emberi tőke megőrzése. A HR-nek aktív szerepet kell vállalnia a transzformáció alakításában."
+  },
+  {
+    "source": "HCA Mag Asia", "category": "Employee Experience", "color": "#0369a1", "geo": "🌏 Ázsia",
+    "title": "Why AI makes human connection a performance priority",
+    "title_hu": "Az AI korában az emberi kapcsolat válik teljesítménytényezővé",
+    "url": "https://www.hcamag.com/asia/specialisation/employee-engagement/why-ai-makes-human-connection-a-performance-priority/",
+    "published": "2026-03-23T07:00:00.000Z",
+    "image": "",
+    "excerpt": "As AI continues to be embedded into workflows, HR leaders need to focus more on how teams collaborate, build trust and keep judgement sharp.",
+    "summary_hu": "Ahogy az AI egyre mélyebben beépül a mindennapi munkavégzésbe, a HR-vezetőknek paradox módon fokozottabban kell foglalkozniuk az emberi együttműködéssel, a bizalomépítéssel és az ítélőképesség fenntartásával. Carmen von Rohr szerint pontosan az AI terjedése az, ami az emberi kapcsolatot teljesítményprioritássá emeli. A csapatkohézió és a kritikus gondolkodás fejlesztése lesz a HR következő stratégiai frontja."
+  },
+  {
+    "source": "HCA Mag Asia", "category": "Employee Experience", "color": "#0369a1", "geo": "🌏 Ázsia",
+    "title": "How to improve frontline engagement",
+    "title_hu": "Frontvonalbeli munkavállalók elkötelezettsége: hogyan változtassuk meg a képletet?",
+    "url": "https://www.hcamag.com/asia/news/general/how-to-improve-frontline-engagement/",
+    "published": "2026-03-23T06:30:00.000Z",
+    "image": "",
+    "excerpt": "Frontline neglect leads to costly turnover at work",
+    "summary_hu": "A frontvonalbeli dolgozók – kiszolgáló, gyártó, logisztikai munkavállalók – elhanyagolása drága fluktuációhoz vezet, és rontja az ügyfélelégedettséget is. A cikk gyakorlati megközelítéseket kínál arra, hogyan növelhető az elköteleződés ebben a sokszor figyelmen kívül hagyott munkavállalói szegmensben. A kulcs a rendszeres kommunikáció, az autonómia és az elismerési kultúra erősítése."
+  },
+  {
+    "source": "HCA Mag Asia", "category": "HR Strategy", "color": "#0369a1", "geo": "🌍 Globális",
+    "title": "What the world's largest study of work hours reveals about how we work",
+    "title_hu": "A munkaidő legnagyobb globális kutatása: amit eddig nem tudtunk munkavégzési szokásainkról",
+    "url": "https://www.hcamag.com/asia/news/general/what-the-worlds-largest-study-of-work-hours-reveals-about-how-we-work/",
+    "published": "2026-03-23T06:00:00.000Z",
+    "image": "",
+    "excerpt": "New research spanning 160 countries upends conventional wisdom about labor, development, and the future of the workforce",
+    "summary_hu": "160 országot felölelő, páratlan méretű kutatás döntötte romba a munkaidőre vonatkozó közmeggyőződéseket: az adatok nem azt mutatják, amit a legtöbb vezető gondol a produktivitásról és a munkaterhelésről. Az eredmények új perspektívát kínálnak a munka jövőjéről és a munkaerő fejlesztéséről. A HR-szakemberek számára alapolvasmány, aki valóban érteni akarja, hogyan dolgozunk."
+  },
+  {
+    "source": "HCA Mag Asia", "category": "HR Tech & Analytics", "color": "#0369a1", "geo": "🌍 Globális",
+    "title": "AI 'workslop' puts leadership trust at risk, report finds",
+    "title_hu": "AI-alapú munkaszlop: hogyan rombolja a vezető hitelességét a gondatlan AI-használat?",
+    "url": "https://www.hcamag.com/asia/news/general/ai-workslop-puts-leadership-trust-at-risk-report-finds/",
+    "published": "2026-03-23T05:30:00.000Z",
+    "image": "",
+    "excerpt": "How can employers reduce AI workslop?",
+    "summary_hu": "A gondatlan, ellenőrizetlen AI-kimenet munkában való felhasználása – az úgynevezett workslop – komoly bizalomromboló hatással bír a leadership megítélésére. Egy új kutatás szerint a munkavállalók észreveszik, ha a vezető AI által generált tartalmat ad elő hiteltelenül sajátjaként, és ez csökkenti a tekintélyt. A cikk konkrét ajánlásokat ad arra, hogyan lehet redukálni a workslop jelenségét a szervezetben."
+  },
+  {
+    "source": "HCA Mag Asia", "category": "HR News", "color": "#0369a1", "geo": "🌏 Ázsia",
+    "title": "South Asian migrant workers killed as Gulf tensions flare",
+    "title_hu": "Dél-ázsiai vendégmunkások áldozatai lesznek az Öböl-térségi feszültségeknek",
+    "url": "https://www.hcamag.com/asia/news/general/south-asian-migrant-workers-killed-as-gulf-tensions-flare/",
+    "published": "2026-03-23T05:00:00.000Z",
+    "image": "",
+    "excerpt": "Multiple South Asian migrant workers have been killed across Gulf states since the Middle East conflict erupted, highlighting how migrants remain among the most vulnerable.",
+    "summary_hu": "A közel-keleti konfliktus kitörése óta több dél-ázsiai vendégmunkás vesztette életét az Öböl-térségben, rámutatva arra, hogy a régió gazdaságát mozgató milliós migráns munkaerő a legkiszolgáltatottabb csoportok egyike marad. Az eset felhívja a figyelmet a migráns munkavállalók emberi jogi helyzetére és a munkáltatói felelősségre a válságzónákban. HR-szempontból ez a helyi kockázatkezelés és etikus munkaerő-gazdálkodás sürgető kérdéseit veti fel."
+  },
+  {
+    "source": "HCA Mag Asia", "category": "HR News", "color": "#0369a1", "geo": "🌏 Ázsia",
+    "title": "WiseTech founder offered $5m 'tax-free' payout to silence accuser",
+    "title_hu": "WiseTech alapítója 5 millió dolláros titoktartási megállapodást ajánlott vádlójának",
+    "url": "https://www.hcamag.com/asia/news/general/wisetech-founder-offered-5m-tax-free-payout-to-silence-accuser/",
+    "published": "2026-03-23T04:30:00.000Z",
+    "image": "",
+    "excerpt": "WiseTech Global co-founder Richard White personally negotiated a multimillion-dollar settlement with a former employee who accused him of underpayment and inappropriate conduct",
+    "summary_hu": "A WiseTech Global társalapítója, Richard White személyesen tárgyalt egy volt alkalmazottal, akit bércsalással és nem megfelelő magatartással vádoltak – és 5 millió dolláros, adómentesnek feltüntetett megállapodással igyekezett elhallgattatni a vádlót. A kifizetés a vizsgálat alatt is zajlott, ami komoly etikai és irányítási kérdéseket vet fel. Az ügy rámutat, milyen következményei lehetnek a hatalmi visszaéléseknek a vállalati felelősségi rendszer oldaláról."
+  },
+  {
+    "source": "HRZone", "category": "Leadership", "color": "#7c3aed", "geo": "🇬🇧 UK",
+    "title": "AI won't take accountability, will you?",
+    "title_hu": "Az AI nem vállal felelősséget – te igen?",
+    "url": "https://hrzone.com/will-you-take-accountability/",
+    "published": "2026-03-23T09:00:00.000Z",
+    "image": "",
+    "excerpt": "Effectively judging situations and acting appropriately under pressure are inherently human skills. But new research suggests that the ability to take accountability is largely contextual.",
+    "summary_hu": "A helyzetfelismerés és a nyomás alatti felelős cselekvés alapvetően emberi képesség – ám egy új kutatás szerint a felelősségvállalás hajlandósága erősen kontextusfüggő, nem egyszerű személyiségvonás. Az AI soha nem vonja magát felelősségre a döntéseivel járó következményekért – ez az emberi vezető megkerülhetetlen szerepe marad. A cikk arra buzdítja a HR-szakembereket és a vezetőket, hogy tudatosan fejlesszék ezt a készséget."
+  },
+  {
+    "source": "Personalwirtschaft", "category": "HR News", "color": "#374151", "geo": "🇩🇪 Németország",
+    "title": "Wer ist die neue Personalchefin der EnBW?",
+    "title_hu": "Ki lesz az EnBW új HR-igazgatója?",
+    "url": "https://www.personalwirtschaft.de/news/allgemein/wer-ist-die-neue-personalchefin-der-enbw/",
+    "published": "2026-03-23T10:00:00.000Z",
+    "image": "",
+    "excerpt": "Colette Rückert-Hennen geht im August in den Ruhestand. Eine Nachfolgerin wurde nun bekannt gegeben.",
+    "summary_hu": "Colette Rückert-Hennen augusztusban vonul nyugdíjba az EnBW-nél, és utódját már nyilvánosságra hozták: az új HR-igazgató jelenleg a düsseldorfi Stadtwerke-nél dolgozik. A vezető HR-kinevezések az energiaszektor szervezeti átalakulásainak fontos mutatói. A csere várhatóan friss impulzust hoz az EnBW HR-stratégiájába."
+  },
+  {
+    "source": "Personalwirtschaft", "category": "HR Tech & Analytics", "color": "#374151", "geo": "🇩🇪 Németország",
+    "title": "82 Prozent der Führungskräfte sicher: Entscheidungen fällt künftig KI",
+    "title_hu": "A német vezetők 82%-a biztos: hamarosan az AI hozza a döntéseket",
+    "url": "https://www.personalwirtschaft.de/themen/kuenstliche-intelligenz/82-prozent-der-fuehrungskraefte-sicher-entscheidungen-faellt-kuenftig-ki/",
+    "published": "2026-03-23T09:00:00.000Z",
+    "image": "",
+    "excerpt": "Führungskräfte sind laut Studie überzeugt: Entscheidungen werden künftig von KI-Systemen getroffen. Welche Aufgaben bleiben auf C-Level-Ebene da noch übrig?",
+    "summary_hu": "Egy friss német tanulmány szerint a felsővezetők 82%-a meg van győződve arról, hogy a jövőben az AI hozza majd a döntéseket – de ez rögtön felveti a kérdést: mi marad akkor a C-szintű vezető feladatköréből? A cikk azokat a területeket azonosítja, ahol az emberi vezetői ítélőképesség pótolhatatlan marad. Az eredmények alapjaiban kérdőjelezik meg a hagyományos leadership-felfogást."
+  },
+  {
+    "source": "Personalwirtschaft", "category": "Leadership", "color": "#374151", "geo": "🇩🇪 Németország",
+    "title": "Team Human x AI: Führung neu gedacht",
+    "title_hu": "Team Human x AI: a vezetés újragondolva",
+    "url": "https://www.personalwirtschaft.de/themen/kuenstliche-intelligenz/team-human-x-ai-fuehrung-neu-gedacht/",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "Wie HR und Führung mit Team Human x AI bessere Entscheidungen treffen, Lernkultur stärken und KI human-zentriert nutzen.",
+    "summary_hu": "A Team Human x AI megközelítés lényege: az ember és az AI nem verseng, hanem egy csapatot alkot – jobb döntéseket hozva, erősebb tanulási kultúrát teremtve, és az AI-t emberi értékek mentén alkalmazva. A cikk gyakorlati keretrendszert kínál HR-eseknek és vezetőknek arra, hogyan valósítsák meg ezt az emberi fókuszú AI-integrációt. Ez a modell a jövő munkahelyi együttműködésének alapja lehet."
+  },
+  {
+    "source": "Personalwirtschaft", "category": "HR Strategy", "color": "#374151", "geo": "🇩🇪 Németország",
+    "title": "New Work 2.0: Wie verändert sich das Konzept aktuell?",
+    "title_hu": "New Work 2.0: hogyan alakul át a koncepció a válságok után?",
+    "url": "https://www.personalwirtschaft.de/news/hr-organisation/new-work-2-0-wie-veraendert-sich-das-konzept-aktuell/",
+    "published": "2026-03-23T07:00:00.000Z",
+    "image": "",
+    "excerpt": "Um als Arbeitgeber attraktiv zu sein, braucht es New-Work-Ansätze. Diese Meinung war bis vor Kurzem noch weit verbreitet. Dann kam die Krise. Ist New Work tot?",
+    "summary_hu": "Nemrég még mindenki a New Work-megközelítéseket szorgalmazta a vonzó munkáltatói lét feltételeként – majd jött a válság, és sokan kérdőjelezik meg, hogy a mozgalom megélte-e. A Personalwirtschaft áttekinti, hogyan alakul ma a New Work 2.0 fogalma: mi maradt meg belőle, mi változott, és mi következik. A cikk szerint a koncepció nem halt meg, de komoly érlelődési folyamaton megy keresztül."
+  },
+  {
+    "source": "Parlons RH", "category": "Employee Experience", "color": "#0369a1", "geo": "🇫🇷 Franciaország",
+    "title": "L'expérience collaborateur à l'heure de l'économie de la connaissance",
+    "title_hu": "Munkavállalói élmény a tudásgazdaság korában – francia kutatás indul",
+    "url": "https://www.parlonsrh.com/lexperience-collaborateur-a-lheure-de-leconomie-de-la-connaissance/",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "Participez à l'étude de ce 9ème baromètre Parlons RH de l'expérience collaborateur. 7 minutes top chrono !",
+    "summary_hu": "A Parlons RH elindítja 9. munkavállalói élmény barométerét, amely ezúttal a tudásgazdaság kontextusában vizsgálja a munkavállalói tapasztalatokat. A felmérés célja feltérképezni, hogyan változtak az elvárások és az elköteleződési tényezők a tudásintenzív iparágakban. Az eredmények értékes referenciává válnak a francia és európai HR-szakemberek számára."
+  },
+  {
+    "source": "Y2Y", "category": "HR & Management", "color": "#7c3aed", "geo": "🇭🇺 Magyar",
+    "title": "Hogy fogjuk megoldani a back-sittinget? És főleg ki?",
+    "title_hu": "Hogy fogjuk megoldani a back-sittinget? És főleg ki?",
+    "url": "https://www.y2y.hu/blog/hogy-fogjuk-megoldani-a-back-sittinget-es-foleg-ki",
+    "published": "2026-03-23T08:00:00.000Z",
+    "image": "",
+    "excerpt": "Állati nagyot megy a back-sitting cikkünk, és élek a feltételezéssel, hogy még több helyen érzitek, mint amit én elsőre feltételeztem.",
+    "summary_hu": "Dorka Nagy-Józsa folytatja a back-sitting jelenség körüli diskurzust: a korábbi cikk óriási visszhangot váltott ki, és rengetegen ismertek rá saját szervezetükre. Most az a kérdés kerül középpontba, hogy ki felelős a megoldásért, és egyáltalán hogyan lehet ezt a mélyen szervezett kulturális mintát valóban megbolygatni. Nem könnyű kérdések – de a Y2Y sajátos szemszögéből éppen ezért érdemes feltenni őket."
+  }
+]
