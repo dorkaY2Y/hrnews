@@ -34,41 +34,66 @@ export default async (request) => {
   const category   = article ? (article.category || 'HR') : 'HR';
   const geo        = article ? (article.geo || '') : '';
   const summaryFull = article ? (article.summary_hu || '') : '';
+  const fullHu     = article ? (article.full_hu || '') : '';
 
-  const jsonLd = article ? JSON.stringify({
+  // Build comprehensive keywords
+  const keywordList = ['HR', category, 'munkaerőpiac', 'HR trendek', source, 'HR hírek magyarul', 'up2date'].filter(Boolean);
+  const keywords = [...new Set(keywordList)].join(', ');
+
+  // Build JSON-LD graph with multiple entities
+  const jsonLdGraph = article ? JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'NewsArticle',
-    'headline': title,
-    'name': title,
-    'alternativeHeadline': titleEn !== title ? titleEn : undefined,
-    'description': desc,
-    'image': image,
-    'datePublished': published,
-    'dateModified': published,
-    'url': pageUrl,
-    'isPartOf': { '@id': 'https://up2date.hu/#website' },
-    'publisher': {
-      '@type': 'Organization',
-      '@id': 'https://up2date.hu/#organization',
-      'name': 'up2date by Y2Y',
-      'logo': { '@type': 'ImageObject', 'url': 'https://up2date.hu/og-image.png' }
-    },
-    'author': {
-      '@type': 'Organization',
-      'name': source
-    },
-    'articleSection': category,
-    'inLanguage': 'hu-HU',
-    'mainEntityOfPage': pageUrl,
-    'keywords': ['HR', category, 'munkaerőpiac', 'HR trendek', source].filter(Boolean).join(', '),
-    'breadcrumb': {
-      '@type': 'BreadcrumbList',
-      'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Főoldal', 'item': 'https://up2date.hu/' },
-        { '@type': 'ListItem', 'position': 2, 'name': category, 'item': 'https://up2date.hu/' },
-        { '@type': 'ListItem', 'position': 3, 'name': title }
-      ]
-    }
+    '@graph': [
+      {
+        '@type': 'NewsArticle',
+        '@id': pageUrl + '#article',
+        'headline': title,
+        'name': title,
+        'alternativeHeadline': titleEn !== title ? titleEn : undefined,
+        'description': desc,
+        'articleBody': fullHu ? fullHu.slice(0, 500) : undefined,
+        'image': image ? {
+          '@type': 'ImageObject',
+          'url': image,
+          'width': 1200,
+          'height': 630
+        } : undefined,
+        'datePublished': published,
+        'dateModified': published,
+        'url': pageUrl,
+        'isPartOf': { '@id': 'https://up2date.hu/#website' },
+        'publisher': {
+          '@type': 'Organization',
+          '@id': 'https://up2date.hu/#organization',
+          'name': 'up2date by Y2Y',
+          'logo': { '@type': 'ImageObject', 'url': 'https://up2date.hu/og-image.png', 'width': 1200, 'height': 630 }
+        },
+        'author': {
+          '@type': 'Organization',
+          'name': source,
+        },
+        'articleSection': category,
+        'inLanguage': 'hu-HU',
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': pageUrl
+        },
+        'keywords': keywords,
+        'copyrightHolder': { '@id': 'https://up2date.hu/#organization' },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['h1', '.summary']
+        }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Főoldal', 'item': 'https://up2date.hu/' },
+          { '@type': 'ListItem', 'position': 2, 'name': category, 'item': 'https://up2date.hu/' },
+          { '@type': 'ListItem', 'position': 3, 'name': title }
+        ]
+      }
+    ]
   }) : 'null';
 
   // Redirect to cikk.html (Hungarian reading page) instead of original article
@@ -84,8 +109,10 @@ export default async (request) => {
   <title>${escapeHtml(title)} – up2date by Y2Y</title>
   <meta name="description" content="${escapeHtml(desc)}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-  <meta name="keywords" content="HR, ${escapeHtml(category)}, munkaerőpiac, ${escapeHtml(source)}, HR trendek, up2date">
+  <meta name="keywords" content="${escapeHtml(keywords)}">
   <link rel="canonical" href="${escapeHtml(pageUrl)}">
+  <link rel="alternate" hreflang="hu" href="${escapeHtml(pageUrl)}" />
+  <link rel="alternate" hreflang="x-default" href="${escapeHtml(pageUrl)}" />
 
   <meta property="og:type"               content="article">
   <meta property="og:site_name"          content="up2date by Y2Y">
@@ -104,6 +131,7 @@ export default async (request) => {
   <meta property="article:tag"          content="HR">
   <meta property="article:tag"          content="${escapeHtml(category)}">
   <meta property="article:tag"          content="munkaerőpiac">
+  <meta property="article:tag"          content="HR hírek magyarul">
 
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="${escapeHtml(title)}">
@@ -111,7 +139,7 @@ export default async (request) => {
   <meta name="twitter:image"       content="${escapeHtml(image)}">
   <meta name="twitter:image:alt"   content="${escapeHtml(title)}">
 
-  ${jsonLd !== 'null' ? `<script type="application/ld+json">${jsonLd}</script>` : ''}
+  ${jsonLdGraph !== 'null' ? `<script type="application/ld+json">${jsonLdGraph}</script>` : ''}
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f0f0f;color:#f0f0f0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
