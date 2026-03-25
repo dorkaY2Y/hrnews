@@ -680,6 +680,29 @@ async function fetchRSSFeeds() {
   try {
     const newsData = JSON.parse(fs.readFileSync(NEWS_JSON, 'utf8'));
     newsData.lastUpdated = new Date().toISOString();
+
+    // ── OG image backfill for ALL existing articles without images ──────────────
+    const missingImg = (newsData.articles || []).filter(a => !a.image && a.url && a.url.startsWith('http'));
+    if (missingImg.length) {
+      process.stdout.write(`\n🖼  OG képek pótlása ${missingImg.length} meglévő cikkhez... `);
+      let imgFound = 0;
+      async function fetchOgForExisting(article) {
+        try {
+          const html = await httpGet(article.url);
+          const rawImg = extractMeta(html, 'og:image') || extractMeta(html, 'twitter:image') || '';
+          const img = rawImg && !['emd_soc_meta_og'].some(p => rawImg.includes(p)) ? rawImg : '';
+          if (img) {
+            article.image = img.startsWith('/') ? new URL(img, article.url).href : img;
+            imgFound++;
+          }
+        } catch { /* skip */ }
+      }
+      let idx2 = 0;
+      async function worker2() { while (idx2 < missingImg.length) await fetchOgForExisting(missingImg[idx2++]); }
+      await Promise.all(Array.from({ length: Math.min(5, missingImg.length) }, worker2));
+      console.log(`✓ (${imgFound} kép)`);
+    }
+
     fs.writeFileSync(NEWS_JSON, JSON.stringify(newsData, null, 2));
     console.log(`🕐 lastUpdated frissítve: ${newsData.lastUpdated}`);
   } catch (e) {
