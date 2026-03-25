@@ -53,7 +53,7 @@ async function loadNews() {
     // Kiegyensúlyozott kiválasztás: max ~25 cikk geo-csoportonként (4 csoport × 25 = 100)
     const dailyQA = getDailyQA();
     const sorted = raw.sort((a, b) => new Date(b.addedAt || b.published || 0) - new Date(a.addedAt || a.published || 0));
-    const perGroupMax = 25;
+    const perGroupMax = 8;
     const groupCounts = {};
     const balanced = [];
     for (const art of sorted) {
@@ -75,7 +75,7 @@ async function loadNews() {
   }
     const sources = [...new Set(allArticles.map(a => a.source))].sort();
     if (headerStats) {
-      headerStats.textContent = allArticles.length + ' cikk · 20+ forrás';
+      headerStats.textContent = 'A világ 30 legfontosabb HR híre — minden reggel frissen, magyarul';
     }
     // Footer: forrásszám statikus 20+
     const statEls = document.querySelectorAll('.footer-stat');
@@ -138,10 +138,11 @@ grid.addEventListener('click', e => {
     e.stopPropagation();
     const art = allArticles.find(a => a.url === copyBtn.dataset.copyUrl);
     if (!art) return;
+    const shareLink = 'https://up2date.hu/article?u=' + encodeURIComponent(art.url);
     const text = (art.title_hu || art.title || '')
       + '\n\n' + (art.summary_hu || '')
-      + '\n\n📌 Forrás: ' + art.url
-      + '\n\nOlvasd naponta: https://up2date.hu';
+      + '\n\n🔗 ' + shareLink
+      + '\n\nup2date.hu – Globális HR hírek naponta';
     navigator.clipboard.writeText(text).then(() => {
       copyBtn.classList.add('copied');
       setTimeout(() => copyBtn.classList.remove('copied'), 2200);
@@ -189,8 +190,8 @@ grid.addEventListener('click', e => {
     return;
   }
   if (e.target.closest('a, button')) return;
-  const card = e.target.closest('[data-url]');
-  if (card && card.dataset.url) window.open(card.dataset.url, '_blank');
+  const card = e.target.closest('[data-cikk]');
+  if (card && card.dataset.cikk) window.location.href = card.dataset.cikk;
 });
 
 let searchTimer;
@@ -351,8 +352,9 @@ function cardHTML(a, idx) {
     + '</button>'
     + '</div>';
 
+  const cikkUrl = '/cikk.html#' + encodeURIComponent(a.url);
   const footer = '<div class="card-footer">'
-    +   '<a class="read-link" href="' + esc(a.url) + '" target="_blank" rel="noopener">'
+    +   '<a class="read-link" href="' + esc(cikkUrl) + '">'
     +     'Olvasd el'
     +     '<svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     +   '</a>'
@@ -367,7 +369,8 @@ function cardHTML(a, idx) {
     ? cover + '<div class="card-content">' + body + footer + '</div>'
     : cover + body + footer;
 
-  return '<article class="card' + (isFeat ? ' featured' : isWide ? ' card--wide' : '') + '" data-geo="' + esc(a.geo || '') + '" data-url="' + esc(a.url) + '" style="--geo-color:' + geoColor + ';cursor:pointer">'
+  const cikkHref = '/cikk.html#' + encodeURIComponent(a.url);
+  return '<article class="card' + (isFeat ? ' featured' : isWide ? ' card--wide' : '') + '" data-geo="' + esc(a.geo || '') + '" data-cikk="' + esc(cikkHref) + '" style="--geo-color:' + geoColor + ';cursor:pointer">'
     + inner
     + '</article>';
 }

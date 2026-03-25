@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>up2date by Y2Y</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d14;
+      --bg2: #13131e;
+      --bg3: #1a1a28;
+      --border: rgba(255,255,255,0.07);
+      --gold: #ded114;
+      --gold-dim: rgba(222,209,20,0.12);
+      --text: #e8e8f0;
+      --text-muted: #7a7a9a;
+      --text-dim: #4a4a6a;
+      --radius: 12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 16px; }
+    .topbar-brand {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .topbar-brand span { color: var(--text-muted); font-weight: 400; font-size: 13px; margin-left: 4px; }
+    .back-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      transition: all 0.15s;
+    }
+    .back-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.15); }
+    .back-btn svg { width: 14px; height: 14px; }
+
+    /* ── ARTICLE WRAPPER ── */
+    .article-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── META ROW ── */
+    .art-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .art-geo {
+      font-size: 18px;
+      line-height: 1;
+    }
+    .art-source {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-dim);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .art-category {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: var(--bg3);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    .art-date {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-left: auto;
+    }
+
+    /* ── TITLE ── */
+    .art-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(24px, 4vw, 38px);
+      font-weight: 800;
+      line-height: 1.15;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    /* ── LEAD (summary_hu) ── */
+    .art-lead {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--text-muted);
+      border-left: 3px solid var(--gold);
+      padding-left: 16px;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    /* ── IMAGE ── */
+    .art-img-wrap {
+      margin-bottom: 32px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+    }
+    .art-img-wrap img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .art-img-credit {
+      font-size: 11px;
+      color: var(--text-dim);
+      padding: 6px 12px;
+      background: var(--bg3);
+      text-align: right;
+    }
+
+    /* ── FULL TEXT ── */
+    .art-body {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--text);
+    }
+    .art-body p {
+      margin-bottom: 22px;
+    }
+    .art-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── DIVIDER ── */
+    .art-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 36px 0;
+    }
+
+    /* ── SOURCE FOOTER ── */
+    .art-source-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .art-source-label {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .art-source-label strong { color: var(--text); }
+    .art-original-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: #0d0d14;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 11px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .art-original-btn:hover { background: #ddb84e; }
+    .art-original-btn svg { width: 14px; height: 14px; }
+
+    /* ── SHARE ROW ── */
+    .art-share {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .art-share-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+    .share-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--bg3);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .share-pill:hover { border-color: rgba(255,255,255,0.2); background: var(--bg2); }
+    .share-pill svg { width: 15px; height: 15px; flex-shrink: 0; }
+    .share-pill--li:hover { border-color: #0a66c2; color: #0a66c2; }
+    .share-pill--fb:hover { border-color: #1877f2; color: #1877f2; }
+    .share-pill--copy.copied { border-color: #22c55e; color: #22c55e; }
+
+    /* ── NO FULL TEXT STATE ── */
+    .art-no-full {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+    .art-no-full p { margin-top: 8px; font-size: 14px; }
+
+    /* ── LOADING ── */
+    .loading-state {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      flex-direction: column;
+      gap: 16px;
+      color: var(--text-muted);
+    }
+    .spinner {
+      width: 32px; height: 32px;
+      border: 2px solid var(--border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── RELATED ARTICLES ── */
+    .related-section { margin-top: 56px; }
+    .related-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .related-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.15s;
+    }
+    .related-card:hover { border-color: rgba(255,255,255,0.15); }
+    .related-card-source {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .related-card-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .related-card-summary {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .article-wrap { padding: 32px 16px 60px; }
+      .art-title { font-size: 24px; }
+      .art-body { font-size: 16px; }
+      .art-lead { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <div class="topbar-left">
+      <a href="/" class="topbar-brand">up2date <span>by Y2Y</span></a>
+    </div>
+    <a href="/" class="back-btn">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Vissza a hírekhez
+    </a>
+  </nav>
+
+  <div class="article-wrap" id="articleWrap">
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <span>Töltés…</span>
+    </div>
+  </div>
+
+  <script>
+    function esc(s) {
+      return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function formatDate(iso) {
+      if (!iso) return '';
+      const d = new Date(iso);
+      if (isNaN(d)) return '';
+      return d.toLocaleDateString('hu-HU', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+    function paragraphs(text) {
+      return (text || '').split('\n\n').map(p => p.trim()).filter(Boolean)
+        .map(p => '<p>' + esc(p) + '</p>').join('');
+    }
+
+    function makeShareUrls(a) {
+      const siteUrl = location.origin;
+      const pageUrl = location.href;
+      const title = a.title_hu || a.title || '';
+      const summary = (a.summary_hu || '').slice(0, 260);
+      return {
+        linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl),
+        fb: 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl),
+        copyText: title + '\n\n' + summary + '\n\n📌 Forrás: ' + a.url + '\n\nOlvasd naponta: ' + siteUrl,
+      };
+    }
+
+    function renderArticle(a) {
+      const wrap = document.getElementById('articleWrap');
+      const share = makeShareUrls(a);
+      const hasFullText = !!(a.full_hu && a.full_hu.trim());
+
+      const metaHtml = `
+        <div class="art-meta">
+          ${a.geo ? '<span class="art-geo">' + a.geo.split(' ')[0] + '</span>' : ''}
+          ${a.source ? '<span class="art-source">' + esc(a.source) + '</span>' : ''}
+          ${a.category ? '<span class="art-category">' + esc(a.category) + '</span>' : ''}
+          <span class="art-date">${formatDate(a.published)}</span>
+        </div>`;
+
+      const titleHtml = `<h1 class="art-title">${esc(a.title_hu || a.title || '')}</h1>`;
+
+      const leadHtml = a.summary_hu
+        ? `<p class="art-lead">${esc(a.summary_hu)}</p>` : '';
+
+      const imgHtml = a.image
+        ? `<div class="art-img-wrap">
+            <img src="${esc(a.image)}" alt="${esc(a.title_hu || a.title || '')}" loading="lazy">
+            <div class="art-img-credit">Forrás: ${esc(a.source)}</div>
+           </div>` : '';
+
+      const bodyHtml = hasFullText
+        ? `<div class="art-body">${paragraphs(a.full_hu)}</div>`
+        : `<div class="art-no-full">
+            <strong>Teljes összefoglaló hamarosan</strong>
+            <p>Ez a cikk még nem kapott részletes magyar feldolgozást. Az eredeti cikket az alábbi gombbal érheted el.</p>
+           </div>`;
+
+      const sourceFooter = `
+        <div class="art-source-footer">
+          <div class="art-source-label">Forrás: <strong>${esc(a.source)}</strong></div>
+          <a class="art-original-btn" href="${esc(a.url)}" target="_blank" rel="noopener">
+            Eredeti cikk
+            <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>`;
+
+      const shareHtml = `
+        <div class="art-share">
+          <span class="art-share-label">Megoszt:</span>
+          <a class="share-pill share-pill--li" href="${share.linkedin}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+          <a class="share-pill share-pill--fb" href="${share.fb}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <button class="share-pill share-pill--copy" id="copyBtn">
+            <svg class="icon-copy" viewBox="0 0 16 16" fill="none"><rect x="5" y="4" width="8" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M3 11V3a1 1 0 011-1h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Másolás
+          </button>
+        </div>`;
+
+      wrap.innerHTML = metaHtml + titleHtml + leadHtml + imgHtml
+        + `<div class="art-divider"></div>`
+        + bodyHtml
+        + `<div class="art-divider"></div>`
+        + sourceFooter
+        + shareHtml;
+
+      // Copy button
+      document.getElementById('copyBtn').addEventListener('click', function() {
+        navigator.clipboard.writeText(share.copyText).then(() => {
+          this.classList.add('copied');
+          this.innerHTML = '<svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Másolva!';
+          setTimeout(() => {
+            this.classList.remove('copied');
+            this.innerHTML = '<svg class="icon-copy" viewBox="0 0 16 16" fill="none"><rect x="5" y="4" width="8" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M3 11V3a1 1 0 011-1h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> Másolás';
+          }, 2500);
+        });
+      });
+
+      // Update page title + OG
+      document.title = (a.title_hu || a.title || 'Cikk') + ' – up2date by Y2Y';
+
+      // Render related articles
+      renderRelated(a);
+    }
+
+    function renderRelated(current) {
+      if (!window._allArticles) return;
+      const others = window._allArticles
+        .filter(a => a.url !== current.url && !a.isQA)
+        .slice(0, 4);
+      if (!others.length) return;
+
+      const section = document.createElement('div');
+      section.className = 'related-section';
+      section.innerHTML = '<p class="related-title">További hírek</p>'
+        + '<div class="related-grid">'
+        + others.map(a => `
+          <a class="related-card" href="/cikk.html#${encodeURIComponent(a.url)}">
+            <div class="related-card-source">${esc(a.source)}</div>
+            <div class="related-card-title">${esc(a.title_hu || a.title || '')}</div>
+            <div class="related-card-summary">${esc(a.summary_hu || '')}</div>
+          </a>`).join('')
+        + '</div>';
+      document.getElementById('articleWrap').appendChild(section);
+    }
+
+    async function init() {
+      const params = new URLSearchParams(location.search);
+      const articleUrl = decodeURIComponent(
+        location.hash.slice(1) || params.get('u') || params.get('id') || ''
+      );
+
+      try {
+        const res = await fetch('data/news.json?t=' + Date.now());
+        const data = await res.json();
+        const articles = data.articles || [];
+        window._allArticles = articles;
+
+        const article = articles.find(a => a.url === articleUrl)
+          || (articleUrl ? null : articles[0]);
+
+        if (!article) {
+          document.getElementById('articleWrap').innerHTML =
+            '<div class="loading-state"><span>Cikk nem található.</span></div>';
+          return;
+        }
+        renderArticle(article);
+      } catch(e) {
+        document.getElementById('articleWrap').innerHTML =
+          '<div class="loading-state"><span>Betöltési hiba: ' + e.message + '</span></div>';
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

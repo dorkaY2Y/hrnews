@@ -1,0 +1,72 @@
+# up2date by Y2Y
+
+> Naprakész globális HR-trendek, munkaerőpiaci kutatások és leadership hírek – naponta frissítve, rövid magyar AI-összefoglalóval.
+
+## Mi ez?
+
+Az up2date by Y2Y egy naponta frissülő HR hírportál, amelyet a Y2Y Hungary Kft. üzemeltet. Minden nap reggel 40+ prémium nemzetközi forrásból gyűjtjük a legfontosabb HR, munkaerőpiaci, leadership és szervezetfejlesztési híreket, és minden cikkhez rövid magyar AI-összefoglalót (summary_hu) és teljes magyar cikket (full_hu) készítünk.
+
+**Fontos:** A cikkek tartalma Claude AI (Anthropic) segítségével készül, Y2Y stílusban – szakmai, direkt, nem gépi fordítás.
+
+## Adatok
+
+- Géppel olvasható adatforrás: https://up2date.hu/data/news.json
+- Formátum: JSON, UTF-8
+- Frissítés: naponta egyszer, reggel ~5:30 (CET)
+- Cikkek száma: max 32 (régiós egyensúlyban)
+- Régiók: 🇺🇸 USA, 🇪🇺 Európa, 🌍 Globális, 🌏 Ázsia, 🇭🇺 Magyar
+
+## JSON struktúra (egy cikk)
+
+```json
+{
+  "source": "Harvard Business Review",
+  "category": "Leadership",
+  "geo": "🌍 Globális",
+  "title": "Eredeti angol cím",
+  "title_hu": "Magyar cím (max 70 kar)",
+  "url": "Eredeti cikk URL",
+  "published": "ISO 8601 dátum",
+  "addedAt": "ISO 8601 – mikor adtuk hozzá",
+  "excerpt": "Eredeti kivonat",
+  "summary_hu": "2-3 mondatos magyar összefoglaló",
+  "full_hu": "220-270 szavas Y2Y-stílusú magyar szöveg, 3 bekezdés \\n\\n-vel elválasztva",
+  "image": "OG kép URL (ha van)"
+}
+```
+
+## Cikk URL-ek
+
+Minden cikk elérhető: `https://up2date.hu/article?u={encoded_article_url}`
+
+Az `/article` endpoint Netlify Edge Function, amely:
+- OG meta tageket és structured data (JSON-LD) szolgál ki crawlereknek
+- Visszairányítja az embereket: `https://up2date.hu/cikk#{encoded_url}`
+
+## Témák
+
+- HR stratégia és munkaerőpiaci trendek
+- Leadership és vezetésfejlesztés
+- Employer branding és munkavállalói élmény (employee experience)
+- Toborzás és tehetségmenedzsment
+- People Analytics és HR technológia
+- Szervezetfejlesztés és változásmenedzsment
+- Távmunka és hibrid munkavégzés
+- Kompenzáció, juttatások és wellbeing
+- DEI (diverzitás, esélyegyenlőség és befogadás)
+
+## Forrásaink (válogatás)
+
+Harvard Business Review, McKinsey & Company, SHRM, Josh Bersin, Gartner HR, CIPD, Deloitte Insights, Korn Ferry, Mercer, People Management, HRD Connect, HR Executive, Personnel Today, HR Grapevine, Worklife, Human Resources Director (HRD), HR Asia, Personalwirtschaft, Human Resources Manager (DE), Parlons RH (FR), CHRO.nl, Portfolio.hu, G7.hu, Y2Y (y2y.hu), és még 20+ forrás.
+
+## Kiadó
+
+**Y2Y Hungary Kft.**
+Vezető-, szervezet- és folyamatfejlesztés – Coaching, Tréning, Szervezetfejlesztés
+- Web: https://www.y2y.hu
+- LinkedIn: https://www.linkedin.com/company/y2y-hungary
+- Alapító: Nagy-Józsa Dorka, CEO
+
+## Licenc
+
+Az up2date by Y2Y cikkeinek magyar összefoglalói (summary_hu, full_hu, title_hu) szabad idézéssel használhatók, forrásmegjelöléssel: „Forrás: up2date.hu (up2date by Y2Y)". Az eredeti cikkek jogai az eredeti forrásoké.

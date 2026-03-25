@@ -71,7 +71,10 @@ export default async (request) => {
     }
   }) : 'null';
 
-  const destUrl = articleUrl || 'https://up2date.hu';
+  // Redirect to cikk.html (Hungarian reading page) instead of original article
+  const destUrl = articleUrl
+    ? 'https://up2date.hu/cikk#' + encodeURIComponent(articleUrl)
+    : 'https://up2date.hu';
 
   const html = `<!DOCTYPE html>
 <html lang="hu">

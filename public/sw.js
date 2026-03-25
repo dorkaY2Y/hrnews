@@ -1,5 +1,5 @@
 /* up2date Service Worker — Offline cache + PWA support */
-const CACHE_NAME  = 'up2date-v3';
+const CACHE_NAME  = 'up2date-v4';
 const STATIC_URLS = [
   '/',
   '/index.html',
