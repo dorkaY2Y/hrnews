@@ -389,7 +389,7 @@ function makeShareUrls(a) {
     + '\n\nOlvasd naponta: ' + siteUrl;
   return {
     fb:           'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(sharePageUrl) + '&quote=' + encodeURIComponent(fbText),
-    linkedin:     'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(sharePageUrl),
+    linkedin:     'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(sharePageUrl) + '&title=' + encodeURIComponent(title) + '&summary=' + encodeURIComponent(short) + '&source=up2date.hu',
     messengerPage: sharePageUrl,
     email:        'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(emailBody)
   };

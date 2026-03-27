@@ -414,6 +414,8 @@
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(() => {});
     }
+    // PWA install popup letiltása
+    window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); });
   </script>
 </body>
 </html>
