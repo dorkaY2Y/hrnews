@@ -375,13 +375,21 @@ function cardHTML(a, idx) {
     + '</article>';
 }
 
+function articleSlug(url) {
+  let h = 5381;
+  for (let i = 0; i < url.length; i++) {
+    h = (((h << 5) + h) ^ url.charCodeAt(i)) >>> 0;
+  }
+  return h.toString(36);
+}
+
 function makeShareUrls(a) {
   const title   = a.title_hu || a.title || '';
   const summary = a.summary_hu || '';
   const srcUrl  = a.url || '';
   const siteUrl = 'https://up2date.hu';
   const short   = summary.length > 260 ? summary.slice(0, 257) + '…' : summary;
-  const sharePageUrl = siteUrl + '/article?u=' + encodeURIComponent(srcUrl);
+  const sharePageUrl = siteUrl + '/article/' + articleSlug(srcUrl);
   const fbText  = title + '\n\n' + short + '\n\n📌 Forrás: ' + srcUrl;
   const liText  = short + '\n\n📌 Forrás: ' + srcUrl;
   const emailBody = title + '\n\n' + summary

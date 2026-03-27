@@ -419,6 +419,10 @@ function extractImage(item) {
     if (u && !isTemplateImage(u)) return u;
   }
   if (item.enclosure?.url && (item.enclosure.type || '').startsWith('image/') && !isTemplateImage(item.enclosure.url)) return item.enclosure.url;
+  // Fallback: extract first <img src="..."> from description/content (e.g. HR Dive)
+  const raw = item.content || item['content:encoded'] || item.contentEncoded || item.summary || item.description || '';
+  const imgMatch = raw.match(/<img[^>]+src=["']([^"']+)["']/i);
+  if (imgMatch && imgMatch[1] && !isTemplateImage(imgMatch[1])) return imgMatch[1];
   return '';
 }
 
@@ -711,6 +715,14 @@ async function fetchRSSFeeds() {
 
   console.log(`\n✅ Kész. ${newArticles.length} új cikk (${allFetched.length} összesen).`);
   console.log(`📄 Mentve: ${RAW_OUTPUT}`);
+
+  // Article share oldalak generálása (Facebook OG)
+  try {
+    require('./generate-article-pages');
+  } catch (e) {
+    console.warn('Article page generálás sikertelen:', e.message);
+  }
+
   return newArticles.length;
 }
 
